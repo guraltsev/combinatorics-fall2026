@@ -1,4 +1,4 @@
-selector_to_html = {"a[href=\"#lecture-notes\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Lecture Notes<a class=\"headerlink\" href=\"#lecture-notes\" title=\"Link to this heading\">#</a></h1><h2>Unit map<a class=\"headerlink\" href=\"#unit-map\" title=\"Link to this heading\">#</a></h2>", "a[href=\"#unit-map\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">Unit map<a class=\"headerlink\" href=\"#unit-map\" title=\"Link to this heading\">#</a></h2>"}
+selector_to_html = {"a[href=\"#unit-map\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">Unit map<a class=\"headerlink\" href=\"#unit-map\" title=\"Link to this heading\">#</a></h2>", "a[href=\"#lecture-notes\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Lecture Notes<a class=\"headerlink\" href=\"#lecture-notes\" title=\"Link to this heading\">#</a></h1><h2>Unit map<a class=\"headerlink\" href=\"#unit-map\" title=\"Link to this heading\">#</a></h2>"}
 skip_classes = ["headerlink", "sd-stretched-link", "no-hover-preview"]
 
 window.onload = function () {
