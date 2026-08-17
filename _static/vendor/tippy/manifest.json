@@ -1,0 +1,40 @@
+{
+  "generated_by": "python tools/vendor_assets.py",
+  "packages": {
+    "@popperjs/core": {
+      "version": "2.11.8",
+      "files": [
+        {
+          "source": "dist/umd/popper.min.js",
+          "destination": "popper.min.js",
+          "sha256": "c212f4b505a86352aed62b24a8f16f999f821ecbe6456c7f3c8a04bc87968782"
+        },
+        {
+          "source": "LICENSE.md",
+          "destination": "LICENSE.popper.md",
+          "sha256": "bf67e2c9b7974543bb18ced3a0b37f53729aaff953b442dd89a3adaf90fd93e8"
+        }
+      ]
+    },
+    "tippy.js": {
+      "version": "6.3.7",
+      "files": [
+        {
+          "source": "dist/tippy.umd.min.js",
+          "destination": "tippy.umd.min.js",
+          "sha256": "ab1ee040c952cd7bd324297c3c1707cb30d02c6bd7ecd6856e2158e385a9b16e"
+        },
+        {
+          "source": "dist/tippy.css",
+          "destination": "tippy.css",
+          "sha256": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
+        },
+        {
+          "source": "LICENSE",
+          "destination": "LICENSE.tippy.txt",
+          "sha256": "7f4929c55f525ae510a77c361496c5a86a092434a3681c95a4dc89e951c67e98"
+        }
+      ]
+    }
+  }
+}
