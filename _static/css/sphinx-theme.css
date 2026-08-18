@@ -246,7 +246,7 @@ div.admonition.admonition-example > .admonition-title::after {
   box-sizing: border-box;
   content: "";
   display: block;
-  background-image: url("customer-explain-give-svgrepo-com.svg");
+  background-image: url("../assets/customer-explain-give-svgrepo-com.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1.5rem 1.5rem;
@@ -272,7 +272,7 @@ div.admonition.admonition-problem > .admonition-title {
 .admonition.admonition-problem > .admonition-title::after,
 div.admonition.admonition-problem > .admonition-title::after {
   box-sizing: border-box;
-  background: url("query-what-how-why-icon.svg") center / contain no-repeat;
+  background: url("../assets/query-what-how-why-icon.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;
@@ -299,7 +299,7 @@ div.admonition.admonition-challenge-problem > .admonition-title {
 .admonition.admonition-challenge-problem > .admonition-title::after,
 div.admonition.admonition-challenge-problem > .admonition-title::after {
   box-sizing: border-box;
-  background: url("query-what-how-why-icon.svg") center / contain no-repeat;
+  background: url("../assets/query-what-how-why-icon.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;
@@ -311,7 +311,7 @@ div.admonition.admonition-challenge-problem > .admonition-title::after {
 
 .admonition.admonition-challenge-problem > .admonition-title::before,
 div.admonition.admonition-challenge-problem > .admonition-title::before {
-  background: url("exclamation-mark-svgrepo-com.svg") center / contain no-repeat;
+  background: url("../assets/exclamation-mark-svgrepo-com.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.25rem;
@@ -344,7 +344,7 @@ div.admonition.admonition-rule > .admonition-title {
 div.admonition.admonition-theorem > .admonition-title::after,
 .admonition.admonition-rule > .admonition-title::after,
 div.admonition.admonition-rule > .admonition-title::after {
-  background: url("chemistry-flask-with-liquid-inside-svgrepo-com.svg") center / contain no-repeat;
+  background: url("../assets/chemistry-flask-with-liquid-inside-svgrepo-com.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;
@@ -369,7 +369,7 @@ div.admonition.admonition-definition > .admonition-title {
 
 .admonition.admonition-definition > .admonition-title::after,
 div.admonition.admonition-definition > .admonition-title::after {
-  background: url("mind-icon.svg") center / contain no-repeat;
+  background: url("../assets/mind-icon.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;
@@ -393,7 +393,7 @@ div.admonition.admonition-proof > .admonition-title {
 
 .admonition.admonition-proof > .admonition-title::after,
 div.admonition.admonition-proof > .admonition-title::after {
-  background: url("science-experiment-svgrepo-com.svg") center / contain no-repeat;
+  background: url("../assets/science-experiment-svgrepo-com.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;

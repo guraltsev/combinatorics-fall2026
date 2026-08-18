@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Subtraction, division, permutations, and combinations. — Combinatorics - Fall 2026</title>
+    <title>I.2 More counting techniques — Combinatorics - Fall 2026</title>
   
   
   
@@ -25,9 +25,9 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02">
-    <link rel="stylesheet" type="text/css" href="../../_static/vendor/tippy/tippy.css?v=865cd1a4">
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-theme.css?v=74ad2d65">
-    <link rel="stylesheet" type="text/css" href="../../_static/tippy.css?v=11e8c0fa">
+    <link rel="stylesheet" type="text/css" href="../../_static/tippy.js/tippy.css?v=865cd1a4">
+    <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx-theme.css?v=7bd7c571">
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tippy.css?v=11e8c0fa">
   
   <!-- So that users can add custom icons -->
   <script defer="" src="../../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
@@ -39,22 +39,22 @@
     <script src="../../_static/documentation_options.js?v=7f41d439"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
-    <script defer="defer" src="../../_static/vendor/tippy/popper.min.js?v=a8c9358f"></script>
-    <script defer="defer" src="../../_static/vendor/tippy/tippy.umd.min.js?v=4126cd26"></script>
-    <script defer="defer" src="../../_static/tippy\lecture_notes\unit-1-enumeration\02-more-basic-counting-and-order.f28af1b5-aa8c-499e-8468-bc8d5087ad0e.js"></script>
+    <script defer="defer" src="../../_static/@popperjs/core/popper.min.js?v=a8c9358f"></script>
+    <script defer="defer" src="../../_static/tippy.js/tippy.umd.min.js?v=4126cd26"></script>
+    <script defer="defer" src="../../_static/tippy\lecture-notes\unit-1-enumeration\02-more counting techniques.b7d5d9cf-5f0a-4f3f-89ec-f68860ea5ccb.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="../../_static/math-progressive.js?v=148949cf"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture_notes/unit-1-enumeration/02-more-basic-counting-and-order';</script>
+    <script defer="defer" src="../../_static/js/math-progressive.js?v=148949cf"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture-notes/unit-1-enumeration/02-more counting techniques';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <script src="../../_static/course-sidebar-toggle.js?v=57cfeca2"></script>
-    <script src="../../_static/course-search.js?v=724d2f2a"></script>
+    <script src="../../_static/js/course-sidebar-toggle.js?v=57cfeca2"></script>
+    <script src="../../_static/js/course-search.js?v=724d2f2a"></script>
   <script src="../../course-search-index.js"></script>
   
 
     <link rel="icon" href="../../_static/uark-favicon.png">
     <link rel="index" title="Index" href="../../genindex.html">
     <link rel="search" title="Search" href="../../search.html">
-    <link rel="prev" title="Set notation and basic counting" href="01-set-notation-and-basic-counting.html">
+    <link rel="prev" title="I.1 Set notation and basic counting" href="01-set-notation-and-basic-counting.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
   <meta name="docsearch:version" content="">
@@ -126,56 +126,43 @@
   
 </a></div>
     
-      <div class="navbar-item"><div class="navbar-item">
-  <a class="nav-link" href="https://learn.uark.edu/ultra/courses/_529368_1/outline/" title="Open this course in Blackboard">
-    Blackboard
-  </a>
-</div></div>
-    
   </div>
   
   <div class=" navbar-header-items">
     
     <div class="me-auto navbar-header-items__center">
       
+        <div class="navbar-item"><div class="navbar-item">
+  <a class="nav-link" href="https://learn.uark.edu/ultra/courses/_529368_1/outline/" title="Open this course in Blackboard">
+    Blackboard
+  </a>
+</div></div>
+      
         <div class="navbar-item">
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../syllabus.html">
-    Syllabus
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../calendar.html">
-    Calendar
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../assignments/index.html">
-    Assignments
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../resources.html">
-    Resources
-  </a>
-</li>
-
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="../index.html">
-    Lecture Notes
-  </a>
-</li>
-
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../../syllabus.html">Syllabus</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../../calendar.html">Calendar</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../../assignments/index.html">Assignments</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../../resources.html">Resources</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../index.html">Lecture notes</a>
+    </li>
+    
   </ul>
 </nav></div>
       
@@ -251,44 +238,40 @@
         
           
           
+            <div class="navbar-item"><div class="navbar-item">
+  <a class="nav-link" href="https://learn.uark.edu/ultra/courses/_529368_1/outline/" title="Open this course in Blackboard">
+    Blackboard
+  </a>
+</div></div>
+          
+        
+          
+          
             <div class="navbar-item">
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../syllabus.html">
-    Syllabus
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../calendar.html">
-    Calendar
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../assignments/index.html">
-    Assignments
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../resources.html">
-    Resources
-  </a>
-</li>
-
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="../index.html">
-    Lecture Notes
-  </a>
-</li>
-
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../../syllabus.html">Syllabus</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../../calendar.html">Calendar</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../../assignments/index.html">Assignments</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../../resources.html">Resources</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link nav-internal" href="../index.html">Lecture notes</a>
+    </li>
+    
   </ul>
 </nav></div>
           
@@ -334,9 +317,9 @@
     <a class="reference internal" href="../index.html">Lecture Notes</a>
   </p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit 1: Enumeration</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01-set-notation-and-basic-counting.html">Set notation and basic counting</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Subtraction, division, permutations, and combinations.</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">I. Enumeration</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-set-notation-and-basic-counting.html">I.1 Set notation and basic counting</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">I.2 More counting techniques</a></li>
 </ul>
 </details></li>
 </ul>
@@ -377,9 +360,9 @@
     <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Lecture Notes</a></li>
     
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Unit 1: Enumeration</a></li>
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">I. Enumeration</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Subtraction, division, permutations, and combinations.</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">I.2 More counting techniques</span></li>
   </ul>
 </nav>
 </div>
@@ -394,15 +377,15 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="subtraction-division-permutations-and-combinations">
-<h1>Subtraction, division, permutations, and combinations.<a class="headerlink" href="#subtraction-division-permutations-and-combinations" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="i-2-more-counting-techniques">
+<h1>I.2 More counting techniques<a class="headerlink" href="#i-2-more-counting-techniques" title="Link to this heading">#</a></h1>
 <p>We will now add two operations to our counting toolkit.</p>
 <ul class="simple">
 <li><p>The <strong>difference rule</strong> counts allowed objects by removing forbidden ones.</p></li>
 <li><p>The <strong>division principle</strong> corrects a construction that overcounts the same outcome multiple times.</p></li>
 </ul>
-<p>We then use these rules to derive formulas for permutations and combinations.
-Finally, we discuss how strings and sets can be used to model a variety of different combinatorial problems using bijections.</p>
+<p>We then use these rules to derive formulas for permutations and combinations - important counting problems that differ by whether order is considered important or not.</p>
+<p>Finally, we discuss how strings and sets can be used to model a variety of different combinatorial problems using bijections.</p>
 <section id="the-difference-rule">
 <h2>The difference rule<a class="headerlink" href="#the-difference-rule" title="Link to this heading">#</a></h2>
 <p>We used the <a class="reference internal" href="01-set-notation-and-basic-counting.html#rule-sum-rule"><span class="std std-ref">the sum rule</span></a> to count the elements in a set by subdiving them into separate cases.
@@ -720,11 +703,9 @@ An ordinary **set partition into three blocks** is different: all three blocks m
 Never divide $3^n$ by $3!$ to count partitions into three nonempty blocks. Assignments with one or two empty labeled parts do not represent three-block partitions, so the collection being divided contains the wrong objects. We will develop systematic methods for enforcing “every label is used” later in the course.
 :::
 -->
-</section>
-</section>
-<hr class="docutils">
-<section id="additional-material-optional">
-<h2>Additional material (optional)<a class="headerlink" href="#additional-material-optional" title="Link to this heading">#</a></h2>
+<div class="external-references docutils container">
+<p class="rubric" id="external-references">External References</p>
+<p class="rubric" id="additional-material-optional">Additional material (optional)</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=RhKYPnd0M4Y&amp;list=PLl-gb0E4MII0sGLCJeqDB3y63HZ6lM5LJ&amp;index=2">Discrete Math II - 6.1.2 The Complement Rule and Complex Counting Problems</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=_DPdmSNHgQc&amp;list=PLl-gb0E4MII0sGLCJeqDB3y63HZ6lM5LJ&amp;index=3">Discrete Math II - 6.1.3 The Subtraction and Division Rules</a></p></li>
@@ -732,6 +713,8 @@ Never divide $3^n$ by $3!$ to count partitions into three nonempty blocks. Assig
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=vSs4TOLyYwg&amp;list=PL5J6K3znOvOkci83fWQbvpXOvuhEguikI&amp;index=6">Counting Rocks! - The Division Principles and Overcounting</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=V4w8Crhd9FQ&amp;list=PL5J6K3znOvOkci83fWQbvpXOvuhEguikI&amp;index=10">Counting Rocks! - Combinations</a></p></li>
 </ul>
+</div>
+</section>
 </section>
 </section>
 
@@ -746,7 +729,7 @@ Never divide $3^n$ by $3!$ to count partitions into three nonempty blocks. Assig
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Set notation and basic counting</p>
+        <p class="prev-next-title">I.1 Set notation and basic counting</p>
       </div>
     </a>
 </div></footer>
@@ -783,7 +766,6 @@ Never divide $3^n$ by $3!$ to count partitions into three nonempty blocks. Assig
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-from-one-set-to-another">Functions from one set to another</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-material-optional">Additional material (optional)</a></li>
 </ul>
   </nav></div>
 
