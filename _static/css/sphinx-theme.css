@@ -212,6 +212,63 @@ body.layout-notes .bd-article-container {
   margin-top: 0.85rem;
 }
 
+/* Optional homework hints stay out of the initial reading path. */
+.free-hint {
+  margin: 1rem 0;
+  border: 1px solid var(--pst-color-border, #c9c9c9);
+  border-radius: 0.35rem;
+  background: var(--pst-color-surface, #fff);
+}
+
+.free-hint > summary {
+  cursor: pointer;
+  padding: 0.6rem 0.8rem;
+  color: var(--pst-color-primary, #9d2235);
+  font-weight: 600;
+}
+
+.free-hint > summary:focus-visible {
+  outline: 3px solid var(--pst-color-secondary, #5c8fa3);
+  outline-offset: -3px;
+}
+
+.free-hint-content {
+  padding: 0 0.8rem 0.7rem;
+}
+
+/* Download links are actions, rather than ordinary inline navigation. */
+.bd-article a.reference.download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.2rem 0;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid var(--pst-color-border, #c9c9c9);
+  border-radius: 0.2rem;
+  background: transparent;
+  color: var(--pst-color-link, #9d2235);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bd-article a.reference.download::before {
+  width: 0.95rem;
+  height: 0.95rem;
+  background: url("../assets/pdf-file.svg") center / contain no-repeat;
+  content: "";
+}
+
+.bd-article a.reference.download > code {
+  color: inherit;
+  font: inherit;
+}
+
+.bd-article a.reference.download:hover {
+  border-color: var(--pst-color-link, #9d2235);
+  background: var(--pst-color-surface, #f2f2f4);
+  color: var(--pst-color-link-hover, #492d14);
+}
+
 /* Callout anchors follow the section-heading convention: reveal on hover. */
 .admonition > .admonition-title:hover > .headerlink,
 .admonition > .admonition-title > .headerlink:focus-visible {

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="240" viewBox="0 0 280 240" role="img" aria-labelledby="title desc">
+  <title id="title">Pattern 1</title>
+  <desc id="desc">Digits 1, 2, 3, 4, and 5 appear clockwise from the top vertex of a pentagon.</desc>
+  <rect width="280" height="240" rx="16" fill="#f8f7f4"/>
+  <path d="M140 35L225 97L193 197L87 197L55 97Z" fill="none" stroke="#424242" stroke-width="5"/>
+  <g fill="#9d2235" stroke="#ffffff" stroke-width="3">
+    <circle cx="140" cy="35" r="22"/><circle cx="225" cy="97" r="22"/>
+    <circle cx="193" cy="197" r="22"/><circle cx="87" cy="197" r="22"/>
+    <circle cx="55" cy="97" r="22"/>
+  </g>
+  <g fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <text x="140" y="35">1</text><text x="225" y="97">2</text>
+    <text x="193" y="197">3</text><text x="87" y="197">4</text>
+    <text x="55" y="97">5</text>
+  </g>
+  <g fill="#555555" font-family="Arial, sans-serif" font-size="15" font-style="italic" text-anchor="middle">
+    <text x="140" y="14">A</text><text x="257" y="102">B</text>
+    <text x="211" y="229">C</text><text x="69" y="229">D</text>
+    <text x="23" y="102">E</text>
+  </g>
+</svg>
