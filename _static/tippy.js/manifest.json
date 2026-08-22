@@ -1,20 +1,20 @@
 {
-  "generated_by": "get-ready.cmd (npm pack)",
+  "generated_by": "..\\.venv\\Scripts\\python.exe scripts\\vendor_assets.py",
   "package": "tippy.js",
   "version": "6.3.7",
   "files": [
     {
-      "source": "package/dist/tippy.umd.min.js",
+      "source": "dist/tippy.umd.min.js",
       "destination": "tippy.umd.min.js",
       "sha256": "ab1ee040c952cd7bd324297c3c1707cb30d02c6bd7ecd6856e2158e385a9b16e"
     },
     {
-      "source": "package/dist/tippy.css",
+      "source": "dist/tippy.css",
       "destination": "tippy.css",
       "sha256": "5969f497d9158d7682f8219c6f13fa67269cdf5bf50a3931d95327151dee5678"
     },
     {
-      "source": "package/LICENSE",
+      "source": "LICENSE",
       "destination": "LICENSE.tippy.txt",
       "sha256": "7f4929c55f525ae510a77c361496c5a86a092434a3681c95a4dc89e951c67e98"
     }

@@ -1,183 +1,45 @@
 /*
  * Course presentation for PyData Sphinx Theme.
- * Layout hooks come exclusively from YAML frontmatter via course_roles.py.
+ * Layout hooks come exclusively from YAML frontmatter via sphinx_course.py.
  */
 
 :root {
-  --brand-primary: #9d2235;
-  --brand-white: #ffffff;
-  --brand-light: #f2f2f4;
-  --brand-silver: #c7c8c9;
-  --brand-dark: #464648;
-  --brand-tan: #ddba96;
-  --brand-brown: #492d14;
-  --brand-sky: #9dc9d5;
-  --brand-blue: #3e94aa;
-  --brand-navy: #0f3842;
+  --uark-razorback-red: #9d2235;
+  --uark-apple-blossom: #ffffff;
+  --uark-quartz: #f2f2f4;
+  --uark-silverleaf: #c7c8c9;
+  --uark-spoofers-stone: #464648;
+  --uark-buckskin: #ddba96;
+  --uark-bauxite: #492d14;
+  --uark-clearsky: #9dc9d5;
+  --uark-springwater: #3e94aa;
+  --uark-storm-cloud: #0f3842;
 
   /* Reclaim space from the right-hand Contents sidebar. */
   --pst-sidebar-secondary: 13rem;
 }
 
 html[data-theme="light"] {
-  --pst-color-primary: var(--brand-primary);
-  --pst-color-link: var(--brand-primary);
-  --pst-color-link-hover: var(--brand-brown);
-  --pst-color-accent: var(--brand-brown);
+  --pst-color-primary: var(--uark-razorback-red);
+  --pst-color-link: var(--uark-razorback-red);
+  --pst-color-link-hover: var(--uark-bauxite);
+  --pst-color-accent: var(--uark-bauxite);
 }
 
 html[data-theme="dark"] {
-  --pst-color-primary: var(--brand-tan);
-  --pst-color-link: var(--brand-tan);
-  --pst-color-link-hover: var(--brand-sky);
-  --pst-color-accent: var(--brand-sky);
+  --pst-color-primary: var(--uark-buckskin);
+  --pst-color-link: var(--uark-buckskin);
+  --pst-color-link-hover: var(--uark-clearsky);
+  --pst-color-accent: var(--uark-clearsky);
 }
 
 :focus-visible {
-  outline: 3px solid var(--brand-blue);
+  outline: 3px solid var(--uark-springwater);
   outline-offset: 3px;
 }
 
-/* Local source navigation is present only in edit-preview HTML. */
-.course-edit-page-tools { display: flex; justify-content: flex-end; min-height: 0; }
-.course-edit-target-wrapper { position: relative; }
-.course-edit-control {
-  display: inline-grid;
-  place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  padding: .45rem;
-  margin-inline: .2rem;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  color: var(--pst-color-link);
-  background: transparent;
-  vertical-align: middle;
-  opacity: 0;
-  cursor: pointer;
-}
-.course-edit-control img { width: 1.1rem; height: 1.1rem; opacity: .78; }
-.course-edit-control:hover,
-.course-edit-control:focus-visible,
-*:hover > .course-edit-control,
-*:focus-within > .course-edit-control { opacity: 1; }
-.course-edit-control:hover { background: color-mix(in srgb, currentColor 10%, transparent); }
-.course-edit-control:focus-visible { opacity: 1; outline: 3px solid var(--brand-blue); outline-offset: 2px; }
-.course-edit-target-wrapper > .course-edit-control,
-.course-edit-target-wrapper > * > .course-edit-control { position: absolute; top: .15rem; right: .15rem; z-index: 1; }
-.course-edit-status { position: fixed; inset: auto 1rem 1rem auto; z-index: 30; max-width: min(24rem, calc(100vw - 2rem)); }
-@media (max-width: 42rem), (pointer: coarse) {
-  .course-edit-control { opacity: 1; }
-  .course-edit-page-tools { min-height: 2.75rem; }
-}
-@media print {
-  .course-edit-control, .course-edit-page-tools, .course-edit-status { display: none !important; }
-}
-
-/* Focus mode keeps the measured header node, but removes its visual and
-   keyboard footprint. The bootstrap class prevents a cold-load banner flash. */
-html.course-focus-requested #pst-header,
-html.course-focused #pst-header {
-  --course-active-header-height: 0px;
-  height: 0;
-  min-height: 0;
-  overflow: visible;
-  background: transparent;
-}
-
-/* Establish the final geometry during the head bootstrap, before the
-   controller runs. This prevents sticky sidebars from first using the full
-   header measurement and then jumping upward. */
-html.course-focus-requested,
-html.course-focused {
-  --course-active-header-height: 0px;
-  --pst-header-height: 0px;
-}
-
-html.course-focused #pst-header > *:not(.sidebar-toggle),
-html.course-focus-requested #pst-header > *:not(.sidebar-toggle) {
-  visibility: hidden;
-  pointer-events: none;
-}
-
-html.course-focused .course-focused-section-utilities { display: flex; }
-html.course-focus-requested .sidebar-header-items,
-html.course-focused .sidebar-header-items { display: none; }
-.course-focused-section-utilities {
-  display: none;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.25rem;
-  min-height: 2.75rem;
-  padding: 0.15rem 0.35rem;
-}
-
-.bd-links__title { display: flex; align-items: center; gap: 0.35rem; }
-.course-focus-button {
-  display: inline-grid;
-  place-items: center;
-  min-width: 2.75rem;
-  min-height: 2.75rem;
-  padding: 0.3rem;
-  color: var(--pst-color-link);
-  background: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  font: inherit;
-  font-size: 0.75rem;
-  line-height: 1.15;
-}
-.course-focus-button:hover { background: var(--pst-color-surface); border-color: var(--pst-color-border); }
-html.course-focused .course-focus-button {
-  background: color-mix(in srgb, var(--pst-color-surface) 88%, var(--pst-color-primary));
-  border-color: color-mix(in srgb, var(--pst-color-border) 70%, var(--pst-color-primary));
-  box-shadow: inset 0 2px 3px rgb(0 0 0 / 0.14), inset 0 0 0 1px rgb(255 255 255 / 0.08);
-}
-html[data-theme="dark"].course-focused .course-focus-button {
-  background: color-mix(in srgb, var(--pst-color-surface) 82%, var(--pst-color-primary));
-  box-shadow: inset 0 2px 3px rgb(0 0 0 / 0.28), inset 0 0 0 1px rgb(255 255 255 / 0.06);
-}
-.course-focus-icon {
-  width: 1.1rem;
-  height: 1.1rem;
-  display: inline-block;
-  background: url("../assets/focus-mode-goal.svg") center / contain no-repeat;
-  filter: brightness(0) saturate(100%) invert(19%) sepia(31%) saturate(2200%) hue-rotate(320deg);
-}
-html[data-theme="dark"] .course-focus-icon { filter: invert(79%) sepia(28%) saturate(500%); }
-
-html.course-focus-requested .bd-container__inner > .bd-sidebar-primary,
-html.course-focus-requested .bd-container__inner > .bd-sidebar-secondary,
-html.course-focus-requested .course-edge-sidebar-toggle,
-html.course-focused .bd-container__inner > .bd-sidebar-primary,
-html.course-focused .bd-container__inner > .bd-sidebar-secondary,
-html.course-focused .course-edge-sidebar-toggle {
-  top: calc(var(--course-active-header-height, 0px) + 1rem);
-}
-
-@media (max-width: 959.98px) {
-  html.course-focused #pst-header > .bd-header__inner > .sidebar-toggle {
-    visibility: visible;
-    pointer-events: auto;
-    position: fixed;
-    top: calc(0.35rem + env(safe-area-inset-top));
-    z-index: 20;
-  }
-  html.course-focused #pst-header > .bd-header__inner > .primary-toggle { left: 0.35rem; }
-  html.course-focused #pst-header > .bd-header__inner > .secondary-toggle { right: 0.35rem; }
-}
-
-@media print {
-  html.course-focused .course-focus-button,
-  html.course-focused .course-focused-section-utilities { display: none !important; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html.course-focused * { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
-}
-
 html[data-theme="dark"] :focus-visible {
-  outline-color: var(--brand-tan);
+  outline-color: var(--uark-buckskin);
 }
 
 /* Let wide notes use the viewport instead of the theme's global page cap. */
@@ -229,9 +91,9 @@ body.layout-notes .bd-article-container {
   .bd-container__inner > .bd-sidebar-primary {
     grid-column: 1;
     grid-row: 1;
-    max-height: calc(100vh - var(--course-active-header-height, var(--pst-header-height)) - 1rem);
+    max-height: calc(100vh - var(--pst-header-height) - 1rem);
     position: sticky;
-    top: calc(var(--course-active-header-height, var(--pst-header-height)) + 1rem);
+    top: calc(var(--pst-header-height) + 1rem);
     width: auto;
     transition: opacity 120ms ease-out;
   }
@@ -244,9 +106,9 @@ body.layout-notes .bd-article-container {
   .bd-container__inner > .bd-sidebar-secondary {
     grid-column: 3;
     grid-row: 1;
-    max-height: calc(100vh - var(--course-active-header-height, var(--pst-header-height)) - 1rem);
+    max-height: calc(100vh - var(--pst-header-height) - 1rem);
     position: sticky;
-    top: calc(var(--course-active-header-height, var(--pst-header-height)) + 1rem);
+    top: calc(var(--pst-header-height) + 1rem);
     transition: opacity 120ms ease-out;
   }
 
@@ -272,7 +134,7 @@ body.layout-notes .bd-article-container {
     margin-right: 0;
     padding: 0;
     position: sticky;
-    top: calc(var(--course-active-header-height, var(--pst-header-height)) + 1rem);
+    top: calc(var(--pst-header-height) + 1rem);
     width: 1em;
     z-index: 2;
   }
@@ -350,95 +212,79 @@ body.layout-notes .bd-article-container {
   margin-top: 0.85rem;
 }
 
+/* Optional homework hints stay out of the initial reading path. */
+.free-hint {
+  margin: 1rem 0;
+  border: 1px solid var(--pst-color-border, #c9c9c9);
+  border-radius: 0.35rem;
+  background: var(--pst-color-surface, #fff);
+}
+
+.free-hint > summary {
+  cursor: pointer;
+  padding: 0.6rem 0.8rem;
+  color: var(--pst-color-primary, #9d2235);
+  font-weight: 600;
+}
+
+.free-hint > summary:focus-visible {
+  outline: 3px solid var(--pst-color-secondary, #5c8fa3);
+  outline-offset: -3px;
+}
+
+.free-hint-content {
+  padding: 0 0.8rem 0.7rem;
+}
+
+/* Download links are actions, rather than ordinary inline navigation. */
+.bd-article a.reference.download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.2rem 0;
+  padding: 0.2rem 0.45rem;
+  border: 1px solid var(--pst-color-border, #c9c9c9);
+  border-radius: 0.2rem;
+  background: transparent;
+  color: var(--pst-color-link, #9d2235);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bd-article a.reference.download::before {
+  width: 0.95rem;
+  height: 0.95rem;
+  background: url("../assets/pdf-file.svg") center / contain no-repeat;
+  content: "";
+}
+
+.bd-article a.reference.download > code {
+  color: inherit;
+  font: inherit;
+}
+
+.bd-article a.reference.download:hover {
+  border-color: var(--pst-color-link, #9d2235);
+  background: var(--pst-color-surface, #f2f2f4);
+  color: var(--pst-color-link-hover, #492d14);
+}
+
 /* Callout anchors follow the section-heading convention: reveal on hover. */
 .admonition > .admonition-title:hover > .headerlink,
 .admonition > .admonition-title > .headerlink:focus-visible {
   visibility: visible;
 }
 
-/* Display math can interrupt prose without introducing a new paragraph.
-   MyST can also put an otherwise standalone display in a paragraph when it
-   lacks blank source lines.  Keep the display box itself marginless in every
-   rendering stage; paragraph/block layout owns any intended separation. */
-.math.display-math-interrupt,
-.math-fallback[data-math-display="block"],
-.math-enhanced[data-math-display="block"] {
+/* Display math can interrupt prose without introducing a new paragraph. */
+.math.display-math-interrupt {
   display: block;
   margin: 0;
+}
+
+/* MathJax otherwise supplies a 1em display margin of its own. */
+.math.display-math-interrupt > mjx-container[display="true"] {
+  margin: 0.35rem 0;
   padding: 0;
-}
-
-/* MathJax 4 injects a .7em vertical display margin after this stylesheet has
-   loaded.  Override it at the actual output node, rather than compensating
-   with a second host margin, so prerendered SVG and browser MathJax agree. */
-.math[data-math-display="block"] > mjx-container[display],
-.math.display-math-interrupt > mjx-container[display] {
-  display: block;
-  margin: 0 !important;
-  padding: 0;
-}
-
-/* Semantic-LaTeX inline emphasis. Colors match xcolor's named palette. */
-.semantic-underline { text-decoration: underline; }
-.semantic-strikethrough { text-decoration: line-through; }
-.semantic-boxed { border: 1px solid currentColor; border-radius: 0.15rem; padding: 0 0.2em; }
-.semantic-colored.semantic-color-black { color: black; }
-.semantic-colored.semantic-color-blue { color: blue; }
-.semantic-colored.semantic-color-brown { color: brown; }
-.semantic-colored.semantic-color-cyan { color: cyan; }
-.semantic-colored.semantic-color-darkgray { color: darkgray; }
-.semantic-colored.semantic-color-gray { color: gray; }
-.semantic-colored.semantic-color-green { color: green; }
-.semantic-colored.semantic-color-lightgray { color: lightgray; }
-.semantic-colored.semantic-color-lime { color: lime; }
-.semantic-colored.semantic-color-magenta { color: magenta; }
-.semantic-colored.semantic-color-olive { color: olive; }
-.semantic-colored.semantic-color-orange { color: orange; }
-.semantic-colored.semantic-color-pink { color: pink; }
-.semantic-colored.semantic-color-purple { color: purple; }
-.semantic-colored.semantic-color-red { color: red; }
-.semantic-colored.semantic-color-teal { color: teal; }
-.semantic-colored.semantic-color-violet { color: violet; }
-.semantic-colored.semantic-color-white { color: white; }
-.semantic-colored.semantic-color-yellow { color: yellow; }
-.semantic-colorboxed { border-radius: 0.15rem; padding: 0 0.2em; }
-.semantic-colorboxed.semantic-color-black { background-color: black; color: white; }
-.semantic-colorboxed.semantic-color-blue { background-color: blue; color: white; }
-.semantic-colorboxed.semantic-color-brown { background-color: brown; color: white; }
-.semantic-colorboxed.semantic-color-cyan { background-color: cyan; }
-.semantic-colorboxed.semantic-color-darkgray { background-color: darkgray; color: white; }
-.semantic-colorboxed.semantic-color-gray { background-color: gray; color: white; }
-.semantic-colorboxed.semantic-color-green { background-color: green; color: white; }
-.semantic-colorboxed.semantic-color-lightgray { background-color: lightgray; }
-.semantic-colorboxed.semantic-color-lime { background-color: lime; }
-.semantic-colorboxed.semantic-color-magenta { background-color: magenta; color: white; }
-.semantic-colorboxed.semantic-color-olive { background-color: olive; color: white; }
-.semantic-colorboxed.semantic-color-orange { background-color: orange; }
-.semantic-colorboxed.semantic-color-pink { background-color: pink; }
-.semantic-colorboxed.semantic-color-purple { background-color: purple; color: white; }
-.semantic-colorboxed.semantic-color-red { background-color: red; color: white; }
-.semantic-colorboxed.semantic-color-teal { background-color: teal; color: white; }
-.semantic-colorboxed.semantic-color-violet { background-color: violet; color: white; }
-.semantic-colorboxed.semantic-color-white { background-color: white; }
-.semantic-colorboxed.semantic-color-yellow { background-color: yellow; }
-
-/* Remarks distinguish explanatory context from numbered results. */
-.admonition.admonition-remark,
-div.admonition.admonition-remark { background-color: #f8fafc; border-color: #64748b; }
-.admonition.admonition-remark > .admonition-title,
-div.admonition.admonition-remark > .admonition-title { background-color: #e2e8f0; color: #334155; }
-
-/* Warnings use a strong red treatment to signal attention. */
-.admonition-warning,
-.admonition.warning {
-  background-color: #fef2f2;
-  border-color: #dc2626;
-}
-
-.admonition-warning > .admonition-title,
-.admonition.warning > .admonition-title {
-  background-color: #fee2e2;
-  color: #991b1b;
 }
 
 /* Worked examples use a distinct blue admonition treatment. */
@@ -457,7 +303,7 @@ div.admonition.admonition-example > .admonition-title::after {
   box-sizing: border-box;
   content: "";
   display: block;
-  background-image: url("../assets/example-explanation.svg");
+  background-image: url("../assets/customer-explain-give-svgrepo-com.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1.5rem 1.5rem;
@@ -468,98 +314,22 @@ div.admonition.admonition-example > .admonition-title::after {
   width: 1.5rem;
 }
 
-/* Propositions use a warm brown treatment. */
-.admonition.admonition-proposition,
-div.admonition.admonition-proposition {
-  background-color: #fff7ed;
-  border-color: #92400e;
-}
-
-.admonition.admonition-proposition > .admonition-title,
-div.admonition.admonition-proposition > .admonition-title {
-  background-color: #fed7aa;
-  color: #78350f;
-}
-
-.admonition.admonition-proposition > .admonition-title::after,
-div.admonition.admonition-proposition > .admonition-title::after {
-  background: url("../assets/proposition-math-board.svg") center / contain no-repeat;
-  content: "";
-  display: block;
-  height: 1.5rem;
-  left: 0.2rem;
-  margin: 0;
-  top: 0.25rem;
-  width: 1.5rem;
-}
-
-/* Lemmas use a warm yellow treatment. */
-.admonition.admonition-lemma,
-div.admonition.admonition-lemma {
-  background-color: #fffbeb;
-  border-color: #d97706;
-}
-
-.admonition.admonition-lemma > .admonition-title,
-div.admonition.admonition-lemma > .admonition-title {
-  background-color: #fef3c7;
-  color: #92400e;
-}
-
-.admonition.admonition-lemma > .admonition-title::after,
-div.admonition.admonition-lemma > .admonition-title::after {
-  background: url("../assets/lemma-pencil-ruler.svg") center / contain no-repeat;
-  content: "";
-  display: block;
-  height: 1.5rem;
-  left: 0.2rem;
-  margin: 0;
-  top: 0.25rem;
-  width: 1.5rem;
-}
-
-/* Corollaries use a blue-violet treatment, close to examples but more purple. */
-.admonition.admonition-corollary,
-div.admonition.admonition-corollary {
-  background-color: #eef2ff;
-  border-color: #6366f1;
-}
-
-.admonition.admonition-corollary > .admonition-title,
-div.admonition.admonition-corollary > .admonition-title {
-  background-color: #e0e7ff;
-  color: #3730a3;
-}
-
-.admonition.admonition-corollary > .admonition-title::after,
-div.admonition.admonition-corollary > .admonition-title::after {
-  background: url("../assets/corollary-cogs.svg") center / contain no-repeat;
-  content: "";
-  display: block;
-  height: 1.5rem;
-  left: 0.2rem;
-  margin: 0;
-  top: 0.25rem;
-  width: 1.5rem;
-}
-
-/* Problems use a subdued slate treatment, distinct from propositions. */
+/* Problems use a warm brown admonition treatment. */
 .admonition.admonition-problem,
 div.admonition.admonition-problem {
-  border-color: #64748b;
-  background-color: #f1f5f9;
+  border-color: #92400e;
+  background-color: #fff7ed;
 }
 
 .admonition.admonition-problem > .admonition-title,
 div.admonition.admonition-problem > .admonition-title {
-  background-color: #e2e8f0;
-  color: #334155;
+  background-color: #fed7aa;
 }
 
 .admonition.admonition-problem > .admonition-title::after,
 div.admonition.admonition-problem > .admonition-title::after {
   box-sizing: border-box;
-  background: url("../assets/problem-question.svg") center / contain no-repeat;
+  background: url("../assets/query-what-how-why-icon.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;
@@ -586,7 +356,7 @@ div.admonition.admonition-challenge-problem > .admonition-title {
 .admonition.admonition-challenge-problem > .admonition-title::after,
 div.admonition.admonition-challenge-problem > .admonition-title::after {
   box-sizing: border-box;
-  background: url("../assets/problem-question.svg") center / contain no-repeat;
+  background: url("../assets/query-what-how-why-icon.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;
@@ -598,7 +368,7 @@ div.admonition.admonition-challenge-problem > .admonition-title::after {
 
 .admonition.admonition-challenge-problem > .admonition-title::before,
 div.admonition.admonition-challenge-problem > .admonition-title::before {
-  background: url("../assets/challenge-warning.svg") center / contain no-repeat;
+  background: url("../assets/exclamation-mark-svgrepo-com.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.25rem;
@@ -631,7 +401,7 @@ div.admonition.admonition-rule > .admonition-title {
 div.admonition.admonition-theorem > .admonition-title::after,
 .admonition.admonition-rule > .admonition-title::after,
 div.admonition.admonition-rule > .admonition-title::after {
-  background: url("../assets/theorem-flask.svg") center / contain no-repeat;
+  background: url("../assets/chemistry-flask-with-liquid-inside-svgrepo-com.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;
@@ -656,7 +426,7 @@ div.admonition.admonition-definition > .admonition-title {
 
 .admonition.admonition-definition > .admonition-title::after,
 div.admonition.admonition-definition > .admonition-title::after {
-  background: url("../assets/definition-mind.svg") center / contain no-repeat;
+  background: url("../assets/mind-icon.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;
@@ -668,19 +438,19 @@ div.admonition.admonition-definition > .admonition-title::after {
 
 .admonition.admonition-proof,
 div.admonition.admonition-proof {
-  background-color: #f9fafb;
-  border-color: #9ca3af;
+  background-color: #ecfdf5;
+  border-color: #047857;
 }
 
 .admonition.admonition-proof > .admonition-title,
 div.admonition.admonition-proof > .admonition-title {
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: #a7f3d0;
+  color: #065f46;
 }
 
 .admonition.admonition-proof > .admonition-title::after,
 div.admonition.admonition-proof > .admonition-title::after {
-  background: url("../assets/proof-experiment.svg") center / contain no-repeat;
+  background: url("../assets/science-experiment-svgrepo-com.svg") center / contain no-repeat;
   content: "";
   display: block;
   height: 1.5rem;
@@ -692,22 +462,6 @@ div.admonition.admonition-proof > .admonition-title::after {
 
 /* Preserve the visual distinction without carrying light-mode pastels into
    dark mode. Each title foreground/background pair exceeds WCAG AA contrast. */
-html[data-theme="dark"] .admonition.admonition-warning,
-html[data-theme="dark"] div.admonition.admonition-warning,
-html[data-theme="dark"] .admonition.warning,
-html[data-theme="dark"] div.admonition.warning {
-  background-color: #2c1015;
-  border-color: #f87171;
-}
-
-html[data-theme="dark"] .admonition.admonition-warning > .admonition-title,
-html[data-theme="dark"] div.admonition.admonition-warning > .admonition-title,
-html[data-theme="dark"] .admonition.warning > .admonition-title,
-html[data-theme="dark"] div.admonition.warning > .admonition-title {
-  background-color: #7f1d1d;
-  color: #fef2f2;
-}
-
 html[data-theme="dark"] .admonition.admonition-example,
 html[data-theme="dark"] div.admonition.admonition-example {
   background-color: #172554;
@@ -720,52 +474,16 @@ html[data-theme="dark"] div.admonition.admonition-example > .admonition-title {
   color: #eff6ff;
 }
 
-html[data-theme="dark"] .admonition.admonition-proposition,
-html[data-theme="dark"] div.admonition.admonition-proposition {
+html[data-theme="dark"] .admonition.admonition-problem,
+html[data-theme="dark"] div.admonition.admonition-problem {
   background-color: #2b1a0e;
   border-color: #fdba74;
 }
 
-html[data-theme="dark"] .admonition.admonition-proposition > .admonition-title,
-html[data-theme="dark"] div.admonition.admonition-proposition > .admonition-title {
-  background-color: #6b3b17;
-  color: #ffedd5;
-}
-
-html[data-theme="dark"] .admonition.admonition-lemma,
-html[data-theme="dark"] div.admonition.admonition-lemma {
-  background-color: #2b2110;
-  border-color: #fbbf24;
-}
-
-html[data-theme="dark"] .admonition.admonition-lemma > .admonition-title,
-html[data-theme="dark"] div.admonition.admonition-lemma > .admonition-title {
-  background-color: #78350f;
-  color: #fffbeb;
-}
-
-html[data-theme="dark"] .admonition.admonition-corollary,
-html[data-theme="dark"] div.admonition.admonition-corollary {
-  background-color: #1e1b4b;
-  border-color: #a5b4fc;
-}
-
-html[data-theme="dark"] .admonition.admonition-corollary > .admonition-title,
-html[data-theme="dark"] div.admonition.admonition-corollary > .admonition-title {
-  background-color: #4338ca;
-  color: #eef2ff;
-}
-
-html[data-theme="dark"] .admonition.admonition-problem,
-html[data-theme="dark"] div.admonition.admonition-problem {
-  background-color: #1e293b;
-  border-color: #93a4b8;
-}
-
 html[data-theme="dark"] .admonition.admonition-problem > .admonition-title,
 html[data-theme="dark"] div.admonition.admonition-problem > .admonition-title {
-  background-color: #334155;
-  color: #e2e8f0;
+  background-color: #6b3b17;
+  color: #ffedd5;
 }
 
 html[data-theme="dark"] .admonition.admonition-challenge-problem,
@@ -810,25 +528,19 @@ html[data-theme="dark"] div.admonition.admonition-definition > .admonition-title
 
 html[data-theme="dark"] .admonition.admonition-proof,
 html[data-theme="dark"] div.admonition.admonition-proof {
-  background-color: #252a33;
-  border-color: #9ca3af;
+  background-color: #102a20;
+  border-color: #6ee7b7;
 }
 
 html[data-theme="dark"] .admonition.admonition-proof > .admonition-title,
 html[data-theme="dark"] div.admonition.admonition-proof > .admonition-title {
-  background-color: #3f4651;
-  color: #f9fafb;
+  background-color: #065f46;
+  color: #ecfdf5;
 }
 
-/* Custom title icons are black SVGs; make them legible on dark headers. */
+/* Both custom title icons are black SVGs; make them legible on dark headers. */
 html[data-theme="dark"] .admonition.admonition-example > .admonition-title::after,
 html[data-theme="dark"] div.admonition.admonition-example > .admonition-title::after,
-html[data-theme="dark"] .admonition.admonition-proposition > .admonition-title::after,
-html[data-theme="dark"] div.admonition.admonition-proposition > .admonition-title::after,
-html[data-theme="dark"] .admonition.admonition-lemma > .admonition-title::after,
-html[data-theme="dark"] div.admonition.admonition-lemma > .admonition-title::after,
-html[data-theme="dark"] .admonition.admonition-corollary > .admonition-title::after,
-html[data-theme="dark"] div.admonition.admonition-corollary > .admonition-title::after,
 html[data-theme="dark"] .admonition.admonition-problem > .admonition-title::after,
 html[data-theme="dark"] div.admonition.admonition-problem > .admonition-title::after {
   filter: invert(1);
@@ -1083,46 +795,42 @@ div.math {
   }
 }
 
-/* General utility classes remain available to semantic MyST containers. */
-.site-bg-primary { background: var(--brand-primary); color: var(--brand-white); }
-.site-bg-light { background: var(--brand-light); color: var(--brand-dark); }
-.site-bg-dark { background: var(--brand-dark); color: var(--brand-white); }
-.site-bg-tan { background: var(--brand-tan); color: var(--brand-brown); }
-.site-bg-navy { background: var(--brand-navy); color: var(--brand-white); }
-.site-text-primary { color: var(--brand-primary); }
-.site-text-brown { color: var(--brand-brown); }
-.site-text-navy { color: var(--brand-navy); }
-.site-border-primary { border-color: var(--brand-primary); }
-.site-border-silver { border-color: var(--brand-silver); }
+/* UArk utility classes remain available to semantic MyST containers. */
+.uark-bg-razorback-red { background: var(--uark-razorback-red); color: var(--uark-apple-blossom); }
+.uark-bg-quartz { background: var(--uark-quartz); color: var(--uark-spoofers-stone); }
+.uark-bg-spoofers-stone { background: var(--uark-spoofers-stone); color: var(--uark-apple-blossom); }
+.uark-bg-buckskin { background: var(--uark-buckskin); color: var(--uark-bauxite); }
+.uark-bg-storm-cloud { background: var(--uark-storm-cloud); color: var(--uark-apple-blossom); }
+.uark-text-razorback-red { color: var(--uark-razorback-red); }
+.uark-text-bauxite { color: var(--uark-bauxite); }
+.uark-text-storm-cloud { color: var(--uark-storm-cloud); }
+.uark-border-razorback-red { border-color: var(--uark-razorback-red); }
+.uark-border-silverleaf { border-color: var(--uark-silverleaf); }
 
-.site-surface {
+.uark-surface {
   padding: 1rem 1.25rem;
-  color: var(--brand-dark);
-  background: var(--brand-light);
-  border: 1px solid var(--brand-silver);
+  color: var(--uark-spoofers-stone);
+  background: var(--uark-quartz);
+  border: 1px solid var(--uark-silverleaf);
   border-radius: 0.25rem;
 }
 
-.site-surface > :first-child { margin-top: 0; }
-.site-surface > :last-child { margin-bottom: 0; }
+.uark-surface > :first-child { margin-top: 0; }
+.uark-surface > :last-child { margin-bottom: 0; }
 
-html[data-theme="dark"] .site-surface {
-  color: var(--brand-light);
-  background: var(--brand-navy);
-  border-color: var(--brand-sky);
+html[data-theme="dark"] .uark-surface {
+  color: var(--uark-quartz);
+  background: var(--uark-storm-cloud);
+  border-color: var(--uark-clearsky);
 }
 
 /* Public lecture entries that are not yet settled remain visible but distinct. */
-.semantic-line-break {
-  display: block;
-}
-
 .lecture-log-tentative {
   display: inline-block;
   margin-left: 0.35rem;
   padding: 0.05rem 0.35rem;
-  color: var(--brand-brown);
-  background: var(--brand-tan);
+  color: var(--uark-bauxite);
+  background: var(--uark-buckskin);
   border-radius: 999px;
   font-size: 0.78em;
   font-weight: 700;
@@ -1131,8 +839,8 @@ html[data-theme="dark"] .site-surface {
 }
 
 html[data-theme="dark"] .lecture-log-tentative {
-  color: var(--brand-navy);
-  background: var(--brand-sky);
+  color: var(--uark-storm-cloud);
+  background: var(--uark-clearsky);
 }
 
 .grade-weights-chart { display: grid; grid-template-columns: minmax(11rem, 16rem) minmax(15rem, 1fr); gap: 1.25rem; align-items: center; max-width: 46rem; margin: 1.25rem auto; }
