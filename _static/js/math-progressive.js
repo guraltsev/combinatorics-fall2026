@@ -30,6 +30,10 @@
       await window.MathJax.startup.promise;
       async function enhanceAll(candidates) {
         var fallbacks = candidates.filter(function (fallback) {
+          if (fallback.classList.contains('math-custom-preamble')) {
+            delete fallback.dataset.mathEnhancing;
+            return false;
+          }
           return fallback.classList.contains('math-fallback') && !fallback.dataset.mathEnhancing;
         });
         if (!fallbacks.length) return;

@@ -1,14 +1,8 @@
+<!DOCTYPE html><html lang="en" data-content_root="../"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!DOCTYPE html>
-
-
-<html lang="en" data-content_root="../" >
-
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Assignments &#8212; Combinatorics - Fall 2026</title>
+    <title>Assignments — REAL VARIABLES I — Fall 2026</title>
   
   
   
@@ -27,19 +21,19 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/tippy.js/tippy.css?v=865cd1a4" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/sphinx-theme.css?v=b41ec8da" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/tippy.css?v=11e8c0fa" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02">
+    <link rel="stylesheet" type="text/css" href="../_static/tippy.js/tippy.css?v=865cd1a4">
+    <link rel="stylesheet" type="text/css" href="../_static/css/sphinx-theme.css?v=93d2aa03">
+    <link rel="stylesheet" type="text/css" href="../_static/css/tippy.css?v=11e8c0fa">
   
   <!-- So that users can add custom icons -->
-  <script defer src="../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer="" src="../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9">
 
   
     <script src="../_static/documentation_options.js?v=7f41d439"></script>
@@ -47,31 +41,53 @@
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script defer="defer" src="../_static/@popperjs/core/popper.min.js?v=a8c9358f"></script>
     <script defer="defer" src="../_static/tippy.js/tippy.umd.min.js?v=4126cd26"></script>
-    <script defer="defer" src="../_static/tippy\assignments\index.97d6da6e-f2d9-4267-b16f-e17db0ce36c4.js"></script>
+    <script defer="defer" src="../_static/tippy\assignments\index.56f17fa0-e7c1-4a57-835d-67296c6f2600.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/js/math-progressive.js?v=a3867a71"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'assignments/index';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/js/course-focused-mode.js?v=0be05eaa"></script>
     <script src="../_static/js/course-sidebar-toggle.js?v=57cfeca2"></script>
     <script src="../_static/js/course-search.js?v=724d2f2a"></script>
   <script src="../course-search-index.js"></script>
   
+  
 
-    <link rel="icon" href="../_static/uark-favicon.png"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Homework 1" href="hw01.html" />
-    <link rel="prev" title="Calendar" href="../calendar.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="August 21, 2026"/>
+    <link rel="icon" href="../_static/uark-favicon.png">
+    <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">
+    <link rel="next" title="Resources" href="../resources.html">
+    <link rel="prev" title="Calendar" href="../calendar.html">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="docsearch:language" content="en">
+  <meta name="docsearch:version" content="">
+    <meta name="docbuild:last-update" content="August 22, 2026">
   
     
     <script src="../_static/searchtools.js"></script>
     <script src="../_static/language_data.js"></script>
     <script src="../searchindex.js"></script>
   
+  <script>
+    // Prevent a focused cold load from briefly displaying the full shell.
+    try { if (new URLSearchParams(location.search).has("focus")) document.documentElement.classList.add("course-focus-requested"); } catch (_) {}
+  </script>
+  <script>
+    // JupyterLite registers a service worker at the origin root. If it was
+    // previously run on the usual local preview port, that worker can control
+    // this unrelated Sphinx site and reject page requests after a rebuild.
+    // Published course sites are unaffected; only loopback previews clear
+    // service-worker registrations.
+    if (location.hostname === "127.0.0.1" || location.hostname === "localhost") {
+      navigator.serviceWorker?.getRegistrations()
+        .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
+        .catch(() => {});
+    }
+  </script>
+
   </head>
-  <body data-default-mode="" class="layout-info">
+  <body data-default-mode="" data-course-docname="assignments/index" data-focus-section-root="assignments/index" data-focus-section-title="Assignments" data-focus-section-documents="assignments/index" data-focus-section-targets="{&quot;assignments/index&quot;:&quot;#&quot;}" class="layout-info">
 
   
   
@@ -89,19 +105,9 @@
     
       <dialog id="pst-search-dialog">
         
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
+  <input type="search" class="form-control" name="q" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
       </dialog>
@@ -137,7 +143,7 @@
   
   
   
-    <p class="title logo__title">Combinatorics - Fall 2026</p>
+    <p class="title logo__title">REAL VARIABLES I — Fall 2026</p>
   
 </a></div>
     
@@ -147,42 +153,17 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><div class="navbar-item">
-  <a
-    class="nav-link"
-    href="https://learn.uark.edu/ultra/courses/_529368_1/outline/"
-    title="Open this course in Blackboard"
-  >
-    Blackboard
-  </a>
-</div></div>
-      
         <div class="navbar-item">
 <nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="../syllabus.html">Syllabus</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="../calendar.html">Calendar</a>
-    </li>
-    
-    <li class="nav-item current active">
-      <a class="nav-link nav-internal" href="#">Assignments</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="../resources.html">Resources</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="../lecture-notes/index.html">Lecture notes</a>
-    </li>
-    
-  </ul>
+  <ul class="bd-navbar-elements navbar-nav current">
+<li class="nav-item"><a class="nav-link nav-external" href="https://learn.uark.edu/ultra/courses/_529398_1/outline/">Blackboard</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../syllabus.html">Syllabus</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../calendar.html">Calendar</a></li>
+<li class="nav-item current"><a class="current nav-link nav-internal" href="#">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
 </nav></div>
       
     </div>
@@ -245,6 +226,8 @@
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
+      
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -257,45 +240,17 @@
         
           
           
-            <div class="navbar-item"><div class="navbar-item">
-  <a
-    class="nav-link"
-    href="https://learn.uark.edu/ultra/courses/_529368_1/outline/"
-    title="Open this course in Blackboard"
-  >
-    Blackboard
-  </a>
-</div></div>
-          
-        
-          
-          
             <div class="navbar-item">
 <nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="../syllabus.html">Syllabus</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="../calendar.html">Calendar</a>
-    </li>
-    
-    <li class="nav-item current active">
-      <a class="nav-link nav-internal" href="#">Assignments</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="../resources.html">Resources</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="../lecture-notes/index.html">Lecture notes</a>
-    </li>
-    
-  </ul>
+  <ul class="bd-navbar-elements navbar-nav current">
+<li class="nav-item"><a class="nav-link nav-external" href="https://learn.uark.edu/ultra/courses/_529398_1/outline/">Blackboard</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../syllabus.html">Syllabus</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../calendar.html">Calendar</a></li>
+<li class="nav-item current"><a class="current nav-link nav-internal" href="#">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
 </nav></div>
           
         
@@ -325,38 +280,25 @@
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item pst-sidebar-collapse">
-<button id="pst-collapse-sidebar-button" class="course-sidebar-toggle"
-        aria-expanded="true" aria-controls="pst-primary-sidebar"
-        aria-label="Collapse section sidebar">
-  <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16">
-    <path d="M10.5 3.5 6 8l4.5 4.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-  </svg>
-  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
-  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
-</button></div>
         <div class="sidebar-primary-item">
 
-<nav class="bd-docs-nav bd-links"
-     aria-label="Assignments">
+<nav class="bd-docs-nav bd-links" aria-label="Assignments">
   <p class="bd-links__title" role="heading" aria-level="1">
     <a class="reference internal" href="#">Assignments</a>
+    
+      <button type="button" class="course-focus-button" data-course-focus-toggle="" aria-label="Focus this section" data-bs-original-title="Focus this section" data-bs-toggle="tooltip" data-bs-placement="bottom">
+        <span class="course-focus-icon" aria-hidden="true"></span>
+      </button>
+    
   </p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="hw01.html">Homework 1</a></li>
-</ul>
-</div>
+  <div class="bd-toc-item navbar-nav"></div>
 </nav></div>
     </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
+<div id="ethical-ad-placement" class="flat" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" data-ea-manual="true">
 </div></div>
   </div>
 
@@ -368,6 +310,8 @@
           <div class="bd-content">
             <div class="bd-article-container">
               <div class="bd-header-article d-print-none">
+                
+                
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -391,50 +335,41 @@
   
   
 </div>
-</div>
+
+              </div>
               
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="assignments">
+  <section id="assignments">
 <h1>Assignments<a class="headerlink" href="#assignments" title="Link to this heading">#</a></h1>
-<!-- AUTO-GENERATED FILE -- DO NOT EDIT. -->
-<!-- Sources: published content/assignments/hwNN.md files -->
-<section id="published-homework">
-<h2>Published homework<a class="headerlink" href="#published-homework" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="hw01.html"><span class="doc">Homework 1</span></a> — <strong>Due:</strong> Thursday, August 27, 2026 <a class="reference download internal" download="" href="../_downloads/6655ed7d04950be82c08bdef1e902fef/hw01.pdf"><code class="xref download docutils literal notranslate"><span class="pre">PDF</span></code></a></p></li>
-</ul>
-</section>
 <section id="weekly-written-homework">
 <h2>Weekly written homework<a class="headerlink" href="#weekly-written-homework" title="Link to this heading">#</a></h2>
-<p>I will post weekly written homework here; you should submit your work through Gradescope. Submission links will be available in <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/outline/">Blackboard &gt; Assignments &gt; Homework</a></p>
-<p>Weekly homework gives you a chance to work through more involved problems using the techniques we have learned. A complete solution includes both a clear explanation and correct computations.</p>
-<p>Every exercise on a homework assignment is required. Point values indicate how much each exercise contributes to the assignment grade.</p>
+<p>I will post written homework here approximately weekly. Submit through Gradescope using the links in <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529398_1/outline/">Blackboard &gt; Assignments &gt; Homework</a>.</p>
+<p>You are encouraged to work in groups of up to three. Make one submission per group and list every group member clearly.</p>
 <ul class="simple">
-<li><p>Please write your homework by hand.</p></li>
-<li><p>For each exercise, start a new page.</p></li>
-<li><p>Scan your homework to PDF for submissing</p></li>
-<li><p>Submit it on Gradescope and clearly mark the pages associated with every exercise.</p></li>
+<li><p>Start each exercise on a new page.</p></li>
+<li><p>Scan or export the complete assignment as a legible PDF.</p></li>
+<li><p>In Gradescope, match every exercise to the pages containing its solution.</p></li>
+<li><p>Write in complete sentences, state the results you use, and make the logical structure of each proof clear.</p></li>
 </ul>
-<p>I will post solutions here within 1 week of the submission deadline</p>
-<p>The deadlines will be appear in your <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/calendar/">Blackboard Calendar</a></p>
+<p>I will normally post solutions within one week of the submission deadline.</p>
+<p>Deadlines will appear in your <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529398_1/calendar/">Blackboard Calendar</a>.</p>
 </section>
 <section id="online-questions">
 <h2>Online questions<a class="headerlink" href="#online-questions" title="Link to this heading">#</a></h2>
 <p>Online questions usually follow each lecture and are due at the start of our next class meeting.
-They can be accessed through <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/outline/">Blackboard &gt; Assignments &gt; Online Questions</a> and the deadlines will appear in your <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/calendar/">Blackboard Calendar</a>.</p>
+They can be accessed through <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529398_1/outline/">Blackboard &gt; Assignments &gt; Online Questions</a> and the deadlines will appear in your <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529398_1/calendar/">Blackboard Calendar</a>.</p>
 <p>Online questions give you a quick chance to practice vocabulary and core skills before we build on the material. Most questions allow multiple attempts.</p>
 </section>
 <section id="academic-integrity-collaboration-and-artificial-intelligence">
 <h2>Academic integrity, collaboration, and artificial intelligence<a class="headerlink" href="#academic-integrity-collaboration-and-artificial-intelligence" title="Link to this heading">#</a></h2>
 <p>You are encouraged to work with classmates, tutors, and me: talking through ideas, definitions, and problem-solving strategies is a valuable part of learning. You must understand every solution you submit and write it based on your own understanding. Please do not copy another person’s solution or write-up.</p>
-<p>You may use generative artificial intelligence as a study aid, but not to produce any work that you submit for credit. For example, it is fine to ask a study question such as, “I do not understand when to use generating functions to count combinations with restrictions.” It is not acceptable to ask an AI system how to solve a specific assigned problem. <strong>Rephrasing a generated solution using your own words is NOT ACCEPTABLE</strong>. If you are unsure whether a particular use is allowed, ask me before you submit your work.</p>
-<p><strong>When you submit an assignment, please disclose any collaboration or use of external tools, even when it is permitted.</strong></p>
+<p>You may use generative artificial intelligence as a study aid, but not to produce work that you submit for credit. For example, it is fine to ask for another explanation of the difference between pointwise and <span class="math notranslate nohighlight math-fallback math-custom-preamble" data-math-prerendered="" data-tex="L^p" data-math-display="inline" data-math-speech="L to the p-th power" role="math" aria-label="Math: L to the p-th power. Original TeX: L^p"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.533ex" height="1.548ex" role="img" focusable="false" viewBox="0 -684 1119.7 684" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-NCM-I-1D43F" d="M520 667C520 678 513 683 500 683L354 680L223 683C208 684 200 676 200 659C200 652 203 647 209 646C218 645 226 644 231 644C262 643 279 641 284 640C289 639 292 636 292 631C292 629 291 623 288 613L156 82C150 60 140 47 125 42C119 40 101 39 70 39C49 39 39 31 39 15C39 5 49 0 70 0L527 0C552 0 554 0 561 19L639 233C642 240 643 245 643 248C643 258 638 263 627 263C617 263 612 254 607 240C588 191 570 154 555 131C518 75 455 39 363 39L270 39C259 39 252 39 249 40C242 40 239 42 239 45C239 47 241 54 244 67L377 601C383 624 396 637 415 642C421 643 442 644 478 644C506 644 520 644 520 667Z"></path><path id="MJX-2-NCM-I-1D45D" d="M355 442C311 442 269 419 228 373C217 419 186 442 137 442C96 442 66 409 45 344C35 311 30 292 30 286C30 277 35 272 46 272C51 272 54 273 57 275C62 284 65 291 66 298C84 374 107 412 134 412C152 412 161 398 161 371C161 356 159 339 154 321L44-118C35-151 34-155-5-155C-23-155-32-163-32-178C-32-189-26-194-15-194C0-194 52-191 67-191C86-191 146-194 165-194C180-194 187-186 187-170C187-160 178-155 159-155C141-155 114-156 114-144C114-131 155 26 159 43C179 6 209-13 249-13C314-13 371 20 421 87C467 148 490 213 490 280C490 367 438 442 355 442M352 412C391 412 411 382 411 323C411 296 405 260 394 215C371 128 342 71 307 42C286 25 267 16 248 16C219 16 199 29 188 56C179 77 174 92 174 100L225 309C230 331 248 354 276 377C304 400 329 412 352 412Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><use data-c="1D43F" xlink:href="#MJX-2-NCM-I-1D43F"></use></g><g data-mml-node="mi" transform="translate(714,363) scale(0.707)"><use data-c="1D45D" xlink:href="#MJX-2-NCM-I-1D45D"></use></g></g></g></g></svg></mjx-container></span> convergence. It is not acceptable to ask an AI system to solve, outline, or check a specific assigned problem. <strong>Rephrasing a generated solution in your own words is not acceptable.</strong> If you are unsure whether a particular use is allowed, ask me before submitting.</p>
+<p><strong>When you submit an assignment, please disclose any collaboration or use of external tools, even when it is permitted.</strong>
+</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
 
@@ -444,21 +379,17 @@ They can be accessed through <a class="reference external" href="https://learn.u
               
                 <footer class="prev-next-footer d-print-none">
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../calendar.html"
-       title="previous page">
+    <a class="left-prev" href="../calendar.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Calendar</p>
       </div>
     </a>
-    <a class="right-next"
-       href="hw01.html"
-       title="next page">
+    <a class="right-next" href="../resources.html" title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Homework 1</p>
+        <p class="prev-next-title">Resources</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -470,37 +401,51 @@ They can be accessed through <a class="reference external" href="https://learn.u
         
       </main>
 
-      <button id="course-primary-sidebar-toggle" class="course-edge-sidebar-toggle"
-              data-course-sidebar-toggle="primary" type="button"
-              aria-controls="pst-primary-sidebar" aria-expanded="true"
-              aria-label="Collapse section navigation" title="Collapse section navigation">&lsaquo;</button>
+      <button id="course-primary-sidebar-toggle" class="course-edge-sidebar-toggle" data-course-sidebar-toggle="primary" type="button" aria-controls="pst-primary-sidebar" aria-expanded="true" aria-label="Collapse section navigation" title="Collapse section navigation">‹</button>
 
       
         
           <dialog id="pst-secondary-sidebar-modal"></dialog>
-          <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+          <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+            <div class="course-focused-section-utilities" data-course-focused-utilities="">
+  
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+  
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
+</div>
+            <div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
+<div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#published-homework">Published homework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weekly-written-homework">Weekly written homework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#online-questions">Online questions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#academic-integrity-collaboration-and-artificial-intelligence">Academic integrity, collaboration, and artificial intelligence</a></li>
 </ul>
   </nav></div>
 
-</div></div>
-          <button id="course-secondary-sidebar-toggle" class="course-edge-sidebar-toggle"
-                  data-course-sidebar-toggle="secondary" type="button"
-                  aria-controls="pst-secondary-sidebar" aria-expanded="true"
-                  aria-label="Collapse on-this-page navigation" title="Collapse on-this-page navigation">&rsaquo;</button>
+</div>
+          </div>
+          <button id="course-secondary-sidebar-toggle" class="course-edge-sidebar-toggle" data-course-sidebar-toggle="secondary" type="button" aria-controls="pst-secondary-sidebar" aria-expanded="true" aria-label="Collapse on-this-page navigation" title="Collapse on-this-page navigation">›</button>
         
       
 
@@ -514,7 +459,7 @@ They can be accessed through <a class="reference external" href="https://learn.u
   <p class="copyright">
     
       © Copyright 2026, Gennady Uraltsev.
-      <br/>
+      <br>
     
   </p>
 </div>
@@ -537,9 +482,10 @@ They can be accessed through <a class="reference external" href="https://learn.u
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer="" src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer="" src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
+  
 
-  </body>
-</html>
+  
+</body></html>
