@@ -356,15 +356,25 @@ body.layout-notes .bd-article-container {
   visibility: visible;
 }
 
-/* Display math can interrupt prose without introducing a new paragraph. */
-.math.display-math-interrupt {
+/* Display math can interrupt prose without introducing a new paragraph.
+   MyST can also put an otherwise standalone display in a paragraph when it
+   lacks blank source lines.  Keep the display box itself marginless in every
+   rendering stage; paragraph/block layout owns any intended separation. */
+.math.display-math-interrupt,
+.math-fallback[data-math-display="block"],
+.math-enhanced[data-math-display="block"] {
   display: block;
   margin: 0;
+  padding: 0;
 }
 
-/* MathJax otherwise supplies a 1em display margin of its own. */
-.math.display-math-interrupt > mjx-container[display="true"] {
-  margin: 0.35rem 0;
+/* MathJax 4 injects a .7em vertical display margin after this stylesheet has
+   loaded.  Override it at the actual output node, rather than compensating
+   with a second host margin, so prerendered SVG and browser MathJax agree. */
+.math[data-math-display="block"] > mjx-container[display],
+.math.display-math-interrupt > mjx-container[display] {
+  display: block;
+  margin: 0 !important;
   padding: 0;
 }
 
