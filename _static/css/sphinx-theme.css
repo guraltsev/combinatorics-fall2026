@@ -491,6 +491,7 @@ body.layout-notes .bd-article-container {
 .semantic-underline { text-decoration: underline; }
 .semantic-strikethrough { text-decoration: line-through; }
 .semantic-boxed { border: 1px solid currentColor; border-radius: 0.15rem; padding: 0 0.2em; }
+.semantic-center { text-align: center; }
 .semantic-colored.semantic-color-black { color: black; }
 .semantic-colored.semantic-color-blue { color: blue; }
 .semantic-colored.semantic-color-brown { color: brown; }

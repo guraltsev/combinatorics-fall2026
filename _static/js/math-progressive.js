@@ -6,6 +6,8 @@
   if (!fallbackMath.length) return;
 
   window.MathJax = {
+    loader: {load: ['[tex]/cancel']},
+    tex: {packages: {'[+]': ['cancel']}},
     options: {
       menuOptions: {
         settings: {
