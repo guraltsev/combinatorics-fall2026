@@ -30,55 +30,65 @@
       await window.MathJax.startup.promise;
       async function enhanceAll(candidates) {
         var fallbacks = candidates.filter(function (fallback) {
+          if (fallback.classList.contains('math-custom-preamble')) {
+            delete fallback.dataset.mathEnhancing;
+            return false;
+          }
           return fallback.classList.contains('math-fallback') && !fallback.dataset.mathEnhancing;
         });
         if (!fallbacks.length) return;
 
-        var staging = document.createElement('div');
-        staging.className = 'math-enhancement-staging mathjax_process';
-        var article = document.querySelector('.bd-article');
-        if (article) staging.style.width = article.getBoundingClientRect().width + 'px';
-
-        var placeholders = fallbacks.map(function (fallback) {
+        var originals = fallbacks.map(function (fallback) {
           fallback.dataset.mathEnhancing = 'true';
-          var placeholder = document.createElement('span');
           var display = fallback.dataset.mathDisplay === 'block';
-          placeholder.textContent = display
+          var svg = fallback.querySelector(':scope > .math-svg');
+          if (!svg) throw new Error('Prerendered math has no SVG fallback');
+          var source = document.createTextNode(display
             ? '\\[' + fallback.dataset.tex + '\\]'
-            : '\\(' + fallback.dataset.tex + '\\)';
-          staging.appendChild(placeholder);
-          return placeholder;
+            : '\\(' + fallback.dataset.tex + '\\)');
+          var children = Array.from(fallback.childNodes);
+          var fontSize = getComputedStyle(svg).fontSize;
+          fallback.style.visibility = 'hidden';
+          svg.replaceWith(source);
+          return {children: children, fontSize: fontSize};
         });
 
-        document.body.appendChild(staging);
         try {
-          // Normal page typesetting installs MathJax's SVG styles and applies
-          // the complete accessibility render actions.  Staging all
-          // expressions also keeps the visible SVGs stable until one swap.
-          await window.MathJax.typesetPromise([staging]);
-          var enhanced = placeholders.map(function (placeholder) {
-            return placeholder.querySelector(':scope > mjx-container');
+          // Typeset in each formula's final DOM location.  Moving a finished
+          // MathJax container out of an off-screen staging tree leaves its
+          // context-menu bookkeeping tied to detached nodes in some MathJax
+          // versions.  In-place typesetting keeps its click, keyboard, and
+          // right-click handlers attached to the visible container.
+          await window.MathJax.typesetPromise(fallbacks);
+          var enhanced = fallbacks.map(function (fallback) {
+            return fallback.querySelector(':scope > mjx-container');
           });
           if (enhanced.some(function (node) { return !node; })) {
             throw new Error('MathJax did not produce output for every expression');
           }
 
           fallbacks.forEach(function (fallback, index) {
-            var svg = fallback.querySelector(':scope > .math-svg');
-            if (!svg) return;
             // Browser MathJax applies an ex-height font-size correction to its
             // container.  The build-time SVG inherits the surrounding size,
             // so retain that measured size to keep identical SVG geometry.
-            enhanced[index].style.fontSize = getComputedStyle(svg).fontSize;
-            svg.replaceWith(enhanced[index]);
+            enhanced[index].style.fontSize = originals[index].fontSize;
             fallback.classList.remove('math-fallback');
             fallback.classList.add('math-enhanced');
             fallback.removeAttribute('role');
             fallback.removeAttribute('aria-label');
             fallback.removeAttribute('tabindex');
+            fallback.style.removeProperty('visibility');
           });
+        } catch (error) {
+          // Keep the no-JavaScript SVG baseline intact if enhancement fails
+          // part way through a batch.
+          if (window.MathJax.typesetClear) window.MathJax.typesetClear(fallbacks);
+          fallbacks.forEach(function (fallback, index) {
+            fallback.replaceChildren.apply(fallback, originals[index].children);
+            fallback.style.removeProperty('visibility');
+          });
+          throw error;
         } finally {
-          staging.remove();
           fallbacks.forEach(function (fallback) {
             delete fallback.dataset.mathEnhancing;
           });

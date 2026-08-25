@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Calendar — Combinatorics - Fall 2026</title>
+    <title>Calendar — Combinatorics — MATH 31003-01 - Fall 2026</title>
   
   
   
@@ -22,18 +22,16 @@
   
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
+  <link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02">
     <link rel="stylesheet" type="text/css" href="_static/tippy.js/tippy.css?v=865cd1a4">
-    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-theme.css?v=b41ec8da">
-    <link rel="stylesheet" type="text/css" href="_static/css/tippy.css?v=11e8c0fa">
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-theme.css?v=c0dbdcfd">
+    <link rel="stylesheet" type="text/css" href="_static/css/tippy.css?v=e6a1d6f7">
   
-  <!-- So that users can add custom icons -->
-  <script defer="" src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9">
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9">
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9">
 
   
     <script src="_static/documentation_options.js?v=7f41d439"></script>
@@ -41,14 +39,17 @@
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script defer="defer" src="_static/@popperjs/core/popper.min.js?v=a8c9358f"></script>
     <script defer="defer" src="_static/tippy.js/tippy.umd.min.js?v=4126cd26"></script>
-    <script defer="defer" src="_static/tippy\calendar.ead9a471-13f1-4b31-8542-43fad010ded4.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="_static/js/math-progressive.js?v=148949cf"></script>
+    <script defer="defer" src="_static/tippy\calendar.9fc33deb-5b13-4768-8ccf-c9613fd20cb2.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'calendar';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="_static/js/course-focused-mode.js?v=0be05eaa"></script>
     <script src="_static/js/course-sidebar-toggle.js?v=57cfeca2"></script>
+    <script src="_static/js/course-page-toc.js?v=cb59aa39"></script>
+    <script src="_static/js/course-navbar-overflow.js?v=3a1ef034"></script>
     <script src="_static/js/course-search.js?v=724d2f2a"></script>
+    <script src="_static/js/my-open-math.js?v=9dae2e6b"></script>
   <script src="course-search-index.js"></script>
+  
   
 
     <link rel="icon" href="_static/uark-favicon.png">
@@ -56,18 +57,37 @@
     <link rel="search" title="Search" href="search.html">
     <link rel="next" title="Assignments" href="assignments/index.html">
     <link rel="prev" title="Syllabus" href="syllabus.html">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
   <meta name="docsearch:version" content="">
-    <meta name="docbuild:last-update" content="August 22, 2026">
+    <meta name="docbuild:last-update" content="August 24, 2026">
   
     
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="searchindex.js"></script>
   
+  
+  <script>
+    // Prevent a focused cold load from briefly displaying the full shell.
+    try { if (new URLSearchParams(location.search).has("focus")) document.documentElement.classList.add("course-focus-requested"); } catch (_) {}
+  </script>
+  <script>
+    // JupyterLite registers a service worker at the origin root. If it was
+    // previously run on the usual local preview port, that worker can control
+    // this unrelated Sphinx site and reject page requests after a rebuild.
+    // Published course sites are unaffected; only loopback previews clear
+    // service-worker registrations.
+    if (location.hostname === "127.0.0.1" || location.hostname === "localhost") {
+      navigator.serviceWorker?.getRegistrations()
+        .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
+        .catch(() => {});
+    }
+  </script>
+
   </head>
-  <body data-default-mode="" class="layout-info">
+  <body data-default-mode="" data-course-docname="calendar" data-focus-section-root="calendar" data-focus-section-title="Calendar" data-focus-section-documents="calendar" data-focus-section-targets="{&quot;calendar&quot;:&quot;#&quot;}" class="layout-info">
 
   
   
@@ -123,7 +143,7 @@
   
   
   
-    <p class="title logo__title">Combinatorics - Fall 2026</p>
+    <p class="title logo__title">Combinatorics — MATH 31003-01 - Fall 2026</p>
   
 </a></div>
     
@@ -133,38 +153,24 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><div class="navbar-item">
-  <a class="nav-link" href="https://learn.uark.edu/ultra/courses/_529368_1/outline/" title="Open this course in Blackboard">
-    Blackboard
-  </a>
-</div></div>
-      
         <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="syllabus.html">Syllabus</a>
-    </li>
-    
-    <li class="nav-item current active">
-      <a class="nav-link nav-internal" href="#">Calendar</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="assignments/index.html">Assignments</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="resources.html">Resources</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture notes</a>
-    </li>
-    
-  </ul>
+<nav class="course-navbar-nav" aria-label="Primary navigation">
+  
+  
+  <ul class="bd-navbar-elements navbar-nav current" data-course-navbar-items="">
+<li class="nav-item"><a class="nav-link nav-internal" href="syllabus.html">Syllabus</a></li>
+<li class="nav-item current"><a class="current nav-link nav-internal" href="#">Calendar</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="assignments/index.html">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
+  <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
+    <button class="course-navbar-overflow__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Show more navigation items" data-course-navbar-overflow-toggle="">
+      <span aria-hidden="true">▾</span>
+    </button>
+    <ul class="course-navbar-overflow__menu" data-course-navbar-overflow-menu="" hidden=""></ul>
+  </div>
 </nav></div>
       
     </div>
@@ -227,6 +233,8 @@
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
+      
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -239,41 +247,24 @@
         
           
           
-            <div class="navbar-item"><div class="navbar-item">
-  <a class="nav-link" href="https://learn.uark.edu/ultra/courses/_529368_1/outline/" title="Open this course in Blackboard">
-    Blackboard
-  </a>
-</div></div>
-          
-        
-          
-          
             <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="syllabus.html">Syllabus</a>
-    </li>
-    
-    <li class="nav-item current active">
-      <a class="nav-link nav-internal" href="#">Calendar</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="assignments/index.html">Assignments</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="resources.html">Resources</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture notes</a>
-    </li>
-    
-  </ul>
+<nav class="course-navbar-nav" aria-label="Primary navigation">
+  
+  
+  <ul class="bd-navbar-elements navbar-nav current" data-course-navbar-items="">
+<li class="nav-item"><a class="nav-link nav-internal" href="syllabus.html">Syllabus</a></li>
+<li class="nav-item current"><a class="current nav-link nav-internal" href="#">Calendar</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="assignments/index.html">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
+  <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
+    <button class="course-navbar-overflow__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Show more navigation items" data-course-navbar-overflow-toggle="">
+      <span aria-hidden="true">▾</span>
+    </button>
+    <ul class="course-navbar-overflow__menu" data-course-navbar-overflow-menu="" hidden=""></ul>
+  </div>
 </nav></div>
           
         
@@ -303,19 +294,16 @@
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item pst-sidebar-collapse">
-<button id="pst-collapse-sidebar-button" class="course-sidebar-toggle" aria-expanded="true" aria-controls="pst-primary-sidebar" aria-label="Collapse section sidebar">
-  <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16">
-    <path d="M10.5 3.5 6 8l4.5 4.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-  </svg>
-  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
-  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
-</button></div>
         <div class="sidebar-primary-item">
 
 <nav class="bd-docs-nav bd-links" aria-label="Calendar">
   <p class="bd-links__title" role="heading" aria-level="1">
     <a class="reference internal" href="#">Calendar</a>
+    
+      <button type="button" class="course-focus-button" data-course-focus-toggle="" aria-label="Focus this section" data-bs-original-title="Focus this section" data-bs-toggle="tooltip" data-bs-placement="bottom">
+        <span class="course-focus-icon" aria-hidden="true"></span>
+      </button>
+    
   </p>
   <div class="bd-toc-item navbar-nav"></div>
 </nav></div>
@@ -336,177 +324,167 @@
           <div class="bd-content">
             <div class="bd-article-container">
               <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
+                
+                
+                <div class="header-article-items header-article__inner">
+                  
+                    <div class="header-article-items__start">
+                      
+                        <div class="header-article-item">
+                          
+                            
 
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
-    
     <li class="breadcrumb-item breadcrumb-home">
       <a href="index.html" class="nav-link" aria-label="Home">
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Calendar</span></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">
+      <span class="ellipsis">Calendar</span>
+      
+      <a class="course-breadcrumb-pdf-link" href="_static/pdfs/calendar.pdf" aria-label="Download PDF version of this page">
+        <img class="course-breadcrumb-pdf-icon" src="_static/assets/pdf-icon.svg" alt="">
+      </a>
+      
+    </li>
   </ul>
 </nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
+
+                          
+                        </div>
+                      
+                    </div>
+                  
+                  
+                </div>
+                
+              </div>
               
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="calendar">
+  <section id="calendar">
 <h1>Calendar<a class="headerlink" href="#calendar" title="Link to this heading">#</a></h1>
-<p>I will put all deadlines on your <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/calendar/">Blackboard Calendar</a>. Please check it regularly!</p>
+<p>I will put all deadlines on the <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/calendar/">Blackboard
+Calendar</a>. Please check it regularly.</p>
 <section id="key-university-dates">
 <h2>Key university dates<a class="headerlink" href="#key-university-dates" title="Link to this heading">#</a></h2>
-<p>For official University dates, see the <a class="reference external" href="https://registrar.uark.edu/academic-dates/academic-semester-calendar/">Fall 2026 academic calendar</a> and the <a class="reference external" href="https://registrar.uark.edu/registration/final-exam-schedule/fall-2026-final-exam-schedule.php">Registrar’s final-exam schedule</a>.</p>
+<p>For official University dates, see the
+<a class="reference external" href="https://registrar.uark.edu/academic-dates/academic-semester-calendar/">Fall
+2026 academic calendar</a> and the <a class="reference external" href="https://registrar.uark.edu/registration/final-exam-schedule/fall-2026-final-exam-schedule.php">Registrar’s final-exam schedule</a>.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Date</p></th>
-<th class="head text-left"><p>Event</p></th>
+<tr class="row-odd"><th class="head"><p>Date</p></th>
+<th class="head"><p>Event</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>Monday, August 17</p></td>
-<td class="text-left"><p>First day of classes</p></td>
+<tr class="row-even"><td><p>Monday, August 17</p></td>
+<td><p>Classes begin</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Friday, August 21</p></td>
-<td class="text-left"><p>Last day to add this course through the standard add period</p></td>
+<tr class="row-odd"><td><p>Monday, September 7</p></td>
+<td><p>Labor Day holiday</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Friday, August 28</p></td>
-<td class="text-left"><p>Last day to drop without a W</p></td>
+<tr class="row-even"><td><p>Tuesday, November 24–Friday, November 27</p></td>
+<td><p>Thanksgiving holiday</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Thursday, December 3</p></td>
-<td class="text-left"><p>Last day of classes and last day to withdraw from all classes</p></td>
+<tr class="row-odd"><td><p>Wednesday, December 9</p></td>
+<td><p>Final exam: 8:00-10:00 a.m., Wednesday, December 9, 2026</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<!-- 
-| Wednesday, December 2            | Last meeting for this M/W/F section                                      |
-| Friday, December 4               | Reading Day                                                              |
-| Monday, September 7              | Labor Day; no class                                                      |
-| Monday-Tuesday, October 19-20    | Fall Break; no Monday class                                              |
--->
 </section>
 <section id="exams">
 <h2>Exams<a class="headerlink" href="#exams" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Date</p></th>
-<th class="head text-left"><p>Event</p></th>
+<tr class="row-odd"><th class="head"><p>Date</p></th>
+<th class="head"><p>Assessment</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>Friday, September 18 <span class="lecture-log-tentative">Tentative</span></p></td>
-<td class="text-left"><p>Midterm 1</p></td>
+<tr class="row-even"><td><p>Friday, September 18 <span class="lecture-log-tentative">Tentative</span></p></td>
+<td><p>Midterm 1</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Friday, October 16  <span class="lecture-log-tentative">Tentative</span></p></td>
-<td class="text-left"><p>Midterm 2</p></td>
+<tr class="row-odd"><td><p>Friday, October 16 <span class="lecture-log-tentative">Tentative</span></p></td>
+<td><p>Midterm 2</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Friday, November 13 <span class="lecture-log-tentative">Tentative</span></p></td>
-<td class="text-left"><p>Midterm 3</p></td>
+<tr class="row-even"><td><p>Friday, November 13 <span class="lecture-log-tentative">Tentative</span></p></td>
+<td><p>Midterm 3</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>8:00 - 10:00 – Wednesday, December 9, 2026</p></td>
-<td class="text-left"><p>Final-exam period</p></td>
+<tr class="row-odd"><td><p>8:00-10:00 a.m., Wednesday, December 9, 2026</p></td>
+<td><p>Exam 4 and mastery reassessment</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Our midterms are in Weeks 5, 9, and 13. The fourth unit exam takes place during the first part of the final-exam period.</p>
-<!--
-| 8-11  | Unit 4: Generating functions              | OGF recurrence solving, rational OGFs, restricted selections, constrained strings, and introductory EGFs |
-
-| 11-13 | ???| Group actions, fixed points, Burnside's lemma, and elementary cycle structure                            |
-| 14-16 | ??? | Congruences, CRT, repeated squaring, RSA, and elementary cost analysis                                   |
--->
 </section>
-<section id="daily-lecture-log">
-<h2>Daily lecture log<a class="headerlink" href="#daily-lecture-log" title="Link to this heading">#</a></h2>
-<!-- See [Lecture Log](../../lecture-log.md)-->
-<!-- AUTO-GENERATED FILE -- DO NOT EDIT. -->
-<!-- Source: lecture-log.md -->
-<div class="pst-scrollable-table-container"><table class="lecture-log-table table">
-<colgroup>
-<col style="width: 6.0%">
-<col style="width: 6.0%">
-<col style="width: 14.0%">
-<col style="width: 44.0%">
-<col style="width: 30.0%">
-</colgroup>
+<section id="calendar:daily-log">
+<h2>Daily lecture log<a class="headerlink" href="#calendar:daily-log" title="Link to this heading">#</a></h2>
+<p>The public daily log below contains the lectures currently released. Later
+planning entries remain in the instructor’s private lecture log and do not
+appear in this navigation.</p>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Week</p></th>
-<th class="head"><p>Lec.</p></th>
-<th class="head"><p>Date</p></th>
+<tr class="row-odd"><th class="head"><p>Wk</p></th>
+<th class="head"><p>Lec</p></th>
 <th class="head"><p>Topics</p></th>
-<th class="head"><p>Read</p></th>
+<th class="head"><p>Ref</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>Mon., Aug. 17</p></td>
-<td><p>Sets, cardinality, and Cartesian products; defining the objects being counted; the sum rule; importance of checking disjointness.</p></td>
-<td><p><a class="reference internal" href="lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting.html"><span class="std std-doc">LN: Set notation and basic counting</span></a>: from start to section <a class="reference internal" href="lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting.html#the-sum-rule"><span class="std std-ref">The sum rule</span></a>.</p></td>
+<tr class="row-even"><td rowspan="3"><p>1</p></td>
+<td><p><strong>L1: Set notation and basic counting</strong><span class="semantic-line-break"></span> 2026-08-17</p></td>
+<td><p>Sets, cardinality, Cartesian products, and the sum rule.</p></td>
+<td><p><a class="reference internal" href="lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting.html"><span class="doc">Set notation and basic counting</span></a>.</p></td>
 </tr>
-<tr class="row-odd"><td></td>
-<td><p>2</p></td>
-<td><p>Wed., Aug. 19</p></td>
-<td><p>Product rule; strings as central counting problems; strings with and without repetition Counting by complement - the subtraction rule; uniform overcounting - the division rule; factorials and permutations;</p></td>
-<td><p><a class="reference internal" href="lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting.html"><span class="std std-doc">LN: Set notation and basic counting</span></a>: from section <a class="reference internal" href="lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting.html#the-product-rule"><span class="std std-ref">The product rule</span></a> to the end.
-<br>
-<a class="reference internal" href="lecture-notes/unit-1-enumeration/02-more%20counting%20techniques.html"><span class="std std-doc">LN: More counting techniques</span></a>: from the start through the factorial and <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="k" data-math-display="inline" data-math-speech="k" role="math" aria-label="Math: k. Original TeX: k"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.179ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 521 705" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-12-NCM-I-1D458" d="M409 353C409 327 423 314 450 314C485 314 508 345 508 379C508 418 476 445 437 445C392 445 344 415 291 356C250 311 217 282 190 269L291 679C289 688 287 694 274 694C242 694 166 685 154 684C139 682 132 675 132 660C132 650 141 645 159 645C178 645 204 646 204 632L59 43C56 32 55 25 55 21C55 0 66-11 87-11C104-11 117-3 124 12C129 21 147 92 179 226C231 221 286 196 286 146C286 131 279 101 279 91C279 34 316-11 373-11C431-11 470 41 490 145C490 154 485 159 475 159C466 159 460 152 457 138C435 59 408 19 375 19C357 19 348 33 348 61C348 77 360 131 360 147C360 204 314 239 221 253C244 269 270 292 298 322C326 352 346 371 359 382C386 404 412 415 435 415C445 415 453 413 459 409C432 404 409 379 409 353Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math" data-latex="k"><g data-mml-node="mi" data-latex="k"><use data-c="1D458" xlink:href="#MJX-12-NCM-I-1D458"></use></g></g></g></svg></mjx-container></span>-permutation formula in <a class="reference internal" href="lecture-notes/unit-1-enumeration/02-more%20counting%20techniques.html#unordered-selections-combinations-without-repetition"><span class="std std-ref">Unordered selections: combinations without repetition</span></a>.</p></td>
+<tr class="row-odd"><td><p><strong>L2: Product rule and strings</strong><span class="semantic-line-break"></span> 2026-08-19</p></td>
+<td><p>Product rule; strings with and without repetition.</p></td>
+<td><p><a class="reference internal" href="lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting.html"><span class="doc">Set notation and basic counting</span></a>.</p></td>
 </tr>
-<tr class="row-even"><td></td>
-<td><p>3</p></td>
-<td><p>Fri., Aug. 21</p></td>
-<td><p>Example of incorrect use of the subtraction principle: number of pins with at least one even number and no repeated digits.  Review: permutation. Alternative interpretation: <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="P(n,k)=P(n,n)/P(n-k,n-k)" data-math-display="inline" data-math-speech="P of open paren n comma k close paren equals P of open paren n comma n close paren divided by P of open paren n minus k comma n minus k close paren" role="math" aria-label="Math: P of open paren n comma k close paren equals P of open paren n comma n close paren divided by P of open paren n minus k comma n minus k close paren. Original TeX: P(n,k)=P(n,n)/P(n-k,n-k)"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="7.008ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3097.7 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math" data-latex="P(n,k)=P(n,n)/P(n-k,n-k)"><g data-mml-node="mi" data-latex="P"><use data-c="1D443" xlink:href="#MJX-13-NCM-I-1D443"></use></g><g data-mml-node="mo" data-latex="(" transform="translate(754,0)"><use data-c="28" xlink:href="#MJX-13-NCM-N-28"></use></g><g data-mml-node="mi" data-latex="n" transform="translate(1143,0)"><use data-c="1D45B" xlink:href="#MJX-13-NCM-I-1D45B"></use></g><g data-mml-node="mo" data-latex="," transform="translate(1743,0)"><use data-c="2C" xlink:href="#MJX-13-NCM-N-2C"></use></g><g data-mml-node="mi" data-latex="k" transform="translate(2187.7,0)"><use data-c="1D458" xlink:href="#MJX-13-NCM-I-1D458"></use></g><g data-mml-node="mo" data-latex=")" transform="translate(2708.7,0)"><use data-c="29" xlink:href="#MJX-13-NCM-N-29"></use></g></g></g><defs><path id="MJX-13-NCM-I-1D443" d="M555 683L235 683C212 683 201 682 201 660C201 649 212 644 234 644C254 644 294 647 294 631C294 629 293 623 290 613L158 82C152 60 142 47 128 42C121 40 103 39 72 39C50 39 40 37 40 16C40 5 46 0 59 0L184 3L248 2C259 2 299 0 312 0C328 0 336 8 336 24C336 34 325 39 304 39C264 39 244 43 244 52C244 52 245 55 247 68L307 312L472 312C537 312 599 332 657 371C722 414 754 467 754 530C754 629 660 683 555 683M524 644C611 644 654 614 654 554C654 498 626 423 597 397C559 363 509 346 447 346L313 346L379 610C387 644 387 644 429 644Z"></path><path id="MJX-13-NCM-N-28" d="M318-248C327-248 332-243 332-234C332-231 330-227 327-223C275-183 233-117 202-26C175 53 161 131 161 208L161 292C161 369 175 447 202 526C233 617 275 683 327 723C330 726 332 730 332 734C332 743 327 748 318 748C317 748 314 747 311 745C251 699 201 631 160 540C121 453 101 371 101 292L101 208C101 129 121 47 160-40C201-131 251-199 311-245C314-247 317-248 318-248Z"></path><path id="MJX-13-NCM-I-1D45B" d="M537 137C514 58 481 18 440 18C427 18 420 28 420 47C420 61 426 84 438 115C478 224 498 296 498 333C498 403 451 442 381 442C322 442 271 416 230 363C222 407 187 442 136 442C80 442 58 390 44 345C34 313 29 294 29 287C29 278 34 273 45 273C50 273 53 274 56 276C61 285 64 292 65 299C83 375 106 413 133 413C151 413 160 399 160 371C160 358 155 331 144 290L87 63C84 50 78 24 78 19C78-1 89-11 111-11C130-11 144-1 151 19C153 24 159 49 170 92L191 181L221 295C232 318 249 341 270 365C299 397 335 413 378 413C411 413 427 391 427 348C427 310 406 234 363 120C356 102 353 87 353 74C353 25 390-11 438-11C482-11 517 14 542 64C561 104 571 131 571 144C571 153 566 158 555 158C552 158 537 149 537 137Z"></path><path id="MJX-13-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-13-NCM-I-1D458" d="M409 353C409 327 423 314 450 314C485 314 508 345 508 379C508 418 476 445 437 445C392 445 344 415 291 356C250 311 217 282 190 269L291 679C289 688 287 694 274 694C242 694 166 685 154 684C139 682 132 675 132 660C132 650 141 645 159 645C178 645 204 646 204 632L59 43C56 32 55 25 55 21C55 0 66-11 87-11C104-11 117-3 124 12C129 21 147 92 179 226C231 221 286 196 286 146C286 131 279 101 279 91C279 34 316-11 373-11C431-11 470 41 490 145C490 154 485 159 475 159C466 159 460 152 457 138C435 59 408 19 375 19C357 19 348 33 348 61C348 77 360 131 360 147C360 204 314 239 221 253C244 269 270 292 298 322C326 352 346 371 359 382C386 404 412 415 435 415C445 415 453 413 459 409C432 404 409 379 409 353Z"></path><path id="MJX-13-NCM-N-29" d="M78-245C138-199 188-131 229-40C268 47 288 129 288 208L288 292C288 371 268 453 229 540C188 631 138 699 78 745C75 747 72 748 71 748C62 748 57 743 57 734C57 730 59 726 62 723C114 683 156 617 187 526C214 447 228 369 228 292L228 208C228 131 214 53 187-26C156-117 114-183 62-223C59-227 57-231 57-234C57-243 62-248 71-248C72-248 75-247 78-245Z"></path><path id="MJX-13-NCM-N-3D" d="M698 367L80 367C64 367 56 359 56 344C56 329 64 321 80 321L698 321C714 321 722 329 722 344C722 356 711 367 698 367M698 179L80 179C64 179 56 171 56 156C56 141 64 133 80 133L698 133C714 133 722 141 722 156C722 169 711 179 698 179Z"></path><path id="MJX-13-NCM-N-2F" d="M444 718C445 720 445 723 445 726C445 742 437 750 421 750C410 750 403 745 399 734L57-218C56-220 56-223 56-226C56-242 64-250 80-250C91-250 98-245 102-234Z"></path><path id="MJX-13-NCM-N-2212" d="M698 270L80 270C64 270 56 263 56 250C56 237 64 230 80 230L698 230C714 230 722 237 722 250C722 262 710 270 698 270Z"></path></defs></svg><mjx-break size="4"> </mjx-break><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="14.65ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 6475.4 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math" data-latex="P(n,k)=P(n,n)/P(n-k,n-k)"><g data-mml-node="mo" data-latex="="><use data-c="3D" xlink:href="#MJX-13-NCM-N-3D"></use></g><g data-mml-node="mi" data-latex="P" transform="translate(1055.8,0)"><use data-c="1D443" xlink:href="#MJX-13-NCM-I-1D443"></use></g><g data-mml-node="mo" data-latex="(" transform="translate(1809.8,0)"><use data-c="28" xlink:href="#MJX-13-NCM-N-28"></use></g><g data-mml-node="mi" data-latex="n" transform="translate(2198.8,0)"><use data-c="1D45B" xlink:href="#MJX-13-NCM-I-1D45B"></use></g><g data-mml-node="mo" data-latex="," transform="translate(2798.8,0)"><use data-c="2C" xlink:href="#MJX-13-NCM-N-2C"></use></g><g data-mml-node="mi" data-latex="n" transform="translate(3243.4,0)"><use data-c="1D45B" xlink:href="#MJX-13-NCM-I-1D45B"></use></g><g data-mml-node="mo" data-latex=")" transform="translate(3843.4,0)"><use data-c="29" xlink:href="#MJX-13-NCM-N-29"></use></g><g data-mml-node="mo" data-latex="/" transform="translate(4232.4,0)"><use data-c="2F" xlink:href="#MJX-13-NCM-N-2F"></use></g><g data-mml-node="mi" data-latex="P" transform="translate(4732.4,0)"><use data-c="1D443" xlink:href="#MJX-13-NCM-I-1D443"></use></g><g data-mml-node="mo" data-latex="(" transform="translate(5486.4,0)"><use data-c="28" xlink:href="#MJX-13-NCM-N-28"></use></g><g data-mml-node="mi" data-latex="n" transform="translate(5875.4,0)"><use data-c="1D45B" xlink:href="#MJX-13-NCM-I-1D45B"></use></g></g></g></svg><mjx-break size="3"> </mjx-break><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.805ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2565.9 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math" data-latex="P(n,k)=P(n,n)/P(n-k,n-k)"><g data-mml-node="mo" data-latex="-"><use data-c="2212" xlink:href="#MJX-13-NCM-N-2212"></use></g><g data-mml-node="mi" data-latex="k" transform="translate(1000.2,0)"><use data-c="1D458" xlink:href="#MJX-13-NCM-I-1D458"></use></g><g data-mml-node="mo" data-latex="," transform="translate(1521.2,0)"><use data-c="2C" xlink:href="#MJX-13-NCM-N-2C"></use></g><g data-mml-node="mi" data-latex="n" transform="translate(1965.9,0)"><use data-c="1D45B" xlink:href="#MJX-13-NCM-I-1D45B"></use></g></g></g></svg><mjx-break size="3"> </mjx-break><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.322ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1910.2 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math" data-latex="P(n,k)=P(n,n)/P(n-k,n-k)"><g data-mml-node="mo" data-latex="-"><use data-c="2212" xlink:href="#MJX-13-NCM-N-2212"></use></g><g data-mml-node="mi" data-latex="k" transform="translate(1000.2,0)"><use data-c="1D458" xlink:href="#MJX-13-NCM-I-1D458"></use></g><g data-mml-node="mo" data-latex=")" transform="translate(1521.2,0)"><use data-c="29" xlink:href="#MJX-13-NCM-N-29"></use></g></g></g></svg></mjx-container></span> as an application of the division principle.  The factorial;  the binomial coefficient. Combinations as unordered selections.  Modeling common combinatorial problems: subsets of fixed number of elements; all subsets of a set; committees of k line members; commitees with distinguished roles (chair, vice chair, etc.), functions from A to B, injective functions from A to B. Paths on the integer lattice from (0,0) to (a,b) going only right or up.</p></td>
-<td><p><a class="reference internal" href="lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting.html"><span class="std std-doc">LN: Set notation and basic counting</span></a>: review <a class="reference internal" href="lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting.html#the-product-rule"><span class="std std-ref">The product rule</span></a>.
-<br>
-<a class="reference internal" href="lecture-notes/unit-1-enumeration/02-more%20counting%20techniques.html"><span class="std std-doc">LN: More counting techniques</span></a>: from the start through <a class="reference internal" href="lecture-notes/unit-1-enumeration/02-more%20counting%20techniques.html#counting-problems"><span class="std std-ref">Counting problems</span></a>.</p></td>
+<tr class="row-even"><td><p><strong>L3: More counting techniques</strong><span class="semantic-line-break"></span> 2026-08-21</p></td>
+<td><p>Subtraction, division, permutations, combinations, and counting models.</p></td>
+<td><p><a class="reference internal" href="lecture-notes/unit-1-enumeration/02-more%20counting%20techniques.html"><span class="doc">More counting techniques</span></a>.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p><span class="lecture-log-tentative">Tentative</span>: Lecture topics may change.</p>
-<p><strong>Week summary</strong></p>
-<div class="pst-scrollable-table-container"><table class="table" id="calendar-week-summary">
+<p><span class="lecture-log-tentative">Tentative</span> Lecture topics and assessment dates may change.</p>
+</section>
+<section id="calendar:week-summary">
+<h2>Week and unit overview<a class="headerlink" href="#calendar:week-summary" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Weeks</p></th>
-<th class="head text-left"><p>Unit</p></th>
-<th class="head text-left"><p>Topic</p></th>
+<tr class="row-odd"><th class="head"><p>Weeks</p></th>
+<th class="head"><p>Unit</p></th>
+<th class="head"><p>Topic</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>1-4  <span class="lecture-log-tentative">Tentative</span></p></td>
-<td class="text-left"><p>Unit 1: Enumeration</p></td>
-<td class="text-left"><p>Counting models, bijections, double counting, and inclusion-exclusion</p></td>
+<tr class="row-even"><td><p>1–4 <span class="lecture-log-tentative">Tentative</span></p></td>
+<td><p>Unit I: Enumeration</p></td>
+<td><p>Counting models, bijections, double counting, and inclusion-exclusion</p></td>
+</tr>
+<tr class="row-odd"><td><p>4–5 <span class="lecture-log-tentative">Tentative</span></p></td>
+<td><p>Unit II: Generating-function foundations</p></td>
+<td><p>Formal power series and ordinary generating-function operations</p></td>
+</tr>
+<tr class="row-even"><td><p>6–8 <span class="lecture-log-tentative">Tentative</span></p></td>
+<td><p>Unit III: Recurrences</p></td>
+<td><p>State models, linear recurrences, recursive evaluation, and dynamic programming</p></td>
+</tr>
+<tr class="row-odd"><td><p>9–16 <span class="lecture-log-tentative">Tentative</span></p></td>
+<td><p>Further topics</p></td>
+<td><p>To be announced</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<!-- 
-
-## Week and unit overview
-
-| Weeks               | Unit                                    | Topic                                                                           |
-| :------------------ | :-------------------------------------- | :------------------------------------------------------------------------------ |
-| 1-4  {tentative}` ` | Unit 1: Enumeration                     | Counting models, bijections, double counting, and inclusion-exclusion           |
-| 4-5  {tentative}` ` | Unit 2: Generating-function foundations | Formal power series and ordinary generating-function operations                 |
-| 6-8  {tentative}` ` | Unit 3: Recurrences                     | State models, linear recurrences, recursive evaluation, and dynamic programming |
-| 9-16                | _TBA_                                   |                                                                                 |
--->
 </section>
 </section>
 
@@ -544,22 +522,59 @@
       
         
           <dialog id="pst-secondary-sidebar-modal"></dialog>
-          <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+          <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+            <div class="course-focused-section-utilities" data-course-focused-utilities="">
+  
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+  
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
+</div>
+            <div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
-<div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
+<div class="course-page-toc-heading">
+    <div class="dropdown course-page-toc-display-menu">
+      <button id="course-page-toc-display-toggle" class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Choose on-this-page navigation display">
+        <i class="fa-solid fa-list" aria-hidden="true"></i>
+        <span class="visually-hidden">Choose on-this-page navigation display</span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="course-page-toc-display-toggle">
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="expanded">Show all sections</button></li>
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="current">Show current section</button></li>
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="top-level">Show top-level sections</button></li>
+      </ul>
+    </div>
+    <div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
+      On this page
+    </div>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-university-dates">Key university dates</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exams">Exams</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#daily-lecture-log">Daily lecture log</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calendar:daily-log">Daily lecture log</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calendar:week-summary">Week and unit overview</a></li>
 </ul>
   </nav></div>
 
-</div></div>
+</div>
+          </div>
           <button id="course-secondary-sidebar-toggle" class="course-edge-sidebar-toggle" data-course-sidebar-toggle="secondary" type="button" aria-controls="pst-secondary-sidebar" aria-expanded="true" aria-label="Collapse on-this-page navigation" title="Collapse on-this-page navigation">›</button>
         
       
@@ -598,8 +613,9 @@
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer="" src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer="" src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer="" src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
+  
 
   
 </body></html>

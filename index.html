@@ -1,14 +1,8 @@
+<!DOCTYPE html><html lang="en" data-content_root="./"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!DOCTYPE html>
-
-
-<html lang="en" data-content_root="./" >
-
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Combinatorics MATH31003-01 – Fall 2026 &#8212; Combinatorics - Fall 2026</title>
+    <title>Combinatorics — Combinatorics — MATH 31003-01 - Fall 2026</title>
   
   
   
@@ -27,19 +21,17 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
+  <link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="_static/tippy.js/tippy.css?v=865cd1a4" />
-    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-theme.css?v=b41ec8da" />
-    <link rel="stylesheet" type="text/css" href="_static/css/tippy.css?v=11e8c0fa" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02">
+    <link rel="stylesheet" type="text/css" href="_static/tippy.js/tippy.css?v=865cd1a4">
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-theme.css?v=c0dbdcfd">
+    <link rel="stylesheet" type="text/css" href="_static/css/tippy.css?v=e6a1d6f7">
   
-  <!-- So that users can add custom icons -->
-  <script defer src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9">
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9">
 
   
     <script src="_static/documentation_options.js?v=7f41d439"></script>
@@ -47,30 +39,54 @@
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script defer="defer" src="_static/@popperjs/core/popper.min.js?v=a8c9358f"></script>
     <script defer="defer" src="_static/tippy.js/tippy.umd.min.js?v=4126cd26"></script>
-    <script defer="defer" src="_static/tippy\index.b03f15f2-1c41-4bf1-91ae-636d64942369.js"></script>
+    <script defer="defer" src="_static/tippy\index.0d741035-f77e-4dec-8cf4-c0c3f2ae61f3.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="_static/js/course-focused-mode.js?v=0be05eaa"></script>
     <script src="_static/js/course-sidebar-toggle.js?v=57cfeca2"></script>
+    <script src="_static/js/course-page-toc.js?v=cb59aa39"></script>
+    <script src="_static/js/course-navbar-overflow.js?v=3a1ef034"></script>
     <script src="_static/js/course-search.js?v=724d2f2a"></script>
+    <script src="_static/js/my-open-math.js?v=9dae2e6b"></script>
   <script src="course-search-index.js"></script>
   
+  
 
-    <link rel="icon" href="_static/uark-favicon.png"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Syllabus" href="syllabus.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="August 22, 2026"/>
+    <link rel="icon" href="_static/uark-favicon.png">
+    <link rel="index" title="Index" href="genindex.html">
+    <link rel="search" title="Search" href="search.html">
+    <link rel="next" title="Syllabus" href="syllabus.html">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="docsearch:language" content="en">
+  <meta name="docsearch:version" content="">
+    <meta name="docbuild:last-update" content="August 24, 2026">
   
     
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="searchindex.js"></script>
   
+  
+  <script>
+    // Prevent a focused cold load from briefly displaying the full shell.
+    try { if (new URLSearchParams(location.search).has("focus")) document.documentElement.classList.add("course-focus-requested"); } catch (_) {}
+  </script>
+  <script>
+    // JupyterLite registers a service worker at the origin root. If it was
+    // previously run on the usual local preview port, that worker can control
+    // this unrelated Sphinx site and reject page requests after a rebuild.
+    // Published course sites are unaffected; only loopback previews clear
+    // service-worker registrations.
+    if (location.hostname === "127.0.0.1" || location.hostname === "localhost") {
+      navigator.serviceWorker?.getRegistrations()
+        .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
+        .catch(() => {});
+    }
+  </script>
+
   </head>
-  <body data-default-mode="" class="layout-info">
+  <body data-default-mode="" data-course-docname="index" data-focus-section-root="" data-focus-section-title="" data-focus-section-documents="" data-focus-section-targets="{}" class="layout-info">
 
   
   
@@ -88,19 +104,9 @@
     
       <dialog id="pst-search-dialog">
         
-<form class="bd-search d-flex align-items-center"
-      action="search.html"
-      method="get">
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
+  <input type="search" class="form-control" name="q" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
       </dialog>
@@ -136,7 +142,7 @@
   
   
   
-    <p class="title logo__title">Combinatorics - Fall 2026</p>
+    <p class="title logo__title">Combinatorics — MATH 31003-01 - Fall 2026</p>
   
 </a></div>
     
@@ -146,42 +152,24 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><div class="navbar-item">
-  <a
-    class="nav-link"
-    href="https://learn.uark.edu/ultra/courses/_529368_1/outline/"
-    title="Open this course in Blackboard"
-  >
-    Blackboard
-  </a>
-</div></div>
-      
         <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="syllabus.html">Syllabus</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="calendar.html">Calendar</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="assignments/index.html">Assignments</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="resources.html">Resources</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture notes</a>
-    </li>
-    
-  </ul>
+<nav class="course-navbar-nav" aria-label="Primary navigation">
+  
+  
+  <ul class="bd-navbar-elements navbar-nav" data-course-navbar-items="">
+<li class="nav-item"><a class="nav-link nav-internal" href="syllabus.html">Syllabus</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="calendar.html">Calendar</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="assignments/index.html">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
+  <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
+    <button class="course-navbar-overflow__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Show more navigation items" data-course-navbar-overflow-toggle="">
+      <span aria-hidden="true">▾</span>
+    </button>
+    <ul class="course-navbar-overflow__menu" data-course-navbar-overflow-menu="" hidden=""></ul>
+  </div>
 </nav></div>
       
     </div>
@@ -244,6 +232,8 @@
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
+      
+      
         
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
@@ -258,45 +248,24 @@
         
           
           
-            <div class="navbar-item"><div class="navbar-item">
-  <a
-    class="nav-link"
-    href="https://learn.uark.edu/ultra/courses/_529368_1/outline/"
-    title="Open this course in Blackboard"
-  >
-    Blackboard
-  </a>
-</div></div>
-          
-        
-          
-          
             <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="syllabus.html">Syllabus</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="calendar.html">Calendar</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="assignments/index.html">Assignments</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="resources.html">Resources</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture notes</a>
-    </li>
-    
-  </ul>
+<nav class="course-navbar-nav" aria-label="Primary navigation">
+  
+  
+  <ul class="bd-navbar-elements navbar-nav" data-course-navbar-items="">
+<li class="nav-item"><a class="nav-link nav-internal" href="syllabus.html">Syllabus</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="calendar.html">Calendar</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="assignments/index.html">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
+  <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
+    <button class="course-navbar-overflow__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Show more navigation items" data-course-navbar-overflow-toggle="">
+      <span aria-hidden="true">▾</span>
+    </button>
+    <ul class="course-navbar-overflow__menu" data-course-navbar-overflow-menu="" hidden=""></ul>
+  </div>
 </nav></div>
           
         
@@ -328,11 +297,7 @@
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
+<div id="ethical-ad-placement" class="flat" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" data-ea-manual="true">
 </div></div>
   </div>
 
@@ -343,33 +308,39 @@
         
           <div class="bd-content">
             <div class="bd-article-container">
-              <div class="bd-header-article d-print-none"></div>
+              <div class="bd-header-article d-print-none">
+                
+                
+              </div>
               
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="combinatorics-math31003-01-fall-2026">
-<h1>Combinatorics MATH31003-01 – Fall 2026<a class="headerlink" href="#combinatorics-math31003-01-fall-2026" title="Link to this heading">#</a></h1>
-<p><strong>Semester</strong>: Fall 2026
-<strong>Instructor:</strong> Gennady Uraltsev<br />
-<strong>Meetings:</strong> Mo/We/Fr 8:35 - 9:25, GEAR 108</p>
-<p>Welcome to Combinatorics! We will explore the mathematics of discrete objects: the many ways things can be selected, arranged, connected, and counted.
-The course covers basic combinatorial techniques, the principle of inclusion-exclusion, generating functions, and recursive relations.
-As additional topics we may cover modular arithmetic and applications to encryption, coding theory, graph theory, counting with symmetries, and algebraic structures.</p>
+  <section id="combinatorics">
+<h1>Combinatorics<a class="headerlink" href="#combinatorics" title="Link to this heading">#</a></h1>
+<p><strong>Course:</strong> <span>MATH 31003-01</span><span class="semantic-line-break"></span><strong>Semester:</strong> <span>Fall 2026</span><span class="semantic-line-break"></span><strong>Instructor:</strong> <span>Gennady Uraltsev</span><span class="semantic-line-break"></span><strong>Meetings:</strong> <span>Monday, Wednesday, Friday 8:35-9:25 a.m.</span>, <span>GEAR 108</span></p>
+<p>Welcome to Combinatorics! We will explore the mathematics of discrete objects:
+the many ways things can be selected, arranged, connected, and counted. The
+course covers basic combinatorial techniques, the principle of
+inclusion-exclusion, generating functions, and recursive relations. Additional
+topics may include modular arithmetic and applications to encryption, coding
+theory, graph theory, counting with symmetries, and algebraic structures.</p>
 <section id="start-here">
 <h2>Start here<a class="headerlink" href="#start-here" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="syllabus.html"><span class="std std-doc">Syllabus</span></a>: how the course works, grading, materials, and what to expect.</p></li>
-<li><p><a class="reference internal" href="calendar.html"><span class="std std-doc">Course calendar</span></a>: class dates, current topics, holidays, and exams.</p></li>
-<li><p><a class="reference internal" href="assignments/index.html"><span class="std std-doc">Assignments</span></a>: written homework and online questions.</p></li>
-<li><p><a class="reference internal" href="resources.html"><span class="std std-doc">Resources</span></a>: references and student-support links.</p></li>
-<li><p><a class="reference internal" href="lecture-notes/index.html"><span class="std std-doc">Lecture notes</span></a>: notes organized by course unit and lecture.</p></li>
+<li><p><a class="reference internal" href="syllabus.html"><span class="doc">Syllabus</span></a>: how the course works, grading, materials, and what to expect.</p></li>
+<li><p><a class="reference internal" href="calendar.html"><span class="doc">Course calendar</span></a>: class dates, current topics, holidays, and exams.</p></li>
+<li><p><a class="reference internal" href="assignments/index.html"><span class="doc">Assignments</span></a>: written homework and online questions.</p></li>
+<li><p><a class="reference internal" href="resources.html"><span class="doc">Resources</span></a>: references and student-support links.</p></li>
+<li><p><a class="reference internal" href="lecture-notes/index.html"><span class="doc">Lecture notes</span></a>: notes organized by course unit and lecture.</p></li>
 </ul>
-<p>Please check the <a class="reference internal" href="calendar.html"><span class="std std-doc">course calendar</span></a> for holidays, University deadlines, and topic updates.</p>
-</section>
+<p>Please check the <a class="reference internal" href="calendar.html"><span class="doc">course calendar</span></a> for holidays, University
+deadlines, and topic updates. Course announcements, grades, and submission
+links are maintained in <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/"><span>Blackboard</span></a>.</p>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
 
@@ -379,9 +350,7 @@ As additional topics we may cover modular arithmetic and applications to encrypt
               
                 <footer class="prev-next-footer d-print-none">
 <div class="prev-next-area">
-    <a class="right-next"
-       href="syllabus.html"
-       title="next page">
+    <a class="right-next" href="syllabus.html" title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Syllabus</p>
@@ -396,22 +365,52 @@ As additional topics we may cover modular arithmetic and applications to encrypt
         
       </main>
 
-      <button id="course-primary-sidebar-toggle" class="course-edge-sidebar-toggle"
-              data-course-sidebar-toggle="primary" type="button"
-              aria-controls="pst-primary-sidebar" aria-expanded="true"
-              aria-label="Collapse section navigation" title="Collapse section navigation">&lsaquo;</button>
+      <button id="course-primary-sidebar-toggle" class="course-edge-sidebar-toggle" data-course-sidebar-toggle="primary" type="button" aria-controls="pst-primary-sidebar" aria-expanded="true" aria-label="Collapse section navigation" title="Collapse section navigation">‹</button>
 
       
         
           <dialog id="pst-secondary-sidebar-modal"></dialog>
-          <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+          <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+            <div class="course-focused-section-utilities" data-course-focused-utilities="">
+  
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+  
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
+</div>
+            <div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
+<div class="course-page-toc-heading">
+    <div class="dropdown course-page-toc-display-menu">
+      <button id="course-page-toc-display-toggle" class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Choose on-this-page navigation display">
+        <i class="fa-solid fa-list" aria-hidden="true"></i>
+        <span class="visually-hidden">Choose on-this-page navigation display</span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="course-page-toc-display-toggle">
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="expanded">Show all sections</button></li>
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="current">Show current section</button></li>
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="top-level">Show top-level sections</button></li>
+      </ul>
+    </div>
+    <div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
+      On this page
+    </div>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
@@ -419,11 +418,9 @@ As additional topics we may cover modular arithmetic and applications to encrypt
 </ul>
   </nav></div>
 
-</div></div>
-          <button id="course-secondary-sidebar-toggle" class="course-edge-sidebar-toggle"
-                  data-course-sidebar-toggle="secondary" type="button"
-                  aria-controls="pst-secondary-sidebar" aria-expanded="true"
-                  aria-label="Collapse on-this-page navigation" title="Collapse on-this-page navigation">&rsaquo;</button>
+</div>
+          </div>
+          <button id="course-secondary-sidebar-toggle" class="course-edge-sidebar-toggle" data-course-sidebar-toggle="secondary" type="button" aria-controls="pst-secondary-sidebar" aria-expanded="true" aria-label="Collapse on-this-page navigation" title="Collapse on-this-page navigation">›</button>
         
       
 
@@ -437,7 +434,7 @@ As additional topics we may cover modular arithmetic and applications to encrypt
   <p class="copyright">
     
       © Copyright 2026, Gennady Uraltsev.
-      <br/>
+      <br>
     
   </p>
 </div>
@@ -460,9 +457,10 @@ As additional topics we may cover modular arithmetic and applications to encrypt
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer="" src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer="" src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
+  
 
-  </body>
-</html>
+  
+</body></html>

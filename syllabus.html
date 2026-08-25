@@ -1,14 +1,8 @@
+<!DOCTYPE html><html lang="en" data-content_root="./"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!DOCTYPE html>
-
-
-<html lang="en" data-content_root="./" >
-
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Syllabus &#8212; Combinatorics - Fall 2026</title>
+    <title>Syllabus — Combinatorics — MATH 31003-01 - Fall 2026</title>
   
   
   
@@ -27,19 +21,17 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
+  <link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="_static/tippy.js/tippy.css?v=865cd1a4" />
-    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-theme.css?v=b41ec8da" />
-    <link rel="stylesheet" type="text/css" href="_static/css/tippy.css?v=11e8c0fa" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02">
+    <link rel="stylesheet" type="text/css" href="_static/tippy.js/tippy.css?v=865cd1a4">
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-theme.css?v=c0dbdcfd">
+    <link rel="stylesheet" type="text/css" href="_static/css/tippy.css?v=e6a1d6f7">
   
-  <!-- So that users can add custom icons -->
-  <script defer src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9">
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9">
 
   
     <script src="_static/documentation_options.js?v=7f41d439"></script>
@@ -47,31 +39,55 @@
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script defer="defer" src="_static/@popperjs/core/popper.min.js?v=a8c9358f"></script>
     <script defer="defer" src="_static/tippy.js/tippy.umd.min.js?v=4126cd26"></script>
-    <script defer="defer" src="_static/tippy\syllabus.79ac07e0-08c3-464c-90be-f54030ee86d3.js"></script>
+    <script defer="defer" src="_static/tippy\syllabus.c7e9bee8-9ad6-44ff-ae56-32f8fd62cb59.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'syllabus';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="_static/js/course-focused-mode.js?v=0be05eaa"></script>
     <script src="_static/js/course-sidebar-toggle.js?v=57cfeca2"></script>
+    <script src="_static/js/course-page-toc.js?v=cb59aa39"></script>
+    <script src="_static/js/course-navbar-overflow.js?v=3a1ef034"></script>
     <script src="_static/js/course-search.js?v=724d2f2a"></script>
+    <script src="_static/js/my-open-math.js?v=9dae2e6b"></script>
   <script src="course-search-index.js"></script>
   
+  
 
-    <link rel="icon" href="_static/uark-favicon.png"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Calendar" href="calendar.html" />
-    <link rel="prev" title="Combinatorics MATH31003-01 – Fall 2026" href="index.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="August 22, 2026"/>
+    <link rel="icon" href="_static/uark-favicon.png">
+    <link rel="index" title="Index" href="genindex.html">
+    <link rel="search" title="Search" href="search.html">
+    <link rel="next" title="Calendar" href="calendar.html">
+    <link rel="prev" title="Combinatorics" href="index.html">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="docsearch:language" content="en">
+  <meta name="docsearch:version" content="">
+    <meta name="docbuild:last-update" content="August 24, 2026">
   
     
     <script src="_static/searchtools.js"></script>
     <script src="_static/language_data.js"></script>
     <script src="searchindex.js"></script>
   
+  
+  <script>
+    // Prevent a focused cold load from briefly displaying the full shell.
+    try { if (new URLSearchParams(location.search).has("focus")) document.documentElement.classList.add("course-focus-requested"); } catch (_) {}
+  </script>
+  <script>
+    // JupyterLite registers a service worker at the origin root. If it was
+    // previously run on the usual local preview port, that worker can control
+    // this unrelated Sphinx site and reject page requests after a rebuild.
+    // Published course sites are unaffected; only loopback previews clear
+    // service-worker registrations.
+    if (location.hostname === "127.0.0.1" || location.hostname === "localhost") {
+      navigator.serviceWorker?.getRegistrations()
+        .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
+        .catch(() => {});
+    }
+  </script>
+
   </head>
-  <body data-default-mode="" class="layout-info">
+  <body data-default-mode="" data-course-docname="syllabus" data-focus-section-root="syllabus" data-focus-section-title="Syllabus" data-focus-section-documents="syllabus" data-focus-section-targets="{&quot;syllabus&quot;:&quot;#&quot;}" class="layout-info">
 
   
   
@@ -89,19 +105,9 @@
     
       <dialog id="pst-search-dialog">
         
-<form class="bd-search d-flex align-items-center"
-      action="search.html"
-      method="get">
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         placeholder="Search the docs ..."
-         aria-label="Search the docs ..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
+  <input type="search" class="form-control" name="q" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form>
       </dialog>
@@ -137,7 +143,7 @@
   
   
   
-    <p class="title logo__title">Combinatorics - Fall 2026</p>
+    <p class="title logo__title">Combinatorics — MATH 31003-01 - Fall 2026</p>
   
 </a></div>
     
@@ -147,42 +153,24 @@
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><div class="navbar-item">
-  <a
-    class="nav-link"
-    href="https://learn.uark.edu/ultra/courses/_529368_1/outline/"
-    title="Open this course in Blackboard"
-  >
-    Blackboard
-  </a>
-</div></div>
-      
         <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-    
-    <li class="nav-item current active">
-      <a class="nav-link nav-internal" href="#">Syllabus</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="calendar.html">Calendar</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="assignments/index.html">Assignments</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="resources.html">Resources</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture notes</a>
-    </li>
-    
-  </ul>
+<nav class="course-navbar-nav" aria-label="Primary navigation">
+  
+  
+  <ul class="bd-navbar-elements navbar-nav current" data-course-navbar-items="">
+<li class="nav-item current"><a class="current nav-link nav-internal" href="#">Syllabus</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="calendar.html">Calendar</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="assignments/index.html">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
+  <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
+    <button class="course-navbar-overflow__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Show more navigation items" data-course-navbar-overflow-toggle="">
+      <span aria-hidden="true">▾</span>
+    </button>
+    <ul class="course-navbar-overflow__menu" data-course-navbar-overflow-menu="" hidden=""></ul>
+  </div>
 </nav></div>
       
     </div>
@@ -245,6 +233,8 @@
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
+      
+      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -257,45 +247,24 @@
         
           
           
-            <div class="navbar-item"><div class="navbar-item">
-  <a
-    class="nav-link"
-    href="https://learn.uark.edu/ultra/courses/_529368_1/outline/"
-    title="Open this course in Blackboard"
-  >
-    Blackboard
-  </a>
-</div></div>
-          
-        
-          
-          
             <div class="navbar-item">
-<nav>
-  <ul class="bd-navbar-elements navbar-nav">
-    
-    
-    <li class="nav-item current active">
-      <a class="nav-link nav-internal" href="#">Syllabus</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="calendar.html">Calendar</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="assignments/index.html">Assignments</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="resources.html">Resources</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture notes</a>
-    </li>
-    
-  </ul>
+<nav class="course-navbar-nav" aria-label="Primary navigation">
+  
+  
+  <ul class="bd-navbar-elements navbar-nav current" data-course-navbar-items="">
+<li class="nav-item current"><a class="current nav-link nav-internal" href="#">Syllabus</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="calendar.html">Calendar</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="assignments/index.html">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
+  <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
+    <button class="course-navbar-overflow__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Show more navigation items" data-course-navbar-overflow-toggle="">
+      <span aria-hidden="true">▾</span>
+    </button>
+    <ul class="course-navbar-overflow__menu" data-course-navbar-overflow-menu="" hidden=""></ul>
+  </div>
 </nav></div>
           
         
@@ -325,22 +294,16 @@
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item pst-sidebar-collapse">
-<button id="pst-collapse-sidebar-button" class="course-sidebar-toggle"
-        aria-expanded="true" aria-controls="pst-primary-sidebar"
-        aria-label="Collapse section sidebar">
-  <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16">
-    <path d="M10.5 3.5 6 8l4.5 4.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-  </svg>
-  <span class="pst-collapse-sidebar-label">Collapse Sidebar</span>
-  <span class="pst-expand-sidebar-label">Expand Sidebar</span>
-</button></div>
         <div class="sidebar-primary-item">
 
-<nav class="bd-docs-nav bd-links"
-     aria-label="Syllabus">
+<nav class="bd-docs-nav bd-links" aria-label="Syllabus">
   <p class="bd-links__title" role="heading" aria-level="1">
     <a class="reference internal" href="#">Syllabus</a>
+    
+      <button type="button" class="course-focus-button" data-course-focus-toggle="" aria-label="Focus this section" data-bs-original-title="Focus this section" data-bs-toggle="tooltip" data-bs-placement="bottom">
+        <span class="course-focus-icon" aria-hidden="true"></span>
+      </button>
+    
   </p>
   <div class="bd-toc-item navbar-nav"></div>
 </nav></div>
@@ -349,11 +312,7 @@
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
+<div id="ethical-ad-placement" class="flat" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" data-ea-manual="true">
 </div></div>
   </div>
 
@@ -365,116 +324,124 @@
           <div class="bd-content">
             <div class="bd-article-container">
               <div class="bd-header-article d-print-none">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
+                
+                
+                <div class="header-article-items header-article__inner">
+                  
+                    <div class="header-article-items__start">
+                      
+                        <div class="header-article-item">
+                          
+                            
 
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
-    
     <li class="breadcrumb-item breadcrumb-home">
       <a href="index.html" class="nav-link" aria-label="Home">
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Syllabus</span></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">
+      <span class="ellipsis">Syllabus</span>
+      
+      <a class="course-breadcrumb-pdf-link" href="_static/pdfs/syllabus.pdf" aria-label="Download PDF version of this page">
+        <img class="course-breadcrumb-pdf-icon" src="_static/assets/pdf-icon.svg" alt="">
+      </a>
+      
+    </li>
   </ul>
 </nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
+
+                          
+                        </div>
+                      
+                    </div>
+                  
+                  
+                </div>
+                
+              </div>
               
                 
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="syllabus">
+  <section id="syllabus">
 <h1>Syllabus<a class="headerlink" href="#syllabus" title="Link to this heading">#</a></h1>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Item</p></th>
-<th class="head text-left"><p>Information</p></th>
+<tr class="row-odd"><th class="head"><p>Course</p></th>
+<th class="head"><p>Combinatorics MATH 31003-01</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>Course</p></td>
-<td class="text-left"><p>Combinatorics MATH31003-01</p></td>
+<tr class="row-even"><td><p>Semester</p></td>
+<td><p>Fall 2026</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Semester</p></td>
-<td class="text-left"><p>Fall 2026</p></td>
+<tr class="row-odd"><td><p>Instructor</p></td>
+<td><p>Gennady Uraltsev</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Instructor</p></td>
-<td class="text-left"><p>Gennady Uraltsev</p></td>
+<tr class="row-even"><td><p>Email</p></td>
+<td><p><a class="reference external" href="mailto:uraltsev%40uark.edu">uraltsev<span>@</span>uark<span>.</span>edu</a></p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Email</p></td>
-<td class="text-left"><p><a class="reference external" href="mailto:uraltsev&#37;&#52;&#48;uark&#46;edu">uraltsev<span>&#64;</span>uark<span>&#46;</span>edu</a></p></td>
+<tr class="row-odd"><td><p>Office</p></td>
+<td><p>SCEN 421</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Office</p></td>
-<td class="text-left"><p>SCEN 421</p></td>
+<tr class="row-even"><td><p>Class meetings</p></td>
+<td><p>Monday, Wednesday, Friday 8:35-9:25 a.m., GEAR 108</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Class meetings</p></td>
-<td class="text-left"><p>Mo/We/Fr 8:35 - 9:25, GEAR 108</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>Office hours</p></td>
-<td class="text-left"><p>Wednesday 16:00-17:00, SCEN 421</p></td>
+<tr class="row-odd"><td><p>Office hours</p></td>
+<td><p>Wednesday 4:00-5:00 p.m., SCEN 421</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<!--
-| Course announcements and grades | University Blackboard course shell                                |
-| Course website                  | This MyST site                                                    | 
--->
 <section id="course-overview">
 <h2>Course overview<a class="headerlink" href="#course-overview" title="Link to this heading">#</a></h2>
-<blockquote>
-<div><p><a class="reference external" href="https://catalog.uark.edu/search/?P=MATH%2031003">University of Arkansas mathematics course listings</a></p>
-<p><strong>Prerequisites:</strong> MATH 26103 or MATH 28003<br />
-<strong>Pre- or Corequisite:</strong> MATH 30803 or MATH 30903.</p>
-<p>You should be comfortable working with sets, functions, relations, basic proofs and mathematical arguments, algebraic manipulation, and polynomials.</p>
-</div></blockquote>
-<p>Combinatorics begins with a simple questions: How many ways can we arrange a collection of objects? Can a schedule, pairing, or design be made at all? What changes when two arrangements should count as the same? These questions show up in mathematics, computer science, probability, and more…</p>
-<p>We will learn foundational combinatorial techniques, the inclusion-exclusion principle, allowing us to count efficiently.</p>
-<p>Next, we will learn generating functions, that will show us how algebra can be used as an efficient bookkeeping combinatorial quantities we become familiar with at the start of the course.</p>
-<p>Then we will learn to model systems by describing them using recurrence relations: rules that govern how later states depend on previous ones.</p>
-<p>With this background in hand we will focus on additional topics that may include modular arithmetic and applications to cryptography, coding theory, graph theory, counting arrangements with symmetries, and elementary algebraic structures.</p>
-<div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-text">Course Contents</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<p>See the <a class="reference external" href="https://catalog.uark.edu/search/?P=MATH%2031003">University of
+Arkansas mathematics course listing</a>. Prerequisites are MATH 26103 or MATH
+28003; the pre- or corequisite is MATH 30803 or MATH 30903. You should be
+comfortable working with sets, functions, relations, basic proofs and
+mathematical arguments, algebraic manipulation, and polynomials.</p>
+<p>Combinatorics begins with a simple question: How many ways can we arrange a
+collection of objects? Can a schedule, pairing, or design be made at all? What
+changes when two arrangements should count as the same? These questions show up
+in mathematics, computer science, probability, and more.</p>
+<p>We will learn foundational combinatorial techniques and the inclusion-exclusion
+principle, which allow us to count efficiently. We will then learn generating
+functions as algebraic bookkeeping for combinatorial quantities, followed by
+recurrence relations that model how later states depend on previous ones.
+Additional topics may include modular arithmetic and applications to
+cryptography, coding theory, graph theory, counting arrangements with
+symmetries, and elementary algebraic structures.</p>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Unit</p></th>
-<th class="head text-left"><p>Main capability</p></th>
+<th class="head"><p>Main capability</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Enumeration and inclusion-exclusion</p></td>
-<td class="text-left"><p>Define discrete objects precisely and count them using case structure, bijections, double counting, and overlapping restrictions.</p></td>
+<td><p>Define objects precisely and count them using cases, bijections, double counting, and overlapping restrictions.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Generating-function foundations</p></td>
-<td class="text-left"><p>Encode sequences as formal power series and interpret algebraic operations as counting operations.</p></td>
+<td><p>Encode sequences as formal power series and interpret algebraic operations as counting operations.</p></td>
 </tr>
 <tr class="row-even"><td><p>Recurrence models</p></td>
-<td class="text-left"><p>Select states and initial conditions, derive and solve recurrences, and compare recursive, memoized, and bottom-up evaluation.</p></td>
+<td><p>Select states and initial conditions, derive and solve recurrences, and compare recursive, memoized, and bottom-up evaluation.</p></td>
 </tr>
 <tr class="row-odd"><td><p>Further topics</p></td>
-<td class="text-left"><p>TBA</p></td>
+<td><p>To be announced.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<!--
-| Symmetry counting                                          | Count equivalence classes with group actions, fixed points, Burnside's lemma, and elementary cycle structure.                            |
-| Algorithmic arithmetic and RSA                             | Carry out modular procedures, state a cost model, use repeated squaring, and separate toy computations from unsupported security claims. |
--->
 <section id="learning-outcomes">
-<h3>Learning Outcomes<a class="headerlink" href="#learning-outcomes" title="Link to this heading">#</a></h3>
-<p>By the end of the course, you should be able to:</p>
-<ol class="arabic simple">
+<h3>Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Link to this heading">#</a></h3>
+<p>By the end of the course, you should be able to:
+</p>
+<ol class="simple">
 <li><p>Use basic counting techniques, including permutations, combinations with repetition, and careful accounting for overcounting.</p></li>
 <li><p>Analyze a discrete model by identifying its objects, states, parameters, and constraints.</p></li>
 <li><p>Choose and switch representations to reveal a model’s useful structure.</p></li>
@@ -486,155 +453,172 @@
 </section>
 <section id="materials">
 <h3>Materials<a class="headerlink" href="#materials" title="Link to this heading">#</a></h3>
-<p>My <a class="reference internal" href="lecture-notes/index.html"><span class="std std-doc">lecture notes</span></a> are our main guide through the course. They may also link to explanatory videos or other freely available sources.</p>
-<p>The principal reference is Keller and Trotter, <em>Applied Combinatorics</em>: <a class="reference external" href="https://appliedcombinatorics.org/book/app-comb-2.html">Web edition</a> <a class="reference external" href="https://appliedcombinatorics.org/book-pdf/app-comb-2017.pdf">PDF edition</a></p>
-<p>You can find additional references on the <a class="reference internal" href="resources.html"><span class="std std-doc">resources page</span></a>. You do not need to purchase any of the listed open materials.</p>
+<p>Our <a class="reference internal" href="lecture-notes/index.html"><span class="doc">lecture notes</span></a> are the main guide through the
+course. The principal reference is Keller and Trotter,
+<em>Applied Combinatorics</em>: <a class="reference external" href="https://appliedcombinatorics.org/book/app-comb-2.html">web
+edition</a> and <a class="reference external" href="https://appliedcombinatorics.org/book-pdf/app-comb-2017.pdf">PDF
+edition</a>. Additional references are listed on the <a class="reference internal" href="resources.html"><span class="doc">resources
+page</span></a>; you do not need to purchase any of the listed open materials.</p>
 </section>
 </section>
 <section id="course-organization">
 <h2>Course organization<a class="headerlink" href="#course-organization" title="Link to this heading">#</a></h2>
-<p>In class, I will introduce new topics and talk through their applications with you.</p>
-<p>After most meetings, online questions provide a quick review of basic skills; they are graded automatically, and most allow multiple attempts.</p>
-<p>I will assign hand-in homework weekly.</p>
-<p>We will have three midterms and a final-period exam.</p>
+<p>In class, I will introduce new topics and talk through their applications with
+you. After most meetings, online questions provide a quick review of basic
+skills; they are graded automatically, and most allow multiple attempts. I will
+assign hand-in homework weekly. We will have three midterms and a final-period
+exam.</p>
 <section id="attendance-and-participation">
 <h3>Attendance and participation<a class="headerlink" href="#attendance-and-participation" title="Link to this heading">#</a></h3>
-<p>Attendance is not graded, and there is no absence penalty.
-If you need to miss class, you can use the posted notes, online questions, homework, and other resources to keep up independently.</p>
-<p>Please keep track of course material, announcements, deadlines, and assessments.
-If your online work, homework, or exams suggest that your current study routine is not serving you, I may reach out with ideas such as regular attendance or office hours.</p>
-<p>Please plan to be present for scheduled exams. I will not be able to offer make up exams except for excused emergencies.</p>
-</section>
+<p>Attendance is not graded, and there is no absence penalty. If you need to miss
+class, use the posted notes, online questions, homework, and other resources to
+keep up independently. Please keep track of course material, announcements,
+deadlines, and assessments. If your work suggests that your current study
+routine is not serving you, I may reach out with ideas such as regular
+attendance or office hours.</p>
+<p>Please plan to be present for scheduled exams. I will not be able to offer make-
+up exams except for excused emergencies.</p>
 </section>
 <section id="academic-integrity">
-<h2>Academic integrity<a class="headerlink" href="#academic-integrity" title="Link to this heading">#</a></h2>
-<p>We all share responsibility for creating a course environment built on honest work and learning. Please follow the <a class="reference external" href="https://honesty.uark.edu/policy/">University of Arkansas Academic Integrity Policy</a>; suspected violations are handled through the University process. You can find the specific expectations for collaboration and the use of artificial intelligence on the <a class="reference internal" href="assignments/index.html"><span class="std std-doc">assignments page</span></a>.</p>
+<h3>Academic integrity<a class="headerlink" href="#academic-integrity" title="Link to this heading">#</a></h3>
+<p>We all share responsibility for creating a course environment built on honest
+work and learning. Follow the <a class="reference external" href="https://honesty.uark.edu/policy/">University
+of Arkansas Academic Integrity Policy</a>. Specific expectations for collaboration
+and artificial intelligence appear on the <a class="reference internal" href="assignments/index.html"><span class="doc">assignments
+page</span></a>.</p>
+</section>
 </section>
 <section id="assessment">
 <h2>Assessment<a class="headerlink" href="#assessment" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><span id="table-grade-weight-breakdown"></span><table class="table" id="id2">
-<caption><span class="caption-text">Grade weights breakdown</span><a class="headerlink" href="#id2" title="Link to this table">#</a></caption>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Component</p></th>
-<th class="head text-left"><p>Weight</p></th>
+<tr class="row-odd"><th class="head"><p>Component</p></th>
+<th class="head"><p>Weight</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>Written hand-in homework</p></td>
-<td class="text-left"><p>20%</p></td>
+<tr class="row-even"><td><p>Written hand-in homework</p></td>
+<td><p>20%</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Online questions</p></td>
-<td class="text-left"><p>15%</p></td>
+<tr class="row-odd"><td><p>Online questions</p></td>
+<td><p>15%</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Exam 1</p></td>
-<td class="text-left"><p>16%</p></td>
+<tr class="row-even"><td><p>Exam 1</p></td>
+<td><p>16%</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Exam 2</p></td>
-<td class="text-left"><p>16%</p></td>
+<tr class="row-odd"><td><p>Exam 2</p></td>
+<td><p>16%</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Exam 3</p></td>
-<td class="text-left"><p>16%</p></td>
+<tr class="row-even"><td><p>Exam 3</p></td>
+<td><p>16%</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Exam 4</p></td>
-<td class="text-left"><p>16%</p></td>
+<tr class="row-odd"><td><p>Exam 4</p></td>
+<td><p>16%</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Course check-in completion</p></td>
-<td class="text-left"><p>1%</p></td>
+<tr class="row-even"><td><p>Course check-in completion</p></td>
+<td><p>1%</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p><strong>Total</strong></p></td>
-<td class="text-left"><p><strong>100%</strong></p></td>
+<tr class="row-odd"><td><p>Total</p></td>
+<td><p>100%</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<figure class="grade-weights-chart"><svg viewBox="0 0 120 120" role="img" aria-labelledby="grade-weights-chart-119-title grade-weights-chart-119-desc"><title id="grade-weights-chart-119-title">Grade weights breakdown</title><desc id="grade-weights-chart-119-desc">Written hand-in homework 20%; Online questions 15%; Exam 1 16%; Exam 2 16%; Exam 3 16%; Exam 4 16%; Course check-in completion 1%.</desc><path class="grade-weights-chart__slice grade-weights-chart__slice--1" d="M 60 60 L 60.000 14.000 A 46 46 0 0 1 103.749 45.785 Z" fill="#9d2235" tabindex="0"><title>Written hand-in homework: 20%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--2" d="M 60 60 L 103.749 45.785 A 46 46 0 0 1 97.215 87.038 Z" fill="#4d7c8a" tabindex="0"><title>Online questions: 15%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--3" d="M 60 60 L 97.215 87.038 A 46 46 0 0 1 57.112 105.909 Z" fill="#d17a22" tabindex="0"><title>Exam 1: 16%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--4" d="M 60 60 L 57.112 105.909 A 46 46 0 0 1 19.690 82.161 Z" fill="#6d597a" tabindex="0"><title>Exam 2: 16%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--5" d="M 60 60 L 19.690 82.161 A 46 46 0 0 1 19.690 37.839 Z" fill="#2a6f97" tabindex="0"><title>Exam 3: 16%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--6" d="M 60 60 L 19.690 37.839 A 46 46 0 0 1 57.112 14.091 Z" fill="#52734d" tabindex="0"><title>Exam 4: 16%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--7" d="M 60 60 L 57.112 14.091 A 46 46 0 0 1 60.000 14.000 Z" fill="#b08968" tabindex="0"><title>Course check-in completion: 1%</title></path></svg><figcaption><ul class="grade-weights-chart__legend"><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--1" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #9d2235"></span>Written hand-in homework <strong>20%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--2" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #4d7c8a"></span>Online questions <strong>15%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--3" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #d17a22"></span>Exam 1 <strong>16%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--4" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #6d597a"></span>Exam 2 <strong>16%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--5" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #2a6f97"></span>Exam 3 <strong>16%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--6" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #52734d"></span>Exam 4 <strong>16%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--7" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #b08968"></span>Course check-in completion <strong>1%</strong></li></ul></figcaption></figure><p>Course check-ins are brief questions I create to learn what is working for you in the course organization, pacing, and resources.</p>
-<p><strong>Dropped assignments:</strong></p>
+<figure class="grade-weights-chart"><svg viewBox="0 0 120 120" role="img" aria-labelledby="grade-weights-chart-111-title grade-weights-chart-111-desc"><title id="grade-weights-chart-111-title">Grade weights breakdown</title><desc id="grade-weights-chart-111-desc">Written hand-in homework 20%; Online questions 15%; Exam 1 16%; Exam 2 16%; Exam 3 16%; Exam 4 16%; Course check-in completion 1%.</desc><path class="grade-weights-chart__slice grade-weights-chart__slice--1" d="M 60 60 L 60.000 14.000 A 46 46 0 0 1 103.749 45.785 Z" fill="#9d2235" tabindex="0"><title>Written hand-in homework: 20%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--2" d="M 60 60 L 103.749 45.785 A 46 46 0 0 1 97.215 87.038 Z" fill="#4d7c8a" tabindex="0"><title>Online questions: 15%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--3" d="M 60 60 L 97.215 87.038 A 46 46 0 0 1 57.112 105.909 Z" fill="#d17a22" tabindex="0"><title>Exam 1: 16%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--4" d="M 60 60 L 57.112 105.909 A 46 46 0 0 1 19.690 82.161 Z" fill="#6d597a" tabindex="0"><title>Exam 2: 16%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--5" d="M 60 60 L 19.690 82.161 A 46 46 0 0 1 19.690 37.839 Z" fill="#2a6f97" tabindex="0"><title>Exam 3: 16%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--6" d="M 60 60 L 19.690 37.839 A 46 46 0 0 1 57.112 14.091 Z" fill="#52734d" tabindex="0"><title>Exam 4: 16%</title></path><path class="grade-weights-chart__slice grade-weights-chart__slice--7" d="M 60 60 L 57.112 14.091 A 46 46 0 0 1 60.000 14.000 Z" fill="#b08968" tabindex="0"><title>Course check-in completion: 1%</title></path></svg><figcaption><ul class="grade-weights-chart__legend"><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--1" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #9d2235"></span>Written hand-in homework <strong>20%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--2" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #4d7c8a"></span>Online questions <strong>15%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--3" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #d17a22"></span>Exam 1 <strong>16%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--4" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #6d597a"></span>Exam 2 <strong>16%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--5" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #2a6f97"></span>Exam 3 <strong>16%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--6" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #52734d"></span>Exam 4 <strong>16%</strong></li><li class="grade-weights-chart__legend-item grade-weights-chart__legend-item--7" tabindex="0"><span class="grade-weights-chart__swatch" style="background-color: #b08968"></span>Course check-in completion <strong>1%</strong></li></ul></figcaption></figure><p>Course check-ins are brief questions I create to learn what is working for you
+in the course organization, pacing, and resources.</p>
+<section id="dropped-assignments">
+<h3>Dropped assignments<a class="headerlink" href="#dropped-assignments" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>The worst 2 hand-in HW assignments get dropped.</p></li>
-<li><p>The worst 4 online question assignments get dropped. (One extra online question assignments dropped if you complete all check-in work)</p></li>
+<li><p>The worst two hand-in homework assignments are dropped.</p></li>
+<li><p>The worst four online-question assignments are dropped. One extra online question is dropped if you complete all check-in work.</p></li>
 </ul>
+</section>
 <section id="weekly-hand-in-homework">
 <h3>Weekly hand-in homework<a class="headerlink" href="#weekly-hand-in-homework" title="Link to this heading">#</a></h3>
-<p>A typical assignment has several problems and may involve computation, modeling, and proofs or other mathematical arguments. Please submit it online as a PDF (a handwritten, scanned PDF is welcome), make sure it is legible and labels each problem, explain your method as well as your final answer, and write complete mathematical statements. Please follow the deadline listed on the assignment page.</p>
-<p>If you need more time, talk to me <strong>in advance of the deadline</strong> so we can work out an extension. We will deal with unforeseen emergencies on a case by case basis.</p>
+<p>A typical assignment has several problems and may involve computation, modeling,
+proofs, or other mathematical arguments. Submit it online as a PDF; a
+handwritten, scanned PDF is welcome. Make sure it is legible, labels each
+problem, explains the method and final answer, and uses complete mathematical
+statements. Follow the deadline listed on the assignment page.</p>
+<p>If you need more time, talk to me in advance of the deadline so we can work out
+an extension. Unforeseen emergencies are handled case by case.</p>
 </section>
 <section id="online-questions">
 <h3>Online questions<a class="headerlink" href="#online-questions" title="Link to this heading">#</a></h3>
-<p>Online questions normally follow a lecture and are due by the start of our next class meeting. They focus on comfort with key vocabulary and formulas.</p>
+<p>Online questions normally follow a lecture and are due by the start of the next
+class meeting. They focus on comfort with key vocabulary and formulas.</p>
 </section>
 <section id="unit-exams">
 <h3>Unit exams<a class="headerlink" href="#unit-exams" title="Link to this heading">#</a></h3>
-<p>There are four unit exams: three in-class exams and one during the first part of the final-exam period.</p>
-<p>Every exam problem will be parallel to an assigned homework problem in its required method and main solution steps, though the parameters, objects, or wording may change.</p>
+<p>There are four unit exams: three in-class exams and one during the first part of
+the final-exam period. Every exam problem will be parallel to an assigned
+homework problem in its required method and main solution steps, though the
+parameters, objects, or wording may change.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Exams</p></th>
-<th class="head text-left"><p>Date or period</p></th>
-<th class="head text-left"><p>Scope</p></th>
+<tr class="row-odd"><th class="head"><p>Exam</p></th>
+<th class="head"><p>Date or period</p></th>
+<th class="head"><p>Scope</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>Exam 1</p></td>
-<td class="text-left"><p>Friday, September 18</p></td>
-<td class="text-left"><p>TBA</p></td>
+<tr class="row-even"><td><p>Exam 1</p></td>
+<td><p>Friday, September 18</p></td>
+<td><p>To be announced</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Exam 2</p></td>
-<td class="text-left"><p>Friday, October 16</p></td>
-<td class="text-left"><p>TBA</p></td>
+<tr class="row-odd"><td><p>Exam 2</p></td>
+<td><p>Friday, October 16</p></td>
+<td><p>To be announced</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Exam 3</p></td>
-<td class="text-left"><p>Friday, November 13</p></td>
-<td class="text-left"><p>TBA</p></td>
+<tr class="row-even"><td><p>Exam 3</p></td>
+<td><p>Friday, November 13</p></td>
+<td><p>To be announced</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>Exam 4</p></td>
-<td class="text-left"><p>First 1h of the Registrar-assigned final exam</p></td>
-<td class="text-left"><p>TBA</p></td>
+<tr class="row-odd"><td><p>Exam 4</p></td>
+<td><p>First hour of the Registrar-assigned final exam</p></td>
+<td><p>To be announced</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Mastery reassessment</p></td>
-<td class="text-left"><p>Second part of the same final period</p></td>
-<td class="text-left"><p>One earlier midterm unit selected by the student</p></td>
+<tr class="row-even"><td><p>Mastery reassessment</p></td>
+<td><p>Second part of the same final period</p></td>
+<td><p>One earlier midterm unit selected by the student</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<!--
-| Midterm 1 | Friday, September 18 | Enumeration, inclusion-exclusion, and the first generating-function foundations |
-| Midterm 2 | Friday, October 16 | Recurrence models, computational evaluation, and ordinary generating-function methods developed after Midterm 1 |
-| Midterm 3 | Friday, November 13 | Later ordinary generating functions, introductory exponential generating functions, and symmetry counting |
-| Unit exam 4 | First part of the Registrar-assigned final period | Algorithmic arithmetic, RSA, and any designated cumulative connections |
-| Mastery reassessment | Second part of the same final period | One earlier midterm unit selected by the student |
--->
-<p>During the second part of the final exam period, you may choose to reassess your mastery of one of the exam units 1-3.
-The reassessment covers the same unit and methods.
-If your reassessment score is higher, it replaces the earlier score; if it is lower, your earlier score stays in place.</p>
-<p>For each exam, you may use one standard letter- or A4-size page of handwritten notes that you prepared yourself.</p>
-<p>If you need an alternate or accommodated testing arrangement, please contact me and the appropriate University office at least 2 weeks in advance of the exam date.</p>
+<p>During the second part of the final exam period, you may choose to reassess your
+mastery of one of exam units 1–3. The reassessment covers the same unit and
+methods. If the reassessment score is higher, it replaces the earlier score; if
+it is lower, the earlier score remains.</p>
+<p>For each exam, you may use one standard letter- or A4-size page of handwritten
+notes that you prepared yourself. If you need an alternate or accommodated
+testing arrangement, contact me and the appropriate University office at least
+two weeks in advance.</p>
 </section>
 <section id="letter-grades">
 <h3>Letter grades<a class="headerlink" href="#letter-grades" title="Link to this heading">#</a></h3>
-<p>Here is the tentative grade distribution.
-It is <strong>just a reference</strong>, and I will let you know if it needs to change during the course.</p>
+<p>The following tentative distribution is a reference; I will let you know if it
+needs to change during the course.</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>Course percentage</p></th>
-<th class="head text-left"><p>Letter grade</p></th>
+<tr class="row-odd"><th class="head"><p>Course percentage</p></th>
+<th class="head"><p>Letter grade</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-left"><p>88-100</p></td>
-<td class="text-left"><p>A</p></td>
+<tr class="row-even"><td><p>88–100</p></td>
+<td><p>A</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>76-87.99</p></td>
-<td class="text-left"><p>B</p></td>
+<tr class="row-odd"><td><p>76–87.99</p></td>
+<td><p>B</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>64-75.99</p></td>
-<td class="text-left"><p>C</p></td>
+<tr class="row-even"><td><p>64–75.99</p></td>
+<td><p>C</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>51-63.99</p></td>
-<td class="text-left"><p>D</p></td>
+<tr class="row-odd"><td><p>51–63.99</p></td>
+<td><p>D</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>Below 51</p></td>
-<td class="text-left"><p>F</p></td>
+<tr class="row-even"><td><p>Below 51</p></td>
+<td><p>F</p></td>
 </tr>
 </tbody>
 </table>
@@ -643,27 +627,42 @@ It is <strong>just a reference</strong>, and I will let you know if it needs to 
 </section>
 <section id="communication-records-and-course-changes">
 <h2>Communication, records, and course changes<a class="headerlink" href="#communication-records-and-course-changes" title="Link to this heading">#</a></h2>
-<p>Email is the best way to reach me with an individual question.</p>
-<p>I will post course-wide announcements, grades, and updates in Blackboard, so please check your University email and Blackboard regularly.</p>
-<p>If you notice a possible grading or recording error, please let me know promptly (within one week of the posted score).</p>
-<p>I may revise the syllabus when needed. If a change materially affects grading, exams, deadlines, or course delivery, I will announce it in writing.
-The current version of this website is our course reference.</p>
+<p>Email is the best way to reach me with an individual question. I will post
+course-wide announcements, grades, and updates in
+<a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/"><span>Blackboard</span></a>, so check your University
+email and Blackboard regularly. If you notice a possible grading or recording
+error, let me know promptly, within one week of the posted score.</p>
+<p>I may revise the syllabus when needed. If a change materially affects grading,
+exams, deadlines, or course delivery, I will announce it in writing. The current
+version of this website is our course reference.</p>
 </section>
 <section id="other-information">
 <h2>Other information<a class="headerlink" href="#other-information" title="Link to this heading">#</a></h2>
 <section id="accessibility-and-accommodations">
 <h3>Accessibility and accommodations<a class="headerlink" href="#accessibility-and-accommodations" title="Link to this heading">#</a></h3>
-<p>If you have approved accommodations, please request your accommodation letter and contact me early so we can make arrangements in time.
-If you think you may need accommodations but have not yet set them up, the <a class="reference external" href="https://cea.uark.edu/">Center for Educational Access</a> can help. Temporary conditions can affect access too, so please reach out promptly when they arise.</p>
+<p>If you have approved accommodations, request your accommodation letter and
+contact me early so we can make arrangements in time. If you think you may need
+accommodations but have not set them up, the <a class="reference external" href="https://cea.uark.edu/">Center
+for Educational Access</a> can help. Temporary conditions can affect access too,
+so reach out promptly when they arise.</p>
 </section>
 <section id="religious-observances-university-activities-and-other-excusable-conflicts">
 <h3>Religious observances, University activities, and other excusable conflicts<a class="headerlink" href="#religious-observances-university-activities-and-other-excusable-conflicts" title="Link to this heading">#</a></h3>
-<p>Please email me as early as you can about religious observances, required University activities, military service, jury duty, documented illness, a family crisis, or another excusable conflict. For an exam conflict you can anticipate, letting me know at least one week ahead is especially helpful. We will follow the applicable University policies and deadlines.</p>
-<p>If you have three or more final exams on one day, you may be able to reschedule one under <a class="reference external" href="https://policies.uark.edu/academic/150020.php">Academic Policy 1500.20</a>. If it involves this course, please make your request before the Registrar’s withdrawal deadline.</p>
+<p>Email me as early as you can about religious observances, required University
+activities, military service, jury duty, documented illness, a family crisis,
+or another excusable conflict. For an exam conflict you can anticipate, letting
+me know at least one week ahead is especially helpful. We will follow applicable
+University policies and deadlines.</p>
+<p>If you have three or more final exams on one day, you may be able to reschedule
+one under <a class="reference external" href="https://policies.uark.edu/academic/150020.php">Academic Policy
+1500.20</a>. If it involves this course, request it before the Registrar’s
+withdrawal deadline.</p>
 </section>
 <section id="inclement-weather-and-emergencies">
 <h3>Inclement weather and emergencies<a class="headerlink" href="#inclement-weather-and-emergencies" title="Link to this heading">#</a></h3>
-<p>We will follow University closure and inclement-weather decisions. If a closure prevents an exam, I will announce a new date through Blackboard and the course website. Please do not travel when conditions are unsafe.</p>
+<p>We will follow University closure and inclement-weather decisions. If a closure
+prevents an exam, I will announce a new date through Blackboard and the course
+website. Please do not travel when conditions are unsafe.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://emergency.uark.edu/">University emergency information</a></p></li>
 <li><p><a class="reference external" href="https://safety.uark.edu/emergency-preparedness/emergency-notification-system/">RazALERT emergency notifications</a></p></li>
@@ -678,7 +677,8 @@ If you think you may need accommodations but have not yet set them up, the <a cl
 <li><p><a class="reference external" href="https://health.uark.edu/mental-health/index.php">Counseling and Psychological Services</a></p></li>
 <li><p><a class="reference external" href="https://uofacares.uark.edu/">U of A Cares</a></p></li>
 </ul>
-<p>Additional links are collected on the <a class="reference internal" href="resources.html"><span class="std std-doc">resources page</span></a>.</p>
+<p>Additional links are collected on the <a class="reference internal" href="resources.html"><span class="doc">resources page</span></a>.
+</p>
 </section>
 </section>
 </section>
@@ -690,18 +690,14 @@ If you think you may need accommodations but have not yet set them up, the <a cl
               
                 <footer class="prev-next-footer d-print-none">
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="index.html"
-       title="previous page">
+    <a class="left-prev" href="index.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Combinatorics MATH31003-01 – Fall 2026</p>
+        <p class="prev-next-title">Combinatorics</p>
       </div>
     </a>
-    <a class="right-next"
-       href="calendar.html"
-       title="next page">
+    <a class="right-next" href="calendar.html" title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Calendar</p>
@@ -716,36 +712,67 @@ If you think you may need accommodations but have not yet set them up, the <a cl
         
       </main>
 
-      <button id="course-primary-sidebar-toggle" class="course-edge-sidebar-toggle"
-              data-course-sidebar-toggle="primary" type="button"
-              aria-controls="pst-primary-sidebar" aria-expanded="true"
-              aria-label="Collapse section navigation" title="Collapse section navigation">&lsaquo;</button>
+      <button id="course-primary-sidebar-toggle" class="course-edge-sidebar-toggle" data-course-sidebar-toggle="primary" type="button" aria-controls="pst-primary-sidebar" aria-expanded="true" aria-label="Collapse section navigation" title="Collapse section navigation">‹</button>
 
       
         
           <dialog id="pst-secondary-sidebar-modal"></dialog>
-          <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+          <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+            <div class="course-focused-section-utilities" data-course-focused-utilities="">
+  
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+  
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
+</div>
+            <div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
-<div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
+<div class="course-page-toc-heading">
+    <div class="dropdown course-page-toc-display-menu">
+      <button id="course-page-toc-display-toggle" class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Choose on-this-page navigation display">
+        <i class="fa-solid fa-list" aria-hidden="true"></i>
+        <span class="visually-hidden">Choose on-this-page navigation display</span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="course-page-toc-display-toggle">
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="expanded">Show all sections</button></li>
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="current">Show current section</button></li>
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="top-level">Show top-level sections</button></li>
+      </ul>
+    </div>
+    <div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
+      On this page
+    </div>
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-overview">Course overview</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-outcomes">Learning Outcomes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-outcomes">Learning outcomes</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#materials">Materials</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-organization">Course organization</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attendance-and-participation">Attendance and participation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#academic-integrity">Academic integrity</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#academic-integrity">Academic integrity</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assessment">Assessment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dropped-assignments">Dropped assignments</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weekly-hand-in-homework">Weekly hand-in homework</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#online-questions">Online questions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-exams">Unit exams</a></li>
@@ -763,11 +790,9 @@ If you think you may need accommodations but have not yet set them up, the <a cl
 </ul>
   </nav></div>
 
-</div></div>
-          <button id="course-secondary-sidebar-toggle" class="course-edge-sidebar-toggle"
-                  data-course-sidebar-toggle="secondary" type="button"
-                  aria-controls="pst-secondary-sidebar" aria-expanded="true"
-                  aria-label="Collapse on-this-page navigation" title="Collapse on-this-page navigation">&rsaquo;</button>
+</div>
+          </div>
+          <button id="course-secondary-sidebar-toggle" class="course-edge-sidebar-toggle" data-course-sidebar-toggle="secondary" type="button" aria-controls="pst-secondary-sidebar" aria-expanded="true" aria-label="Collapse on-this-page navigation" title="Collapse on-this-page navigation">›</button>
         
       
 
@@ -781,7 +806,7 @@ If you think you may need accommodations but have not yet set them up, the <a cl
   <p class="copyright">
     
       © Copyright 2026, Gennady Uraltsev.
-      <br/>
+      <br>
     
   </p>
 </div>
@@ -804,9 +829,10 @@ If you think you may need accommodations but have not yet set them up, the <a cl
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer="" src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer="" src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
 
+  
 
-  </body>
-</html>
+  
+</body></html>
