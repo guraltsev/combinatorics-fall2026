@@ -511,6 +511,14 @@ body.layout-notes .bd-article-container {
 .semantic-colored.semantic-color-violet { color: violet; }
 .semantic-colored.semantic-color-white { color: white; }
 .semantic-colored.semantic-color-yellow { color: yellow; }
+
+/* Browser named colors are calibrated for a light canvas.  Use lighter,
+   recognizably equivalent hues for the inline LaTeX color names in dark mode. */
+html[data-theme="dark"] .semantic-colored.semantic-color-blue { color: #6ea8fe; }
+html[data-theme="dark"] .semantic-colored.semantic-color-green { color: #63d98a; }
+html[data-theme="dark"] .semantic-colored.semantic-color-orange { color: #ffc857; }
+html[data-theme="dark"] .semantic-colored.semantic-color-purple { color: #c69cff; }
+
 .semantic-colorboxed { border-radius: 0.15rem; padding: 0 0.2em; }
 .semantic-colorboxed.semantic-color-black { background-color: black; color: white; }
 .semantic-colorboxed.semantic-color-blue { background-color: blue; color: white; }
@@ -1326,6 +1334,27 @@ section[id^="homework-problem-"][id*="-part-"] > h3 + p {
 
 .hwinstructions-title {
   font-weight: 700;
+}
+
+/* Model write-ups should resemble the scale and informality of handwritten
+   student work while remaining selectable, searchable, and accessible text. */
+.semantic-studentwork {
+  font-family: "Segoe Print", "Comic Sans MS", "Bradley Hand", cursive;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin: 0.75rem 0 1.25rem;
+  padding: 1rem 1.1rem;
+  background: color-mix(in srgb, var(--pst-color-surface) 94%, var(--brand-sky));
+  border: 1px solid color-mix(in srgb, var(--pst-color-border) 65%, var(--brand-blue));
+  border-radius: 0.25rem;
+}
+
+.semantic-studentwork > :first-child {
+  margin-top: 0;
+}
+
+.semantic-studentwork > :last-child {
+  margin-bottom: 0;
 }
 
 .online-question-title {
