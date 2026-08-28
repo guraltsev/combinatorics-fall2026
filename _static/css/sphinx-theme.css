@@ -450,6 +450,13 @@ body.layout-notes .bd-article-container {
   margin-top: 0.85rem;
 }
 
+/* Descriptive checkpoints make long proofs easier to scan. */
+.bd-article .semantic-proof-step {
+  font-weight: 650;
+  margin-bottom: 0.35rem;
+  margin-top: 1rem;
+}
+
 /* Homework problem names are secondary to their numbered markers. */
 .homework-problem-name {
   font-size: 0.9em;
@@ -511,14 +518,6 @@ body.layout-notes .bd-article-container {
 .semantic-colored.semantic-color-violet { color: violet; }
 .semantic-colored.semantic-color-white { color: white; }
 .semantic-colored.semantic-color-yellow { color: yellow; }
-
-/* Browser named colors are calibrated for a light canvas.  Use lighter,
-   recognizably equivalent hues for the inline LaTeX color names in dark mode. */
-html[data-theme="dark"] .semantic-colored.semantic-color-blue { color: #6ea8fe; }
-html[data-theme="dark"] .semantic-colored.semantic-color-green { color: #63d98a; }
-html[data-theme="dark"] .semantic-colored.semantic-color-orange { color: #ffc857; }
-html[data-theme="dark"] .semantic-colored.semantic-color-purple { color: #c69cff; }
-
 .semantic-colorboxed { border-radius: 0.15rem; padding: 0 0.2em; }
 .semantic-colorboxed.semantic-color-black { background-color: black; color: white; }
 .semantic-colorboxed.semantic-color-blue { background-color: blue; color: white; }
@@ -1446,6 +1445,11 @@ html[data-theme="dark"] .lecture-log-tentative {
 html[data-theme="dark"] .lecture-log-inclass {
   color: #d9f5fb;
   background: #24596a;
+}
+
+/* LaTeX's \item[(A)] syntax requests parenthesized alphabetic list markers. */
+ol.parenthesized-upperalpha > li::marker {
+  content: "(" counter(list-item, upper-alpha) ") ";
 }
 
 .grade-weights-chart { display: grid; grid-template-columns: minmax(11rem, 16rem) minmax(15rem, 1fr); gap: 1.25rem; align-items: center; max-width: 46rem; margin: 1.25rem auto; }
