@@ -46,6 +46,23 @@ html[data-theme="dark"] {
   vertical-align: -0.16em;
 }
 
+/* The home page has no breadcrumb trail, but its direct PDF remains available
+   from the same article-header area as the page-level breadcrumb action. */
+.course-home-page-tools {
+  display: flex;
+  align-items: center;
+}
+
+.course-home-pdf-link {
+  display: inline-flex;
+  padding: 0.2rem;
+}
+
+.course-home-pdf-icon {
+  width: 1.15em;
+  height: 1.15em;
+}
+
 :focus-visible {
   outline: 3px solid var(--brand-blue);
   outline-offset: 3px;
