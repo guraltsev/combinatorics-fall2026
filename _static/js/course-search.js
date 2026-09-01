@@ -1,3 +1,4 @@
+/** Enhances the generated course search results without replacing native search. */
 (() => {
   function setup() {
   const dialog = document.querySelector("#pst-search-dialog");

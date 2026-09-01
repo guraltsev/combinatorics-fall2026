@@ -4,6 +4,19 @@
     const layout = document.querySelector(".bd-container__inner");
     if (!layout) return;
 
+    // Let the course grid follow PyData's own secondary-sidebar breakpoint.
+    // The theme exposes that state by showing this header control, so there
+    // is no second breakpoint here that could drift out of sync.
+    const syncSecondaryMenuState = () => {
+      const menuToggle = document.querySelector("#pst-header .secondary-toggle");
+      const secondaryInMenu = Boolean(menuToggle && getComputedStyle(menuToggle).display !== "none");
+      layout.classList.toggle("course-secondary-in-menu", secondaryInMenu);
+      document.documentElement.classList.toggle("course-secondary-in-menu", secondaryInMenu);
+    };
+
+    syncSecondaryMenuState();
+    window.addEventListener("resize", syncSecondaryMenuState);
+
     layout.addEventListener("click", (event) => {
       const toggle = event.target.closest("[data-course-sidebar-toggle]");
       if (!toggle) return;

@@ -1,3 +1,4 @@
+/** Provides disclosure and copy behavior for semantic MyOpenMath exports. */
 (() => {
   async function copyText(value) {
     if (navigator.clipboard?.writeText) {
