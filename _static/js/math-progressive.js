@@ -40,30 +40,36 @@
         });
         if (!fallbacks.length) return;
 
-        var originals = fallbacks.map(function (fallback) {
+        var pending = fallbacks.map(function (fallback) {
           fallback.dataset.mathEnhancing = 'true';
           var display = fallback.dataset.mathDisplay === 'block';
           var svg = fallback.querySelector(':scope > .math-svg');
           if (!svg) throw new Error('Prerendered math has no SVG fallback');
-          var source = document.createTextNode(display
+          // Keep the fallback visible while MathJax works.  Typeset beside it
+          // in the formula's final DOM location, then make a single swap only
+          // after MathJax has produced its complete SVG container.
+          var staging = document.createElement('span');
+          staging.setAttribute('aria-hidden', 'true');
+          staging.style.visibility = 'hidden';
+          staging.style.position = 'absolute';
+          staging.style.pointerEvents = 'none';
+          staging.append(document.createTextNode(display
             ? '\\[' + fallback.dataset.tex + '\\]'
-            : '\\(' + fallback.dataset.tex + '\\)');
-          var children = Array.from(fallback.childNodes);
+            : '\\(' + fallback.dataset.tex + '\\)'));
           var fontSize = getComputedStyle(svg).fontSize;
-          fallback.style.visibility = 'hidden';
-          svg.replaceWith(source);
-          return {children: children, fontSize: fontSize};
+          svg.after(staging);
+          return {svg: svg, staging: staging, fontSize: fontSize};
         });
 
         try {
-          // Typeset in each formula's final DOM location.  Moving a finished
-          // MathJax container out of an off-screen staging tree leaves its
-          // context-menu bookkeeping tied to detached nodes in some MathJax
-          // versions.  In-place typesetting keeps its click, keyboard, and
-          // right-click handlers attached to the visible container.
-          await window.MathJax.typesetPromise(fallbacks);
-          var enhanced = fallbacks.map(function (fallback) {
-            return fallback.querySelector(':scope > mjx-container');
+          // The staging nodes are in the final document, avoiding the
+          // detached-tree context-menu issue while preserving the SVG until
+          // every replacement has rendered.
+          await window.MathJax.typesetPromise(pending.map(function (item) {
+            return item.staging;
+          }));
+          var enhanced = pending.map(function (item) {
+            return item.staging.querySelector(':scope > mjx-container');
           });
           if (enhanced.some(function (node) { return !node; })) {
             throw new Error('MathJax did not produce output for every expression');
@@ -73,21 +79,25 @@
             // Browser MathJax applies an ex-height font-size correction to its
             // container.  The build-time SVG inherits the surrounding size,
             // so retain that measured size to keep identical SVG geometry.
-            enhanced[index].style.fontSize = originals[index].fontSize;
+            enhanced[index].style.fontSize = pending[index].fontSize;
+            // Replacing the SVG directly avoids any visible intermediate
+            // state: the completed MathJax container takes its exact place.
+            pending[index].svg.replaceWith(enhanced[index]);
+            pending[index].staging.remove();
             fallback.classList.remove('math-fallback');
             fallback.classList.add('math-enhanced');
             fallback.removeAttribute('role');
             fallback.removeAttribute('aria-label');
             fallback.removeAttribute('tabindex');
-            fallback.style.removeProperty('visibility');
           });
         } catch (error) {
-          // Keep the no-JavaScript SVG baseline intact if enhancement fails
-          // part way through a batch.
-          if (window.MathJax.typesetClear) window.MathJax.typesetClear(fallbacks);
-          fallbacks.forEach(function (fallback, index) {
-            fallback.replaceChildren.apply(fallback, originals[index].children);
-            fallback.style.removeProperty('visibility');
+          // The fallback SVG was never removed, so failure simply discards the
+          // hidden staging output and leaves the no-JavaScript baseline intact.
+          if (window.MathJax.typesetClear) window.MathJax.typesetClear(pending.map(function (item) {
+            return item.staging;
+          }));
+          pending.forEach(function (item) {
+            item.staging.remove();
           });
           throw error;
         } finally {
