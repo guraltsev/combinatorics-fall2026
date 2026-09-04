@@ -1,0 +1,650 @@
+<!DOCTYPE html><html lang="en" data-content_root="../"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Homework 3 — Combinatorics — MATH 31003-01 - Fall 2026</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
+  <link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02">
+    <link rel="stylesheet" type="text/css" href="../_static/tippy.js/tippy.css?v=865cd1a4">
+    <link rel="stylesheet" type="text/css" href="../_static/css/sphinx-theme.css?v=b36af13d">
+    <link rel="stylesheet" type="text/css" href="../_static/css/tippy.css?v=234a49ec">
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9">
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9">
+
+  
+    <script src="../_static/documentation_options.js?v=7f41d439"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script defer="defer" src="../_static/@popperjs/core/popper.min.js?v=a8c9358f"></script>
+    <script defer="defer" src="../_static/tippy.js/tippy.umd.min.js?v=4126cd26"></script>
+    <script defer="defer" src="../_static/tippy\assignments\hw03.d27f9fae-99b8-45e0-899e-8cfc71a38ec0.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/js/math-progressive.js?v=c3e6d62a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'assignments/hw03';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="../_static/js/course-focused-mode.js?v=0be05eaa"></script>
+    <script src="../_static/js/course-sidebar-toggle.js?v=5012eb64"></script>
+    <script src="../_static/js/course-page-toc.js?v=cb59aa39"></script>
+    <script src="../_static/js/course-navbar-overflow.js?v=3a1ef034"></script>
+    <script src="../_static/js/course-search.js?v=d094b4b4"></script>
+    <script src="../_static/js/my-open-math.js?v=f599d90e"></script>
+  <script src="../course-search-index.js"></script>
+  
+  
+
+    <link rel="icon" href="../_static/uark-favicon.png">
+    <link rel="index" title="Index" href="../genindex.html">
+    <link rel="search" title="Search" href="../search.html">
+    <link rel="next" title="Resources" href="../resources.html">
+    <link rel="prev" title="Homework 2" href="hw02.html">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="docsearch:language" content="en">
+  <meta name="docsearch:version" content="">
+    <meta name="docbuild:last-update" content="September 03, 2026">
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  
+  <script>
+    // Prevent a focused cold load from briefly displaying the full shell.
+    try { if (new URLSearchParams(location.search).has("focus")) document.documentElement.classList.add("course-focus-requested"); } catch (_) {}
+  </script>
+  <script>
+    // JupyterLite registers a service worker at the origin root. If it was
+    // previously run on the usual local preview port, that worker can control
+    // this unrelated Sphinx site and reject page requests after a rebuild.
+    // Published course sites are unaffected; only loopback previews clear
+    // service-worker registrations.
+    if (location.hostname === "127.0.0.1" || location.hostname === "localhost") {
+      navigator.serviceWorker?.getRegistrations()
+        .then((registrations) => Promise.all(registrations.map((registration) => registration.unregister())))
+        .catch(() => {});
+    }
+  </script>
+
+  </head>
+  <body data-default-mode="" data-course-docname="assignments/hw03" data-focus-section-root="assignments/index" data-focus-section-title="Assignments" data-focus-section-documents="assignments/index,assignments/example-homework-writeup,assignments/hw01,assignments/hw02,assignments/hw03" data-focus-section-targets="{&quot;assignments/index&quot;:&quot;index.html&quot;,&quot;assignments/example-homework-writeup&quot;:&quot;example-homework-writeup.html&quot;,&quot;assignments/hw01&quot;:&quot;hw01.html&quot;,&quot;assignments/hw02&quot;:&quot;hw02.html&quot;,&quot;assignments/hw03&quot;:&quot;#&quot;}" class="layout-info">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+    <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+      <i class="fa-solid fa-arrow-up"></i>Back to top
+    </button>
+  
+
+  
+    
+      <dialog id="pst-search-dialog">
+        
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+      </dialog>
+    
+  
+
+  
+  
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+      
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Combinatorics — MATH 31003-01 - Fall 2026</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="course-navbar-nav" aria-label="Primary navigation">
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  <ul class="bd-navbar-elements navbar-nav current" data-course-navbar-items="">
+<li class="nav-item"><a class="nav-link nav-internal" href="../syllabus.html">Syllabus</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../calendar.html">Calendar</a></li>
+<li class="nav-item current"><a class="nav-link nav-internal" href="index.html">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
+  <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
+    <button class="course-navbar-overflow__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Show more navigation items" data-course-navbar-overflow-toggle="">
+      <span aria-hidden="true">▾</span>
+    </button>
+    <ul class="course-navbar-overflow__menu" data-course-navbar-overflow-menu="" hidden=""></ul>
+  </div>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav class="course-navbar-nav" aria-label="Primary navigation">
+  
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+  <ul class="bd-navbar-elements navbar-nav current" data-course-navbar-items="">
+<li class="nav-item"><a class="nav-link nav-internal" href="../syllabus.html">Syllabus</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../calendar.html">Calendar</a></li>
+<li class="nav-item current"><a class="nav-link nav-internal" href="index.html">Assignments</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../resources.html">Resources</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../lecture-notes/index.html">Lecture Notes</a></li>
+</ul>
+
+  <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
+    <button class="course-navbar-overflow__toggle" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Show more navigation items" data-course-navbar-overflow-toggle="">
+      <span aria-hidden="true">▾</span>
+    </button>
+    <ul class="course-navbar-overflow__menu" data-course-navbar-overflow-menu="" hidden=""></ul>
+  </div>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+<nav class="bd-docs-nav bd-links" aria-label="Assignments">
+  <p class="bd-links__title" role="heading" aria-level="1">
+    <a class="reference internal" href="index.html">Assignments</a>
+    
+      <button type="button" class="course-focus-button" data-course-focus-toggle="" aria-label="Focus this section" data-bs-original-title="Focus this section" data-bs-toggle="tooltip" data-bs-placement="bottom">
+        <span class="course-focus-icon" aria-hidden="true"></span>
+      </button>
+    
+  </p>
+  <div class="bd-toc-item navbar-nav">
+    
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="example-homework-writeup.html">Example Homework Write-Ups</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hw01.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw02.html">Homework 2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Homework 3</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement" class="flat" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+
+      <main id="main-content" class="bd-main" role="main">
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              <div class="bd-header-article d-print-none">
+                
+                
+                
+                <div class="header-article-items header-article__inner">
+                  
+                    <div class="header-article-items__start">
+                      
+                        <div class="header-article-item">
+                          
+                            
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+      
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Assignments</a></li>
+      
+    
+    <li class="breadcrumb-item active" aria-current="page">
+      <span class="ellipsis">Homework 3</span>
+      
+      <a class="course-breadcrumb-pdf-link" href="_pdf/hw03.pdf" aria-label="Download PDF version of this page">
+        <img class="course-breadcrumb-pdf-icon" src="../_static/assets/pdf-icon.svg" alt="">
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+
+                          
+                        </div>
+                      
+                    </div>
+                  
+                  
+                </div>
+                
+              </div>
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="homework-3">
+<h1>Homework 3<a class="headerlink" href="#homework-3" title="Link to this heading">#</a></h1>
+<p><strong>Due:</strong> Thursday, September 17, 2026 23:58<span class="semantic-line-break"></span><strong>Submit:</strong> Gradescope, through
+<a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/outline/">Blackboard’s assignment area</a>.</p>
+<p>Please write your homework by hand. Start each exercise on a new page, scan
+your work to a legible PDF, and clearly mark the pages associated with every
+exercise.</p>
+<section id="selecting-colored-balls">
+<h2>1. <span class="homework-problem-name">(Selecting colored balls)</span><a class="headerlink" href="#selecting-colored-balls" title="Link to this heading">#</a></h2>
+<p><strong>Points:</strong> 10</p>
+<p>For this exercise, an outcome records only the number of balls selected of
+each color. Thus balls of the same color are not distinguished from one
+another, and the order of selection is irrelevant.</p>
+<ol class="upperalpha simple parenthesized-upperalpha" start="1">
+<li><p><strong>5 points.</strong> A box contains 5 blue balls, 7 red balls, and 14
+yellow balls. How many ways are there to select a total of 15 balls?</p></li>
+<li><p><strong>5 points.</strong> A box contains 5 blue balls, 7 red balls, and 20
+yellow balls. How many ways are there to select a total of 15 balls?</p></li>
+</ol>
+<div class="admonition-homework-hint admonition" id="need-a-free-hint">
+<p class="admonition-title">Need a free hint?<a class="headerlink reference external" href="#need-a-free-hint">#</a></p>
+<p>Let the <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="b" data-math-display="inline" data-math-speech="b" role="math" aria-label="Math: b. Original TeX: b"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="0.971ex" height="1.595ex" role="img" focusable="false" viewBox="0 -694 429 705" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-NCM-I-1D44F" d="M281 445C245 445 209 428 174 394L243 679C241 688 238 694 226 694C193 694 120 685 107 684C92 682 84 675 84 660C84 650 93 645 112 645C131 645 157 646 157 632C157 628 152 608 143 571L63 249C52 207 47 173 47 148C47 62 93-11 175-11C240-11 297 22 347 89C392 151 415 216 415 283C415 370 364 445 281 445M279 415C318 415 337 385 337 326C337 299 331 263 319 218C297 133 268 75 233 44C213 27 194 19 175 19C134 19 114 51 114 115C114 137 119 170 129 214L151 304C154 319 159 330 165 338C204 389 242 415 279 415Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D44F" xlink:href="#MJX-1-NCM-I-1D44F"></use></g></g></g></svg></mjx-container></span>, <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="r" data-math-display="inline" data-math-speech="r" role="math" aria-label="Math: r. Original TeX: r"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.02ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 451 453" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-NCM-I-1D45F" d="M436 374C436 416 395 442 351 442C302 442 261 419 227 372C217 411 183 442 136 442C95 442 65 410 44 345C34 312 29 293 29 287C29 278 34 273 45 273C50 273 53 274 56 276C61 285 64 292 65 299C83 375 106 413 133 413C150 413 159 399 159 371C159 358 154 331 144 290L87 63C84 50 78 24 78 19C78-1 89-11 110-11C130-11 143-1 150 19L169 91C180 134 187 162 190 175L221 303C223 311 231 324 244 343C271 381 302 413 351 413C363 413 373 411 382 406C352 397 337 378 337 351C337 325 351 312 378 312C411 312 436 341 436 374Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D45F" xlink:href="#MJX-2-NCM-I-1D45F"></use></g></g></g></svg></mjx-container></span> and <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="y" data-math-display="inline" data-math-speech="y" role="math" aria-label="Math: y. Original TeX: y"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="1.109ex" height="1.464ex" role="img" focusable="false" viewBox="0 -442 490 647" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-3-NCM-I-1D466" d="M163 442C118 442 83 417 58 367C39 328 29 301 29 286C29 277 34 272 45 272C59 272 60 278 64 293C87 372 119 412 160 412C173 412 180 403 180 385C180 369 175 346 164 317C126 214 107 145 107 108C107 32 154-13 231-13C264-13 295-1 323 23C288-109 233-175 158-175C124-175 101-164 89-142C129-140 149-121 149-85C149-60 136-47 109-47C72-47 50-78 50-115C50-170 100-205 158-205C273-205 367-99 392-1L486 377C489 388 490 396 490 401C490 421 479 431 458 431C442 431 429 423 420 408C414 387 409 369 406 354L342 97C332 61 279 16 234 16C196 16 177 41 177 92C177 134 194 198 227 284C240 319 247 343 247 357C247 406 212 442 163 442Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D466" xlink:href="#MJX-3-NCM-I-1D466"></use></g></g></g></svg></mjx-container></span>  record the numbers of blue, red, and yellow balls
+selected. What does <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="b+r+y" data-math-display="inline" data-math-speech="b plus r plus y" role="math" aria-label="Math: b plus r plus y. Original TeX: b+r+y"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="0.971ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 429 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D44F" xlink:href="#MJX-4-NCM-I-1D44F"></use></g></g></g><defs><path id="MJX-4-NCM-I-1D44F" d="M281 445C245 445 209 428 174 394L243 679C241 688 238 694 226 694C193 694 120 685 107 684C92 682 84 675 84 660C84 650 93 645 112 645C131 645 157 646 157 632C157 628 152 608 143 571L63 249C52 207 47 173 47 148C47 62 93-11 175-11C240-11 297 22 347 89C392 151 415 216 415 283C415 370 364 445 281 445M279 415C318 415 337 385 337 326C337 299 331 263 319 218C297 133 268 75 233 44C213 27 194 19 175 19C134 19 114 51 114 115C114 137 119 170 129 214L151 304C154 319 159 330 165 338C204 389 242 415 279 415Z"></path><path id="MJX-4-NCM-N-2B" d="M698 274L413 274L413 559C413 575 405 583 389 583C373 583 365 575 365 559L365 274L80 274C64 274 56 266 56 250C56 234 64 226 80 226L365 226L365-59C365-75 373-83 389-83C405-83 413-75 413-59L413 226L698 226C714 226 722 234 722 250C722 263 711 274 698 274Z"></path><path id="MJX-4-NCM-I-1D45F" d="M436 374C436 416 395 442 351 442C302 442 261 419 227 372C217 411 183 442 136 442C95 442 65 410 44 345C34 312 29 293 29 287C29 278 34 273 45 273C50 273 53 274 56 276C61 285 64 292 65 299C83 375 106 413 133 413C150 413 159 399 159 371C159 358 154 331 144 290L87 63C84 50 78 24 78 19C78-1 89-11 110-11C130-11 143-1 150 19L169 91C180 134 187 162 190 175L221 303C223 311 231 324 244 343C271 381 302 413 351 413C363 413 373 411 382 406C352 397 337 378 337 351C337 325 351 312 378 312C411 312 436 341 436 374Z"></path><path id="MJX-4-NCM-I-1D466" d="M163 442C118 442 83 417 58 367C39 328 29 301 29 286C29 277 34 272 45 272C59 272 60 278 64 293C87 372 119 412 160 412C173 412 180 403 180 385C180 369 175 346 164 317C126 214 107 145 107 108C107 32 154-13 231-13C264-13 295-1 323 23C288-109 233-175 158-175C124-175 101-164 89-142C129-140 149-121 149-85C149-60 136-47 109-47C72-47 50-78 50-115C50-170 100-205 158-205C273-205 367-99 392-1L486 377C489 388 490 396 490 401C490 421 479 431 458 431C442 431 429 423 420 408C414 387 409 369 406 354L342 97C332 61 279 16 234 16C196 16 177 41 177 92C177 134 194 198 227 284C240 319 247 343 247 357C247 406 212 442 163 442Z"></path></defs></svg><mjx-break size="3"> </mjx-break><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="3.283ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1451.2 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="2B" xlink:href="#MJX-4-NCM-N-2B"></use></g><g data-mml-node="mi" transform="translate(1000.2,0)"><use data-c="1D45F" xlink:href="#MJX-4-NCM-I-1D45F"></use></g></g></g></svg><mjx-break size="3"> </mjx-break><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="3.372ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1490.2 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="2B" xlink:href="#MJX-4-NCM-N-2B"></use></g><g data-mml-node="mi" transform="translate(1000.2,0)"><use data-c="1D466" xlink:href="#MJX-4-NCM-I-1D466"></use></g></g></g></svg></mjx-container></span> have to be? Are there restrictions on <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="b,r,y" data-math-display="inline" data-math-speech="b comma r comma y" role="math" aria-label="Math: b comma r comma y. Original TeX: b,r,y"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="5.112ex" height="2.034ex" role="img" focusable="false" viewBox="0 -694 2259.3 899" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-5-NCM-I-1D44F" d="M281 445C245 445 209 428 174 394L243 679C241 688 238 694 226 694C193 694 120 685 107 684C92 682 84 675 84 660C84 650 93 645 112 645C131 645 157 646 157 632C157 628 152 608 143 571L63 249C52 207 47 173 47 148C47 62 93-11 175-11C240-11 297 22 347 89C392 151 415 216 415 283C415 370 364 445 281 445M279 415C318 415 337 385 337 326C337 299 331 263 319 218C297 133 268 75 233 44C213 27 194 19 175 19C134 19 114 51 114 115C114 137 119 170 129 214L151 304C154 319 159 330 165 338C204 389 242 415 279 415Z"></path><path id="MJX-5-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-5-NCM-I-1D45F" d="M436 374C436 416 395 442 351 442C302 442 261 419 227 372C217 411 183 442 136 442C95 442 65 410 44 345C34 312 29 293 29 287C29 278 34 273 45 273C50 273 53 274 56 276C61 285 64 292 65 299C83 375 106 413 133 413C150 413 159 399 159 371C159 358 154 331 144 290L87 63C84 50 78 24 78 19C78-1 89-11 110-11C130-11 143-1 150 19L169 91C180 134 187 162 190 175L221 303C223 311 231 324 244 343C271 381 302 413 351 413C363 413 373 411 382 406C352 397 337 378 337 351C337 325 351 312 378 312C411 312 436 341 436 374Z"></path><path id="MJX-5-NCM-I-1D466" d="M163 442C118 442 83 417 58 367C39 328 29 301 29 286C29 277 34 272 45 272C59 272 60 278 64 293C87 372 119 412 160 412C173 412 180 403 180 385C180 369 175 346 164 317C126 214 107 145 107 108C107 32 154-13 231-13C264-13 295-1 323 23C288-109 233-175 158-175C124-175 101-164 89-142C129-140 149-121 149-85C149-60 136-47 109-47C72-47 50-78 50-115C50-170 100-205 158-205C273-205 367-99 392-1L486 377C489 388 490 396 490 401C490 421 479 431 458 431C442 431 429 423 420 408C414 387 409 369 406 354L342 97C332 61 279 16 234 16C196 16 177 41 177 92C177 134 194 198 227 284C240 319 247 343 247 357C247 406 212 442 163 442Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><use data-c="1D44F" xlink:href="#MJX-5-NCM-I-1D44F"></use></g><g data-mml-node="mo" transform="translate(429,0)"><use data-c="2C" xlink:href="#MJX-5-NCM-N-2C"></use></g><g data-mml-node="mi" transform="translate(873.7,0)"><use data-c="1D45F" xlink:href="#MJX-5-NCM-I-1D45F"></use></g><g data-mml-node="mo" transform="translate(1324.7,0)"><use data-c="2C" xlink:href="#MJX-5-NCM-N-2C"></use></g><g data-mml-node="mi" transform="translate(1769.3,0)"><use data-c="1D466" xlink:href="#MJX-5-NCM-I-1D466"></use></g></g></g></svg></mjx-container></span>?
+</p>
+</div>
+</section>
+<section id="strings-avoiding-specified-substrings">
+<h2>2. <span class="homework-problem-name">(Strings avoiding specified substrings)</span><a class="headerlink" href="#strings-avoiding-specified-substrings" title="Link to this heading">#</a></h2>
+<p><strong>Points:</strong> 14</p>
+<p>How many strings of length 15 can be formed from the 26 uppercase English
+letters if no letter may be repeated and none of the following strings may
+occur as a substring?
+<span class="display-math-interrupt math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="\texttt{CAT},\qquad \texttt{TUG},\qquad \texttt{GAS},\qquad \texttt{SILK}" data-math-display="block" data-math-speech="monospace CAT comma empty TUG comma empty GAS comma empty SILK" role="math" aria-label="Math: monospace CAT comma empty TUG comma empty GAS comma empty SILK. Original TeX: \texttt{CAT},\qquad \texttt{TUG},\qquad \texttt{GAS},\qquad \texttt{SILK}" tabindex="0"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" display="true" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.437ex;" xmlns="http://www.w3.org/2000/svg" width="32.034ex" height="1.846ex" role="img" focusable="false" viewBox="0 -623 14159 816" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-6-NCM-M-1D672" d="M484 440L484 578C484 607 473 622 451 622C439 622 428 616 419 603C419 600 415 592 407 577C370 607 328 622 281 622C206 622 146 587 100 516C60 454 40 384 40 306C40 227 60 157 100 95C146 24 207-11 282-11C334-11 380 6 420 39C463 74 484 118 484 170C484 194 471 206 446 206C423 206 410 195 408 174C404 107 356 57 286 57C232 57 189 86 156 145C129 194 116 248 116 306C116 363 129 417 156 466C189 525 232 554 285 554C354 554 397 495 407 432C411 406 420 396 446 396C474 396 484 409 484 440Z"></path><path id="MJX-6-NCM-M-1D670" d="M219 34C219 65 198 68 165 68L186 163L338 163L359 68C326 68 305 65 305 34C305 9 322 0 350 0L451 0C482 0 497 11 497 34C497 49 491 60 478 65C473 67 460 68 437 68L319 581C311 618 299 623 262 623C226 623 213 617 205 582L87 68C64 68 51 67 46 66C33 59 27 49 27 34C27 11 42 0 73 0L174 0C202 0 219 9 219 34M262 518L322 231L202 231Z"></path><path id="MJX-6-NCM-M-1D683" d="M498 495L498 567C498 601 489 611 455 611L70 611C37 611 26 603 26 567L26 495C26 465 31 450 63 450C91 450 102 463 102 495L102 543L225 543L225 68L177 68C148 68 134 57 134 35C134 10 151 0 177 0L348 0C377 0 391 11 391 34C391 58 375 68 348 68L300 68L300 543L422 543L422 495C422 465 428 450 460 450C487 450 498 464 498 495Z"></path><path id="MJX-6-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-6-NCM-M-1D684" d="M150 210L150 543L175 543C205 543 220 554 220 577C220 600 205 611 175 611L48 611C19 611 4 600 4 577C4 554 19 543 48 543L74 543L74 205C74 148 91 99 125 57C161 12 207-11 262-11C317-11 363 12 399 57C433 99 450 148 450 205L450 543L476 543C505 543 520 554 520 577C520 600 505 611 476 611L349 611C319 611 304 600 304 577C304 554 319 543 349 543L374 543L374 210C374 173 365 139 347 109C326 74 297 57 262 57C191 57 150 133 150 210Z"></path><path id="MJX-6-NCM-M-1D676" d="M496 241C496 263 481 274 452 274L335 274C306 274 292 263 292 241C292 215 308 206 335 206L372 206C360 107 324 57 264 57C215 57 177 88 148 149C125 198 114 250 114 305C114 360 125 412 148 461C177 523 216 554 265 554C330 554 365 491 374 428C377 407 390 396 411 396C439 396 450 408 450 440L450 578C450 607 439 622 416 622C390 622 386 605 375 580C341 608 303 622 261 622C190 622 134 585 91 512C56 451 38 382 38 306C38 230 56 161 91 99C134 26 190-11 261-11C306-11 344 4 374 35C375 12 388 0 412 0C440 0 450 13 450 44L450 206C480 207 496 214 496 241Z"></path><path id="MJX-6-NCM-M-1D682" d="M237 554C294 554 336 527 353 488C365 461 367 449 374 421C380 409 391 403 407 403C435 403 446 416 446 447L446 578C446 607 435 622 412 622C404 622 397 620 391 615C382 600 376 588 374 579C338 608 293 622 238 622C140 622 52 552 52 456C52 376 116 313 182 297L294 271C365 254 400 218 400 163C400 101 347 57 285 57C200 57 132 93 128 170C127 175 127 181 126 187C123 201 111 208 90 208C63 208 52 194 52 164L52 33C52 4 63-11 85-11C103-11 116 3 124 32C164 3 217-11 284-11C335-11 379 6 416 40C453 74 472 117 472 168C472 215 456 255 424 288C384 330 351 337 279 353L199 371C163 380 124 414 124 460C124 517 178 554 237 554Z"></path><path id="MJX-6-NCM-M-1D678" d="M402 0C431 0 446 11 446 34C446 57 431 68 402 68L300 68L300 543L402 543C431 543 446 554 446 576C446 599 431 611 402 611L123 611C94 611 79 600 79 577C79 554 94 543 123 543L225 543L225 68L123 68C94 68 79 57 79 35C79 12 94 0 123 0Z"></path><path id="MJX-6-NCM-M-1D67B" d="M488 44L488 132C488 162 483 177 451 177C423 177 412 164 412 132L412 68L183 68L183 543L234 543C264 543 279 554 279 576C279 599 264 611 234 611L75 611C47 611 32 601 32 576C32 554 46 543 75 543L108 543L108 68L75 68C48 68 32 58 32 34C32 11 46 0 75 0L445 0C479 0 488 11 488 44Z"></path><path id="MJX-6-NCM-M-1D67A" d="M442 68C388 165 334 261 280 357L427 543C462 543 485 544 485 577C485 600 470 611 441 611L354 611C325 611 310 599 310 576C310 556 322 545 346 543L151 296L151 543L169 543C198 543 213 554 213 576C213 599 198 611 169 611L70 611C41 611 26 600 26 577C26 554 41 543 70 543L88 543L88 68L70 68C41 68 26 57 26 35C26 12 41 0 70 0L169 0C198 0 213 11 213 34C213 57 198 68 169 68L151 68L151 194L238 304L369 68C345 66 333 55 333 35C333 12 348 0 377 0L451 0C480 0 495 11 495 34C495 62 477 68 442 68Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mtext"><use data-c="1D672" xlink:href="#MJX-6-NCM-M-1D672"></use><use data-c="1D670" xlink:href="#MJX-6-NCM-M-1D670" transform="translate(525,0)"></use><use data-c="1D683" xlink:href="#MJX-6-NCM-M-1D683" transform="translate(1050,0)"></use></g><g data-mml-node="mo" transform="translate(1575,0)"><use data-c="2C" xlink:href="#MJX-6-NCM-N-2C"></use></g><g data-mml-node="mspace" transform="translate(1853,0)"></g><g data-mml-node="mtext" transform="translate(4019.7,0)"><use data-c="1D683" xlink:href="#MJX-6-NCM-M-1D683"></use><use data-c="1D684" xlink:href="#MJX-6-NCM-M-1D684" transform="translate(525,0)"></use><use data-c="1D676" xlink:href="#MJX-6-NCM-M-1D676" transform="translate(1050,0)"></use></g><g data-mml-node="mo" transform="translate(5594.7,0)"><use data-c="2C" xlink:href="#MJX-6-NCM-N-2C"></use></g><g data-mml-node="mspace" transform="translate(5872.7,0)"></g><g data-mml-node="mtext" transform="translate(8039.3,0)"><use data-c="1D676" xlink:href="#MJX-6-NCM-M-1D676"></use><use data-c="1D670" xlink:href="#MJX-6-NCM-M-1D670" transform="translate(525,0)"></use><use data-c="1D682" xlink:href="#MJX-6-NCM-M-1D682" transform="translate(1050,0)"></use></g><g data-mml-node="mo" transform="translate(9614.3,0)"><use data-c="2C" xlink:href="#MJX-6-NCM-N-2C"></use></g><g data-mml-node="mspace" transform="translate(9892.3,0)"></g><g data-mml-node="mtext" transform="translate(12059,0)"><use data-c="1D682" xlink:href="#MJX-6-NCM-M-1D682"></use><use data-c="1D678" xlink:href="#MJX-6-NCM-M-1D678" transform="translate(525,0)"></use><use data-c="1D67B" xlink:href="#MJX-6-NCM-M-1D67B" transform="translate(1050,0)"></use><use data-c="1D67A" xlink:href="#MJX-6-NCM-M-1D67A" transform="translate(1575,0)"></use></g></g></g></svg></mjx-container></span>Here a substring consists of consecutive letters in the given order.</p>
+<div class="admonition-homework-hint admonition" id="need-a-free-hint-2">
+<p class="admonition-title">Need a free hint?<a class="headerlink reference external" href="#need-a-free-hint-2">#</a></p>
+<p>Use inclusion–exclusion. Determine every intersection carefully. 
+Some pairs can occur by sharing a
+letter: for example, a string containing both <code class="docutils literal notranslate"><span class="pre">CAT</span></code> and <code class="docutils literal notranslate"><span class="pre">TUG</span></code>
+must contain the block <code class="docutils literal notranslate"><span class="pre">CATUG</span></code>. Some other pairs cannot occur together
+because letters may not repeat.
+</p>
+</div>
+</section>
+<section id="permutations-with-forbidden-positions">
+<h2>3. <span class="homework-problem-name">(Permutations with forbidden positions)</span><a class="headerlink" href="#permutations-with-forbidden-positions" title="Link to this heading">#</a></h2>
+<p><strong>Points:</strong> 12</p>
+<p>The digits in the string
+<span class="display-math-interrupt math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="0123456789" data-math-display="block" data-math-speech="0123456789" role="math" aria-label="Math: 0123456789. Original TeX: 0123456789" tabindex="0"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" display="true" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.05ex;" xmlns="http://www.w3.org/2000/svg" width="11.312ex" height="1.581ex" role="img" focusable="false" viewBox="0 -677 5000 699" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-7-NCM-N-30" d="M249-22C390-22 460 92 460 320C460 473 428 575 365 625C330 652 291 666 250 666C109 666 39 551 39 320C39 136 88-22 249-22M361 524C368 489 371 425 371 332C371 240 367 172 360 128C347 48 310 8 249 8C226 8 203 17 182 34C155 57 139 104 132 176C129 201 128 253 128 332C128 419 131 480 136 513C145 568 163 603 191 618C213 630 232 636 249 636C314 636 350 583 361 524Z"></path><path id="MJX-7-NCM-N-31" d="M269 666C228 624 168 603 89 603L89 564C141 564 184 572 217 588L217 82C217 64 213 52 204 47C195 42 170 39 130 39L95 39L95 0C120 2 174 3 257 3C340 3 394 2 419 0L419 39L384 39C343 39 318 42 310 47C302 52 297 64 297 82L297 636C297 660 295 666 269 666Z"></path><path id="MJX-7-NCM-N-32" d="M237 666C186 666 143 648 106 612C69 576 50 534 50 483C50 449 75 424 106 424C136 424 161 450 161 480C161 513 137 536 105 536C102 536 100 536 98 535C117 584 161 627 224 627C306 627 352 556 352 470C352 403 318 331 250 255L62 43C49 28 50 29 50 0L421 0L450 180L417 180C409 129 402 100 396 91C391 86 361 84 306 84L139 84L236 179C304 243 390 312 419 365C439 400 449 435 449 470C449 588 357 666 237 666Z"></path><path id="MJX-7-NCM-N-33" d="M303 353C369 378 431 441 431 526C431 569 410 604 369 631C333 654 292 666 246 666C201 666 162 654 127 631C88 605 68 571 68 528C68 495 90 472 122 472C154 472 176 495 176 527C176 560 157 578 119 580C145 615 186 633 242 633C302 633 332 598 332 527C332 485 324 450 309 421C282 373 245 364 183 364C171 362 165 357 165 348C165 333 172 333 192 333L235 333C310 333 348 280 348 173C348 88 317 14 241 14C176 14 128 36 99 80C134 79 160 105 160 139C160 173 135 198 101 198C62 198 42 178 42 137C42 88 64 49 108 18C147-9 193-22 244-22C301-22 350-3 393 34C436 71 457 117 457 173C457 267 383 332 303 353Z"></path><path id="MJX-7-NCM-N-34" d="M353 677C344 677 336 672 330 663L28 199L28 163L289 163L289 81C289 63 285 51 278 46C271 41 252 39 219 39L194 39L194 0C223 2 269 3 331 3C393 3 439 2 468 0L468 39L443 39C410 39 391 41 384 46C377 51 373 63 373 81L373 163L471 163L471 202L373 202L373 660C373 670 366 677 353 677M295 553L295 202L67 202Z"></path><path id="MJX-7-NCM-N-35" d="M118 315C123 315 129 319 134 326C164 371 205 393 257 393C292 393 319 373 337 332C348 305 354 264 354 209C354 146 346 102 331 76C306 35 272 14 229 14C162 14 109 62 91 114C94 113 96 114 100 114C130 114 155 137 155 167C155 198 130 219 100 219C65 219 50 200 50 163C50 63 131-22 231-22C292-22 344 0 386 44C428 88 449 141 449 202C449 260 432 310 398 353C361 400 315 423 259 423C212 423 171 408 138 378L138 556C165 548 191 544 218 544C264 544 304 555 338 578C369 597 390 616 402 634C408 642 411 648 411 651C411 661 406 666 396 666C341 645 294 634 256 634C211 634 168 643 127 662C122 664 118 665 114 665C105 665 100 656 100 637L100 345C100 324 100 315 118 315Z"></path><path id="MJX-7-NCM-N-36" d="M383 504C416 504 432 521 432 555C432 627 378 666 304 666C221 666 155 627 106 548C63 480 42 403 42 316C42 189 65 100 112 47C152 1 198-22 251-22C312-22 362 1 401 47C438 91 457 144 457 205C457 266 439 318 403 361C365 407 316 431 257 431C205 431 165 402 138 346L138 352C138 465 166 561 226 605C252 624 279 633 306 633C342 633 368 623 385 602C351 602 334 583 334 553C334 525 355 504 383 504M344 340C355 317 361 272 361 206C361 141 356 98 345 76C325 35 294 14 251 14C222 14 200 24 184 44C171 60 162 74 158 85C146 116 140 163 140 227C140 255 144 282 151 308C164 355 201 399 256 399C295 399 325 379 344 340Z"></path><path id="MJX-7-NCM-N-37" d="M475 604C482 613 485 626 485 644L243 644C174 644 135 648 128 657C125 660 122 667 120 676L89 676L55 464L88 464C98 520 106 550 112 555C115 558 146 560 205 560L401 560L295 410C214 295 174 171 174 36C174-3 190-22 223-22C256-22 272-3 272 36L272 87C272 239 296 349 343 416Z"></path><path id="MJX-7-NCM-N-38" d="M250 666C201 666 158 650 122 618C86 586 68 546 68 497C68 456 83 419 113 386C120 378 142 361 179 335C88 288 42 227 42 153C42 100 64 57 107 24C147-7 194-22 249-22C305-22 354-4 395 32C436 68 457 115 457 170C457 216 441 257 408 294C396 307 365 330 316 361C393 402 431 454 431 515C431 606 344 666 250 666M379 515C379 463 348 418 286 381L167 459C136 479 120 505 120 536C120 596 185 633 249 633C318 633 379 584 379 515M250 14C168 14 99 73 99 153C99 220 136 274 210 315L328 240C376 209 400 174 400 134C400 62 325 14 250 14Z"></path><path id="MJX-7-NCM-N-39" d="M116 140C83 140 67 123 67 89C67 14 128-22 207-22C287-22 351 18 398 99C437 166 457 243 457 329C457 456 434 546 388 599C349 644 304 666 253 666C194 666 145 645 106 602C63 557 42 503 42 440C42 379 60 327 96 284C134 238 183 215 242 215C294 215 334 243 361 299L361 286C361 177 342 103 303 63C272 30 239 14 206 14C166 14 137 23 118 42C149 42 165 60 165 91C165 119 144 140 116 140M243 246C204 246 175 266 155 306C144 329 138 374 138 439C138 504 145 548 158 573C180 613 212 633 253 633C294 633 324 608 343 558C354 531 361 485 361 420C361 333 322 246 243 246Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="30" xlink:href="#MJX-7-NCM-N-30"></use><use data-c="31" xlink:href="#MJX-7-NCM-N-31" transform="translate(500,0)"></use><use data-c="32" xlink:href="#MJX-7-NCM-N-32" transform="translate(1000,0)"></use><use data-c="33" xlink:href="#MJX-7-NCM-N-33" transform="translate(1500,0)"></use><use data-c="34" xlink:href="#MJX-7-NCM-N-34" transform="translate(2000,0)"></use><use data-c="35" xlink:href="#MJX-7-NCM-N-35" transform="translate(2500,0)"></use><use data-c="36" xlink:href="#MJX-7-NCM-N-36" transform="translate(3000,0)"></use><use data-c="37" xlink:href="#MJX-7-NCM-N-37" transform="translate(3500,0)"></use><use data-c="38" xlink:href="#MJX-7-NCM-N-38" transform="translate(4000,0)"></use><use data-c="39" xlink:href="#MJX-7-NCM-N-39" transform="translate(4500,0)"></use></g></g></g></svg></mjx-container></span>are initially in their original positions. Rearrange all ten digits, using
+each digit exactly once.</p>
+<ol class="upperalpha simple parenthesized-upperalpha" start="1">
+<li><p><strong>6 points.</strong> How many rearrangements have no digit in its
+original position?</p></li>
+<li><p><strong>6 points.</strong> How many rearrangements satisfy all three of the
+following conditions?</p>
+<ul class="simple">
+<li><p>No digit is in its original position.</p></li>
+<li><p>The digits <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="0,1,2" data-math-display="inline" data-math-speech="0 comma 1 comma 2" role="math" aria-label="Math: 0 comma 1 comma 2. Original TeX: 0,1,2"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.437ex;" xmlns="http://www.w3.org/2000/svg" width="5.406ex" height="1.943ex" role="img" focusable="false" viewBox="0 -666 2389.3 859" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-8-NCM-N-30" d="M249-22C390-22 460 92 460 320C460 473 428 575 365 625C330 652 291 666 250 666C109 666 39 551 39 320C39 136 88-22 249-22M361 524C368 489 371 425 371 332C371 240 367 172 360 128C347 48 310 8 249 8C226 8 203 17 182 34C155 57 139 104 132 176C129 201 128 253 128 332C128 419 131 480 136 513C145 568 163 603 191 618C213 630 232 636 249 636C314 636 350 583 361 524Z"></path><path id="MJX-8-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-8-NCM-N-31" d="M269 666C228 624 168 603 89 603L89 564C141 564 184 572 217 588L217 82C217 64 213 52 204 47C195 42 170 39 130 39L95 39L95 0C120 2 174 3 257 3C340 3 394 2 419 0L419 39L384 39C343 39 318 42 310 47C302 52 297 64 297 82L297 636C297 660 295 666 269 666Z"></path><path id="MJX-8-NCM-N-32" d="M237 666C186 666 143 648 106 612C69 576 50 534 50 483C50 449 75 424 106 424C136 424 161 450 161 480C161 513 137 536 105 536C102 536 100 536 98 535C117 584 161 627 224 627C306 627 352 556 352 470C352 403 318 331 250 255L62 43C49 28 50 29 50 0L421 0L450 180L417 180C409 129 402 100 396 91C391 86 361 84 306 84L139 84L236 179C304 243 390 312 419 365C439 400 449 435 449 470C449 588 357 666 237 666Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="30" xlink:href="#MJX-8-NCM-N-30"></use></g><g data-mml-node="mo" transform="translate(500,0)"><use data-c="2C" xlink:href="#MJX-8-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(944.7,0)"><use data-c="31" xlink:href="#MJX-8-NCM-N-31"></use></g><g data-mml-node="mo" transform="translate(1444.7,0)"><use data-c="2C" xlink:href="#MJX-8-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(1889.3,0)"><use data-c="32" xlink:href="#MJX-8-NCM-N-32"></use></g></g></g></svg></mjx-container></span> occupy the first three positions, in some order.</p></li>
+<li><p>The digits <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="8,9" data-math-display="inline" data-math-speech="8 comma 9" role="math" aria-label="Math: 8 comma 9. Original TeX: 8,9"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.437ex;" xmlns="http://www.w3.org/2000/svg" width="3.268ex" height="1.943ex" role="img" focusable="false" viewBox="0 -666 1444.7 859" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-9-NCM-N-38" d="M250 666C201 666 158 650 122 618C86 586 68 546 68 497C68 456 83 419 113 386C120 378 142 361 179 335C88 288 42 227 42 153C42 100 64 57 107 24C147-7 194-22 249-22C305-22 354-4 395 32C436 68 457 115 457 170C457 216 441 257 408 294C396 307 365 330 316 361C393 402 431 454 431 515C431 606 344 666 250 666M379 515C379 463 348 418 286 381L167 459C136 479 120 505 120 536C120 596 185 633 249 633C318 633 379 584 379 515M250 14C168 14 99 73 99 153C99 220 136 274 210 315L328 240C376 209 400 174 400 134C400 62 325 14 250 14Z"></path><path id="MJX-9-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-9-NCM-N-39" d="M116 140C83 140 67 123 67 89C67 14 128-22 207-22C287-22 351 18 398 99C437 166 457 243 457 329C457 456 434 546 388 599C349 644 304 666 253 666C194 666 145 645 106 602C63 557 42 503 42 440C42 379 60 327 96 284C134 238 183 215 242 215C294 215 334 243 361 299L361 286C361 177 342 103 303 63C272 30 239 14 206 14C166 14 137 23 118 42C149 42 165 60 165 91C165 119 144 140 116 140M243 246C204 246 175 266 155 306C144 329 138 374 138 439C138 504 145 548 158 573C180 613 212 633 253 633C294 633 324 608 343 558C354 531 361 485 361 420C361 333 322 246 243 246Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mn"><use data-c="38" xlink:href="#MJX-9-NCM-N-38"></use></g><g data-mml-node="mo" transform="translate(500,0)"><use data-c="2C" xlink:href="#MJX-9-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(944.7,0)"><use data-c="39" xlink:href="#MJX-9-NCM-N-39"></use></g></g></g></svg></mjx-container></span> occupy the last two positions, in some order.</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition-homework-hint admonition" id="need-a-free-hint-3">
+<p class="admonition-title">Need a free hint?<a class="headerlink reference external" href="#need-a-free-hint-3">#</a></p>
+<p>For part (a), apply the formula for derangements. For part (b), the stated
+position restrictions divide the digits into the groups <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="\{0,1,2\}" data-math-display="inline" data-math-speech="the set 0 comma 1 comma 2" role="math" aria-label="Math: the set 0 comma 1 comma 2. Original TeX: \{0,1,2\}"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="7.668ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3389.3 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-10-NCM-N-7B" d="M286-122L286 126C286 183 251 225 182 250C251 275 286 317 286 374L286 622C286 680 348 718 409 718C420 718 425 723 425 734C425 745 420 750 409 750C363 750 321 740 284 721C237 697 214 664 214 622L214 374C214 311 154 266 91 266C80 266 75 261 75 250C75 239 80 234 91 234C155 234 214 188 214 126L214-122C214-164 237-197 284-221C321-240 363-250 409-250C420-250 425-245 425-234C425-223 420-218 409-218C348-218 286-180 286-122Z"></path><path id="MJX-10-NCM-N-30" d="M249-22C390-22 460 92 460 320C460 473 428 575 365 625C330 652 291 666 250 666C109 666 39 551 39 320C39 136 88-22 249-22M361 524C368 489 371 425 371 332C371 240 367 172 360 128C347 48 310 8 249 8C226 8 203 17 182 34C155 57 139 104 132 176C129 201 128 253 128 332C128 419 131 480 136 513C145 568 163 603 191 618C213 630 232 636 249 636C314 636 350 583 361 524Z"></path><path id="MJX-10-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-10-NCM-N-31" d="M269 666C228 624 168 603 89 603L89 564C141 564 184 572 217 588L217 82C217 64 213 52 204 47C195 42 170 39 130 39L95 39L95 0C120 2 174 3 257 3C340 3 394 2 419 0L419 39L384 39C343 39 318 42 310 47C302 52 297 64 297 82L297 636C297 660 295 666 269 666Z"></path><path id="MJX-10-NCM-N-32" d="M237 666C186 666 143 648 106 612C69 576 50 534 50 483C50 449 75 424 106 424C136 424 161 450 161 480C161 513 137 536 105 536C102 536 100 536 98 535C117 584 161 627 224 627C306 627 352 556 352 470C352 403 318 331 250 255L62 43C49 28 50 29 50 0L421 0L450 180L417 180C409 129 402 100 396 91C391 86 361 84 306 84L139 84L236 179C304 243 390 312 419 365C439 400 449 435 449 470C449 588 357 666 237 666Z"></path><path id="MJX-10-NCM-N-7D" d="M286 374L286 622C286 664 263 697 216 721C179 740 137 750 91 750C80 750 75 745 75 734C75 723 80 718 91 718C152 718 214 680 214 622L214 374C214 317 249 275 318 250C249 225 214 183 214 126L214-122C214-180 152-218 91-218C80-218 75-223 75-234C75-245 80-250 91-250C137-250 179-240 216-221C263-197 286-164 286-122L286 126C286 188 345 234 409 234C420 234 425 239 425 250C425 261 420 266 409 266C345 266 286 312 286 374Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="7B" xlink:href="#MJX-10-NCM-N-7B"></use></g><g data-mml-node="mn" transform="translate(500,0)"><use data-c="30" xlink:href="#MJX-10-NCM-N-30"></use></g><g data-mml-node="mo" transform="translate(1000,0)"><use data-c="2C" xlink:href="#MJX-10-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(1444.7,0)"><use data-c="31" xlink:href="#MJX-10-NCM-N-31"></use></g><g data-mml-node="mo" transform="translate(1944.7,0)"><use data-c="2C" xlink:href="#MJX-10-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(2389.3,0)"><use data-c="32" xlink:href="#MJX-10-NCM-N-32"></use></g><g data-mml-node="mo" transform="translate(2889.3,0)"><use data-c="7D" xlink:href="#MJX-10-NCM-N-7D"></use></g></g></g></svg></mjx-container></span>,
+<span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="\{3,4,5,6,7\}" data-math-display="inline" data-math-speech="the set 3 comma 4 comma 5 comma 6 comma 7" role="math" aria-label="Math: the set 3 comma 4 comma 5 comma 6 comma 7. Original TeX: \{3,4,5,6,7\}"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="11.943ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 5278.7 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-11-NCM-N-7B" d="M286-122L286 126C286 183 251 225 182 250C251 275 286 317 286 374L286 622C286 680 348 718 409 718C420 718 425 723 425 734C425 745 420 750 409 750C363 750 321 740 284 721C237 697 214 664 214 622L214 374C214 311 154 266 91 266C80 266 75 261 75 250C75 239 80 234 91 234C155 234 214 188 214 126L214-122C214-164 237-197 284-221C321-240 363-250 409-250C420-250 425-245 425-234C425-223 420-218 409-218C348-218 286-180 286-122Z"></path><path id="MJX-11-NCM-N-33" d="M303 353C369 378 431 441 431 526C431 569 410 604 369 631C333 654 292 666 246 666C201 666 162 654 127 631C88 605 68 571 68 528C68 495 90 472 122 472C154 472 176 495 176 527C176 560 157 578 119 580C145 615 186 633 242 633C302 633 332 598 332 527C332 485 324 450 309 421C282 373 245 364 183 364C171 362 165 357 165 348C165 333 172 333 192 333L235 333C310 333 348 280 348 173C348 88 317 14 241 14C176 14 128 36 99 80C134 79 160 105 160 139C160 173 135 198 101 198C62 198 42 178 42 137C42 88 64 49 108 18C147-9 193-22 244-22C301-22 350-3 393 34C436 71 457 117 457 173C457 267 383 332 303 353Z"></path><path id="MJX-11-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-11-NCM-N-34" d="M353 677C344 677 336 672 330 663L28 199L28 163L289 163L289 81C289 63 285 51 278 46C271 41 252 39 219 39L194 39L194 0C223 2 269 3 331 3C393 3 439 2 468 0L468 39L443 39C410 39 391 41 384 46C377 51 373 63 373 81L373 163L471 163L471 202L373 202L373 660C373 670 366 677 353 677M295 553L295 202L67 202Z"></path><path id="MJX-11-NCM-N-35" d="M118 315C123 315 129 319 134 326C164 371 205 393 257 393C292 393 319 373 337 332C348 305 354 264 354 209C354 146 346 102 331 76C306 35 272 14 229 14C162 14 109 62 91 114C94 113 96 114 100 114C130 114 155 137 155 167C155 198 130 219 100 219C65 219 50 200 50 163C50 63 131-22 231-22C292-22 344 0 386 44C428 88 449 141 449 202C449 260 432 310 398 353C361 400 315 423 259 423C212 423 171 408 138 378L138 556C165 548 191 544 218 544C264 544 304 555 338 578C369 597 390 616 402 634C408 642 411 648 411 651C411 661 406 666 396 666C341 645 294 634 256 634C211 634 168 643 127 662C122 664 118 665 114 665C105 665 100 656 100 637L100 345C100 324 100 315 118 315Z"></path><path id="MJX-11-NCM-N-36" d="M383 504C416 504 432 521 432 555C432 627 378 666 304 666C221 666 155 627 106 548C63 480 42 403 42 316C42 189 65 100 112 47C152 1 198-22 251-22C312-22 362 1 401 47C438 91 457 144 457 205C457 266 439 318 403 361C365 407 316 431 257 431C205 431 165 402 138 346L138 352C138 465 166 561 226 605C252 624 279 633 306 633C342 633 368 623 385 602C351 602 334 583 334 553C334 525 355 504 383 504M344 340C355 317 361 272 361 206C361 141 356 98 345 76C325 35 294 14 251 14C222 14 200 24 184 44C171 60 162 74 158 85C146 116 140 163 140 227C140 255 144 282 151 308C164 355 201 399 256 399C295 399 325 379 344 340Z"></path><path id="MJX-11-NCM-N-37" d="M475 604C482 613 485 626 485 644L243 644C174 644 135 648 128 657C125 660 122 667 120 676L89 676L55 464L88 464C98 520 106 550 112 555C115 558 146 560 205 560L401 560L295 410C214 295 174 171 174 36C174-3 190-22 223-22C256-22 272-3 272 36L272 87C272 239 296 349 343 416Z"></path><path id="MJX-11-NCM-N-7D" d="M286 374L286 622C286 664 263 697 216 721C179 740 137 750 91 750C80 750 75 745 75 734C75 723 80 718 91 718C152 718 214 680 214 622L214 374C214 317 249 275 318 250C249 225 214 183 214 126L214-122C214-180 152-218 91-218C80-218 75-223 75-234C75-245 80-250 91-250C137-250 179-240 216-221C263-197 286-164 286-122L286 126C286 188 345 234 409 234C420 234 425 239 425 250C425 261 420 266 409 266C345 266 286 312 286 374Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="7B" xlink:href="#MJX-11-NCM-N-7B"></use></g><g data-mml-node="mn" transform="translate(500,0)"><use data-c="33" xlink:href="#MJX-11-NCM-N-33"></use></g><g data-mml-node="mo" transform="translate(1000,0)"><use data-c="2C" xlink:href="#MJX-11-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(1444.7,0)"><use data-c="34" xlink:href="#MJX-11-NCM-N-34"></use></g><g data-mml-node="mo" transform="translate(1944.7,0)"><use data-c="2C" xlink:href="#MJX-11-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(2389.3,0)"><use data-c="35" xlink:href="#MJX-11-NCM-N-35"></use></g><g data-mml-node="mo" transform="translate(2889.3,0)"><use data-c="2C" xlink:href="#MJX-11-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(3334,0)"><use data-c="36" xlink:href="#MJX-11-NCM-N-36"></use></g><g data-mml-node="mo" transform="translate(3834,0)"><use data-c="2C" xlink:href="#MJX-11-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(4278.7,0)"><use data-c="37" xlink:href="#MJX-11-NCM-N-37"></use></g><g data-mml-node="mo" transform="translate(4778.7,0)"><use data-c="7D" xlink:href="#MJX-11-NCM-N-7D"></use></g></g></g></svg></mjx-container></span>, and <span class="math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="\{8,9\}" data-math-display="inline" data-math-speech="the set 8 comma 9" role="math" aria-label="Math: the set 8 comma 9. Original TeX: \{8,9\}"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.531ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2444.7 1000" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-12-NCM-N-7B" d="M286-122L286 126C286 183 251 225 182 250C251 275 286 317 286 374L286 622C286 680 348 718 409 718C420 718 425 723 425 734C425 745 420 750 409 750C363 750 321 740 284 721C237 697 214 664 214 622L214 374C214 311 154 266 91 266C80 266 75 261 75 250C75 239 80 234 91 234C155 234 214 188 214 126L214-122C214-164 237-197 284-221C321-240 363-250 409-250C420-250 425-245 425-234C425-223 420-218 409-218C348-218 286-180 286-122Z"></path><path id="MJX-12-NCM-N-38" d="M250 666C201 666 158 650 122 618C86 586 68 546 68 497C68 456 83 419 113 386C120 378 142 361 179 335C88 288 42 227 42 153C42 100 64 57 107 24C147-7 194-22 249-22C305-22 354-4 395 32C436 68 457 115 457 170C457 216 441 257 408 294C396 307 365 330 316 361C393 402 431 454 431 515C431 606 344 666 250 666M379 515C379 463 348 418 286 381L167 459C136 479 120 505 120 536C120 596 185 633 249 633C318 633 379 584 379 515M250 14C168 14 99 73 99 153C99 220 136 274 210 315L328 240C376 209 400 174 400 134C400 62 325 14 250 14Z"></path><path id="MJX-12-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-12-NCM-N-39" d="M116 140C83 140 67 123 67 89C67 14 128-22 207-22C287-22 351 18 398 99C437 166 457 243 457 329C457 456 434 546 388 599C349 644 304 666 253 666C194 666 145 645 106 602C63 557 42 503 42 440C42 379 60 327 96 284C134 238 183 215 242 215C294 215 334 243 361 299L361 286C361 177 342 103 303 63C272 30 239 14 206 14C166 14 137 23 118 42C149 42 165 60 165 91C165 119 144 140 116 140M243 246C204 246 175 266 155 306C144 329 138 374 138 439C138 504 145 548 158 573C180 613 212 633 253 633C294 633 324 608 343 558C354 531 361 485 361 420C361 333 322 246 243 246Z"></path><path id="MJX-12-NCM-N-7D" d="M286 374L286 622C286 664 263 697 216 721C179 740 137 750 91 750C80 750 75 745 75 734C75 723 80 718 91 718C152 718 214 680 214 622L214 374C214 317 249 275 318 250C249 225 214 183 214 126L214-122C214-180 152-218 91-218C80-218 75-223 75-234C75-245 80-250 91-250C137-250 179-240 216-221C263-197 286-164 286-122L286 126C286 188 345 234 409 234C420 234 425 239 425 250C425 261 420 266 409 266C345 266 286 312 286 374Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="7B" xlink:href="#MJX-12-NCM-N-7B"></use></g><g data-mml-node="mn" transform="translate(500,0)"><use data-c="38" xlink:href="#MJX-12-NCM-N-38"></use></g><g data-mml-node="mo" transform="translate(1000,0)"><use data-c="2C" xlink:href="#MJX-12-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(1444.7,0)"><use data-c="39" xlink:href="#MJX-12-NCM-N-39"></use></g><g data-mml-node="mo" transform="translate(1944.7,0)"><use data-c="7D" xlink:href="#MJX-12-NCM-N-7D"></use></g></g></g></svg></mjx-container></span>. Count the allowed rearrangements within each
+group, then use the product rule.
+</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+<div class="prev-next-area">
+    <a class="left-prev" href="hw02.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Homework 2</p>
+      </div>
+    </a>
+    <a class="right-next" href="../resources.html" title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Resources</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></footer>
+              
+            </div>
+          </div>
+          <footer class="bd-footer-content"></footer>
+        
+      </main>
+
+      <button id="course-primary-sidebar-toggle" class="course-edge-sidebar-toggle" data-course-sidebar-toggle="primary" type="button" aria-controls="pst-primary-sidebar" aria-expanded="true" aria-label="Collapse section navigation" title="Collapse section navigation">‹</button>
+
+      
+        
+          <dialog id="pst-secondary-sidebar-modal"></dialog>
+          <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc">
+            
+<div class="course-focused-section-utilities" data-course-focused-utilities="">
+  
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+  
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
+</div>
+            <div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div class="course-page-toc-heading">
+    <div class="dropdown course-page-toc-display-menu">
+      <button id="course-page-toc-display-toggle" class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Choose on-this-page navigation display">
+        <i class="fa-solid fa-list" aria-hidden="true"></i>
+        <span class="visually-hidden">Choose on-this-page navigation display</span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="course-page-toc-display-toggle">
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="expanded">Show all sections</button></li>
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="current">Show current section</button></li>
+        <li><button class="dropdown-item" type="button" data-course-page-toc-mode="top-level">Show top-level sections</button></li>
+      </ul>
+    </div>
+    <div id="pst-page-navigation-heading-2" class="page-toc tocsection onthispage">
+      On this page
+    </div>
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-colored-balls">1. <span class="homework-problem-name">(Selecting colored balls)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strings-avoiding-specified-substrings">2. <span class="homework-problem-name">(Strings avoiding specified substrings)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#permutations-with-forbidden-positions">3. <span class="homework-problem-name">(Permutations with forbidden positions)</span></a></li>
+</ul>
+  </nav></div>
+
+</div>
+          </div>
+          <button id="course-secondary-sidebar-toggle" class="course-edge-sidebar-toggle" data-course-sidebar-toggle="secondary" type="button" aria-controls="pst-secondary-sidebar" aria-expanded="true" aria-label="Collapse on-this-page navigation" title="Collapse on-this-page navigation">›</button>
+        
+      
+
+      <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026, Gennady Uraltsev.
+      <br>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with Sphinx.
+</p></div>
+      
+    </div>
+  
+</div>
+</footer>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer="" src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer="" src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  
+
+  
+</body></html>
