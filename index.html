@@ -25,9 +25,8 @@
   <link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02">
-    <link rel="stylesheet" type="text/css" href="_static/tippy.js/tippy.css?v=865cd1a4">
-    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-theme.css?v=b36af13d">
-    <link rel="stylesheet" type="text/css" href="_static/css/tippy.css?v=234a49ec">
+    <link rel="stylesheet" type="text/css" href="_static/css/sphinx-theme.css?v=8fc8b44a">
+    <link rel="stylesheet" type="text/css" href="_static/css/course-reference-preview.css?v=dfd52601">
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9">
@@ -37,17 +36,18 @@
     <script src="_static/documentation_options.js?v=7f41d439"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
-    <script defer="defer" src="_static/@popperjs/core/popper.min.js?v=a8c9358f"></script>
-    <script defer="defer" src="_static/tippy.js/tippy.umd.min.js?v=4126cd26"></script>
-    <script defer="defer" src="_static/tippy\index.50bfd2d1-1df7-4e3a-8958-60ac769ddc09.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <script src="_static/js/course-focused-mode.js?v=0be05eaa"></script>
     <script src="_static/js/course-sidebar-toggle.js?v=5012eb64"></script>
-    <script src="_static/js/course-page-toc.js?v=cb59aa39"></script>
+    <script src="_static/js/course-page-toc.js?v=21b48933"></script>
     <script src="_static/js/course-navbar-overflow.js?v=3a1ef034"></script>
     <script src="_static/js/course-search.js?v=d094b4b4"></script>
     <script src="_static/js/my-open-math.js?v=f599d90e"></script>
+    <script src="_static/@floating-ui/core/floating-ui.core.umd.min.js?v=4c6fc893"></script>
+    <script src="_static/@floating-ui/dom/floating-ui.dom.umd.min.js?v=b4f165e2"></script>
+    <script src="_static/js/course-reference-preview-core.js?v=56ac7479"></script>
+    <script src="_static/js/course-reference-preview.js?v=c43e9279"></script>
   <script src="course-search-index.js"></script>
   
   
@@ -60,7 +60,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
   <meta name="docsearch:version" content="">
-    <meta name="docbuild:last-update" content="September 03, 2026">
+    <meta name="docbuild:last-update" content="September 12, 2026">
   
     
     <script src="_static/searchtools.js"></script>
@@ -176,9 +176,64 @@
       
     
   
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
   <ul class="bd-navbar-elements navbar-nav" data-course-navbar-items="">
 <li class="nav-item"><a class="nav-link nav-internal" href="syllabus.html">Syllabus</a></li>
-<li class="nav-item"><a class="nav-link nav-internal" href="calendar.html">Calendar</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="calendar/index.html">Calendar</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="assignments/index.html">Assignments</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="resources.html">Resources</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture Notes</a></li>
@@ -292,9 +347,64 @@
       
     
   
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
   <ul class="bd-navbar-elements navbar-nav" data-course-navbar-items="">
 <li class="nav-item"><a class="nav-link nav-internal" href="syllabus.html">Syllabus</a></li>
-<li class="nav-item"><a class="nav-link nav-internal" href="calendar.html">Calendar</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="calendar/index.html">Calendar</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="assignments/index.html">Assignments</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="resources.html">Resources</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="lecture-notes/index.html">Lecture Notes</a></li>
@@ -373,25 +483,21 @@
                   
   <section id="combinatorics">
 <h1>Combinatorics<a class="headerlink" href="#combinatorics" title="Link to this heading">#</a></h1>
-<p><strong>Course:</strong> <span>MATH 31003-01</span><span class="semantic-line-break"></span><strong>Semester:</strong> <span>Fall 2026</span><span class="semantic-line-break"></span><strong>Instructor:</strong> <span>Gennady Uraltsev</span><span class="semantic-line-break"></span><strong>Meetings:</strong> <span>Monday, Wednesday, Friday 8:35-9:25 a.m.</span>, <span>GEAR 108</span></p>
-<p>Welcome to Combinatorics! We will explore the mathematics of discrete objects:
-the many ways things can be selected, arranged, connected, and counted. The
-course covers basic combinatorial techniques, the principle of
-inclusion-exclusion, generating functions, and recursive relations. Additional
-topics may include modular arithmetic and applications to encryption, coding
-theory, graph theory, counting with symmetries, and algebraic structures.</p>
+<p><strong>Course:</strong> <span>MATH 31003-01</span><span class="semantic-line-break"></span>
+<strong>Semester:</strong> <span>Fall 2026</span><span class="semantic-line-break"></span>
+<strong>Instructor:</strong> <span>Gennady Uraltsev</span><span class="semantic-line-break"></span>
+<strong>Meetings:</strong> <span>Monday, Wednesday, Friday 8:35-9:25 a.m.</span>, <span>GEAR 108</span></p>
+<p>Welcome to Combinatorics! We will explore the mathematics of discrete objects: the many ways things can be selected, arranged, connected, and counted. The course covers basic combinatorial techniques, the principle of inclusion-exclusion, generating functions, and recursive relations. Additional topics may include modular arithmetic and applications to encryption, coding theory, graph theory, counting with symmetries, and algebraic structures.</p>
 <section id="start-here">
 <h2>Start here<a class="headerlink" href="#start-here" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="syllabus.html"><span class="doc">Syllabus</span></a>: how the course works, grading, materials, and what to expect.</p></li>
-<li><p><a class="reference internal" href="calendar.html"><span class="doc">Course calendar</span></a>: class dates, current topics, holidays, and exams.</p></li>
-<li><p><a class="reference internal" href="assignments/index.html"><span class="doc">Assignments</span></a>: written homework and online questions.</p></li>
-<li><p><a class="reference internal" href="resources.html"><span class="doc">Resources</span></a>: references and student-support links.</p></li>
-<li><p><a class="reference internal" href="lecture-notes/index.html"><span class="doc">Lecture notes</span></a>: notes organized by course unit and lecture.</p></li>
+<li><p><a class="reference internal" href="syllabus.html"><span>Syllabus</span></a>: how the course works, grading, materials, and what to expect.</p></li>
+<li><p><a class="reference internal" href="calendar/index.html"><span>Course calendar</span></a>: class dates, current topics, holidays, and exams.</p></li>
+<li><p><a class="reference internal" href="assignments/index.html"><span>Assignments</span></a>: written homework and online questions.</p></li>
+<li><p><a class="reference internal" href="resources.html"><span>Resources</span></a>: references and student-support links.</p></li>
+<li><p><a class="reference internal" href="lecture-notes/index.html"><span>Lecture notes</span></a>: notes organized by course unit and lecture.</p></li>
 </ul>
-<p>Please check the <a class="reference internal" href="calendar.html"><span class="doc">course calendar</span></a> for holidays, University
-deadlines, and topic updates. Course announcements, grades, and submission
-links are maintained in <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/"><span>Blackboard</span></a>.</p>
+<p>Please check the <a class="reference internal" href="calendar/index.html"><span>course calendar</span></a> for holidays, University deadlines, and topic updates. Course announcements, grades, and submission links are maintained in <a class="reference external" href="https://learn.uark.edu/ultra/courses/_529368_1/"><span>Blackboard</span></a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -471,7 +577,11 @@ links are maintained in <a class="reference external" href="https://learn.uark.e
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-here">Start here</a></li>
 </ul>
-  </nav></div>
+  </nav>
+  <button id="course-page-toc-follow-current" class="course-page-toc-follow-current" type="button" hidden="" aria-label="Show the current section in on-this-page navigation" title="Show the current section">
+    <img class="course-page-toc-follow-current-icon" src="_static/assets/file-move-right-icon.svg" alt="" aria-hidden="true">
+    <span class="visually-hidden">Current section</span>
+  </button></div>
 
 </div>
           </div>

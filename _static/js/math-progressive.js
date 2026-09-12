@@ -32,6 +32,10 @@
       await window.MathJax.startup.promise;
       async function enhanceAll(candidates) {
         var fallbacks = candidates.filter(function (fallback) {
+          if (fallback.closest('[data-course-reference-preview-host]')) {
+            delete fallback.dataset.mathEnhancing;
+            return false;
+          }
           if (fallback.classList.contains('math-custom-preamble')) {
             delete fallback.dataset.mathEnhancing;
             return false;

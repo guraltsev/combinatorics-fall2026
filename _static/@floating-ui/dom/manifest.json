@@ -1,0 +1,17 @@
+{
+  "generated_by": "get-ready.cmd (npm pack)",
+  "package": "@floating-ui/dom",
+  "version": "1.7.4",
+  "files": [
+    {
+      "source": "package/dist/floating-ui.dom.umd.min.js",
+      "destination": "floating-ui.dom.umd.min.js",
+      "sha256": "b8199f76adccb9b17b3ab57124c42585dc19197127d1a5d19307d1983f80bd89"
+    },
+    {
+      "source": "package/LICENSE",
+      "destination": "LICENSE",
+      "sha256": "0e4c9a9b6c71019cbbea3bdc20b01223110a9035700f9c960c8fcbf78c2325ce"
+    }
+  ]
+}

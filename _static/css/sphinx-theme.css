@@ -140,6 +140,17 @@ html[data-theme="dark"].course-focused .course-focus-button {
 }
 html[data-theme="dark"] .course-focus-icon { filter: invert(79%) sepia(28%) saturate(500%); }
 
+/* On a narrow screen, PyData copies the header's course-wide navigation into
+   the opened primary sidebar.  The section sidebar immediately below it has
+   the same active-section heading, producing two consecutive "Calendar"
+   entries.  Keep the section's child links, but omit that redundant heading.
+   Desktop keeps the heading because its copied header navigation is hidden. */
+@media (max-width: 959.98px) {
+  #pst-primary-sidebar .sidebar-header-items + .sidebar-primary-items__start .bd-links__title {
+    display: none;
+  }
+}
+
 html.course-focus-requested .bd-container__inner > .bd-sidebar-primary,
 html.course-focus-requested .bd-container__inner > .bd-sidebar-secondary,
 html.course-focus-requested .course-edge-sidebar-toggle,
@@ -603,6 +614,35 @@ html.course-secondary-in-menu body.layout-info .bd-main .bd-content .bd-article-
 .semantic-colorboxed.semantic-color-yellow { background-color: yellow; }
 
 /* Remarks distinguish explanatory context from numbered results. */
+.admonition.admonition-lecture-log,
+div.admonition.admonition-lecture-log { background-color: #f9fafb; border-color: #9ca3af; }
+.admonition.admonition-lecture-log > .admonition-title,
+div.admonition.admonition-lecture-log > .admonition-title { background-color: #f3f4f6; color: #374151; }
+/* A reusable variant for titled panels which intentionally have no icon.
+   PyData reserves 2rem at the left of every admonition title for its default
+   bell, so reset that padding as well as both icon pseudo-elements. */
+.admonition.admonition-no-icon > .admonition-title,
+div.admonition.admonition-no-icon > .admonition-title {
+  padding-left: 0.6rem;
+}
+
+/* The base theme also indents prose following every admonition title.  For
+   no-icon panels, keep the content aligned with the title and box gutter. */
+.admonition.admonition-no-icon > .admonition-title ~ p,
+div.admonition.admonition-no-icon > .admonition-title ~ p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.admonition.admonition-no-icon > .admonition-title::before,
+div.admonition.admonition-no-icon > .admonition-title::before,
+.admonition.admonition-no-icon > .admonition-title::after,
+div.admonition.admonition-no-icon > .admonition-title::after {
+  background: none !important;
+  content: none !important;
+  display: none !important;
+}
+
 .admonition.admonition-remark,
 div.admonition.admonition-remark { background-color: #f8fafc; border-color: #64748b; }
 .admonition.admonition-remark > .admonition-title,
@@ -1143,6 +1183,47 @@ html[data-theme="dark"] div.admonition.admonition-proof > .admonition-title::aft
   color: var(--pst-color-primary-text);
 }
 
+/* After a reader scrolls this navigation manually, offer a compact way back
+   to the scroll-spy-selected section without obscuring the list itself. */
+.course-page-toc-follow-current {
+  position: fixed;
+  right: 0.8rem;
+  bottom: 0.9rem;
+  z-index: 4;
+  display: inline-grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.45rem;
+  border: 1px solid var(--pst-color-border);
+  border-radius: 999px;
+  color: var(--pst-color-text-base);
+  background: var(--pst-color-background);
+  box-shadow: 0 0.2rem 0.6rem rgb(0 0 0 / 0.16);
+  font-size: var(--pst-sidebar-font-size);
+  opacity: 0.72;
+}
+
+.course-page-toc-follow-current-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+html[data-theme="dark"] .course-page-toc-follow-current-icon {
+  filter: invert(1);
+}
+
+.course-page-toc-follow-current:hover,
+.course-page-toc-follow-current:focus-visible {
+  color: var(--pst-color-link);
+  opacity: 1;
+}
+
+.bd-container__inner.course-secondary-collapsed .course-page-toc-follow-current {
+  display: none;
+}
+
 #pst-page-toc-nav[data-course-page-toc-mode="expanded"] ul ul {
   display: block;
 }
@@ -1177,6 +1258,13 @@ div.math {
    SVG replaces it when the browser bundle is available. */
 .math-fallback {
   cursor: text;
+}
+
+/* Punctuation belongs to the preceding inline formula.  The wrapper prevents
+   a browser line break between the formula and its comma, period, or similar
+   mark without making the surrounding sentence unbreakable. */
+.semantic-inline-math-with-punctuation {
+  white-space: nowrap;
 }
 
 .math-fallback:focus {
@@ -1487,6 +1575,26 @@ section[id^="homework-problem-"][id*="-part-"] > h3 + p {
   text-transform: uppercase;
 }
 
+.lecture-status {
+  display: inline-block;
+  margin: 0.35rem 0 0.65rem;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.lecture-status-published { color: #166534; background: #dcfce7; }
+.lecture-status-tentative { color: var(--brand-brown); background: var(--brand-tan); }
+.lecture-status-draft { color: #374151; background: #e5e7eb; }
+
+html[data-theme="dark"] .lecture-status-published { color: #bbf7d0; background: #166534; }
+html[data-theme="dark"] .lecture-status-tentative { color: var(--brand-navy); background: var(--brand-sky); }
+html[data-theme="dark"] .lecture-status-draft { color: #f3f4f6; background: #4b5563; }
+
 html[data-theme="dark"] .lecture-log-tentative {
   color: var(--brand-navy);
   background: var(--brand-sky);
@@ -1514,6 +1622,10 @@ html[data-theme="dark"] .lecture-log-inclass {
 ol.parenthesized-upperalpha > li::marker {
   content: "(" counter(list-item, upper-alpha) ") ";
 }
+
+/* LaTeX's \item[label] syntax is represented inside the list item so the
+   label remains available to screen readers and can contain inline math. */
+.latex-item-label { font-weight: 700; }
 
 .grade-weights-chart { display: grid; grid-template-columns: minmax(11rem, 16rem) minmax(15rem, 1fr); gap: 1.25rem; align-items: center; max-width: 46rem; margin: 1.25rem auto; }
 .grade-weights-chart svg { width: 100%; max-width: 16rem; margin: auto; }
