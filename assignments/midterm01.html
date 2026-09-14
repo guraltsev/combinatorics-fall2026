@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Lecture Notes — Combinatorics — MATH 31003-01 - Fall 2026</title>
+    <title>Midterm 1 — Combinatorics — MATH 31003-01 - Fall 2026</title>
   
   
   
@@ -36,7 +36,9 @@
     <script src="../_static/documentation_options.js?v=7f41d439"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture-notes/index';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="../_static/js/math-progressive.js?v=b9a6853d"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'assignments/midterm01';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <script src="../_static/js/course-focused-mode.js?v=0be05eaa"></script>
     <script src="../_static/js/course-sidebar-toggle.js?v=5012eb64"></script>
@@ -55,8 +57,8 @@
     <link rel="icon" href="../_static/uark-favicon.png">
     <link rel="index" title="Index" href="../genindex.html">
     <link rel="search" title="Search" href="../search.html">
-    <link rel="next" title="Unit I: Enumeration and inclusion-exclusion" href="unit-1-enumeration/index.html">
-    <link rel="prev" title="Resources" href="../resources.html">
+    <link rel="next" title="Homework 1" href="hw01.html">
+    <link rel="prev" title="Example Homework Write-Ups" href="example-homework-writeup.html">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
@@ -87,7 +89,7 @@
   </script>
 
   </head>
-  <body data-default-mode="" data-course-docname="lecture-notes/index" data-focus-section-root="lecture-notes/index" data-focus-section-title="Lecture Notes" data-focus-section-documents="lecture-notes/index,lecture-notes/unit-1-enumeration/index,lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting,lecture-notes/unit-1-enumeration/02-more counting techniques,lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition,lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers,lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications" data-focus-section-targets="{&quot;lecture-notes/index&quot;:&quot;#&quot;,&quot;lecture-notes/unit-1-enumeration/index&quot;:&quot;unit-1-enumeration/index.html&quot;,&quot;lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting&quot;:&quot;unit-1-enumeration/01-set-notation-and-basic-counting.html&quot;,&quot;lecture-notes/unit-1-enumeration/02-more counting techniques&quot;:&quot;unit-1-enumeration/02-more%20counting%20techniques.html&quot;,&quot;lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition&quot;:&quot;unit-1-enumeration/03-applications-of-combinations-and-repetition.html&quot;,&quot;lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers&quot;:&quot;unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers.html&quot;,&quot;lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications&quot;:&quot;unit-1-enumeration/05-inclusion-exclusion-and-applications.html&quot;}" class="layout-notes">
+  <body data-default-mode="" data-course-docname="assignments/midterm01" data-focus-section-root="assignments/index" data-focus-section-title="Assignments" data-focus-section-documents="assignments/index,assignments/example-homework-writeup,assignments/midterm01,assignments/hw01,assignments/hw02,assignments/hw03" data-focus-section-targets="{&quot;assignments/index&quot;:&quot;index.html&quot;,&quot;assignments/example-homework-writeup&quot;:&quot;example-homework-writeup.html&quot;,&quot;assignments/midterm01&quot;:&quot;#&quot;,&quot;assignments/hw01&quot;:&quot;hw01.html&quot;,&quot;assignments/hw02&quot;:&quot;hw02.html&quot;,&quot;assignments/hw03&quot;:&quot;hw03.html&quot;}" class="layout-info">
 
   
   
@@ -240,9 +242,9 @@
   <ul class="bd-navbar-elements navbar-nav current" data-course-navbar-items="">
 <li class="nav-item"><a class="nav-link nav-internal" href="../syllabus.html">Syllabus</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="../calendar/index.html">Calendar</a></li>
-<li class="nav-item"><a class="nav-link nav-internal" href="../assignments/index.html">Assignments</a></li>
+<li class="nav-item current"><a class="nav-link nav-internal" href="index.html">Assignments</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="../resources.html">Resources</a></li>
-<li class="nav-item current"><a class="current nav-link nav-internal" href="#">Lecture Notes</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../lecture-notes/index.html">Lecture Notes</a></li>
 </ul>
 
   <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
@@ -414,9 +416,9 @@
   <ul class="bd-navbar-elements navbar-nav current" data-course-navbar-items="">
 <li class="nav-item"><a class="nav-link nav-internal" href="../syllabus.html">Syllabus</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="../calendar/index.html">Calendar</a></li>
-<li class="nav-item"><a class="nav-link nav-internal" href="../assignments/index.html">Assignments</a></li>
+<li class="nav-item current"><a class="nav-link nav-internal" href="index.html">Assignments</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="../resources.html">Resources</a></li>
-<li class="nav-item current"><a class="current nav-link nav-internal" href="#">Lecture Notes</a></li>
+<li class="nav-item"><a class="nav-link nav-internal" href="../lecture-notes/index.html">Lecture Notes</a></li>
 </ul>
 
   <div class="course-navbar-overflow" data-course-navbar-overflow="" hidden="">
@@ -456,9 +458,9 @@
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
-<nav class="bd-docs-nav bd-links" aria-label="Lecture Notes">
+<nav class="bd-docs-nav bd-links" aria-label="Assignments">
   <p class="bd-links__title" role="heading" aria-level="1">
-    <a class="reference internal" href="#">Lecture Notes</a>
+    <a class="reference internal" href="index.html">Assignments</a>
     
       <button type="button" class="course-focus-button" data-course-focus-toggle="" aria-label="Focus this section" data-bs-original-title="Focus this section" data-bs-toggle="tooltip" data-bs-placement="bottom">
         <span class="course-focus-icon" aria-hidden="true"></span>
@@ -548,14 +550,15 @@
         
       
     <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="unit-1-enumeration/index.html">Unit I: Enumeration and inclusion-exclusion</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="unit-1-enumeration/01-set-notation-and-basic-counting.html">1. Set notation and basic counting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unit-1-enumeration/02-more%20counting%20techniques.html">2. More counting techniques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unit-1-enumeration/03-applications-of-combinations-and-repetition.html">3. Applications of combinations and combinations with repetition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers.html">4. Binomial expansions, Pascal paths, and Catalan numbers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unit-1-enumeration/05-inclusion-exclusion-and-applications.html">5. Inclusion–exclusion and applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example-homework-writeup.html">Example Homework Write-Ups</a></li>
 </ul>
-</details></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Midterm 1</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="hw01.html">Homework 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw02.html">Homework 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hw03.html">Homework 3</a></li>
 </ul>
 </div>
 </nav></div>
@@ -595,10 +598,14 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item active" aria-current="page">
-      <span class="ellipsis">Lecture Notes</span>
       
-      <a class="course-breadcrumb-pdf-link" href="_pdf/index.pdf" aria-label="Download PDF version of this page">
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Assignments</a></li>
+      
+    
+    <li class="breadcrumb-item active" aria-current="page">
+      <span class="ellipsis">Midterm 1</span>
+      
+      <a class="course-breadcrumb-pdf-link" href="_pdf/midterm01.pdf" aria-label="Download PDF version of this page">
         <img class="course-breadcrumb-pdf-icon" src="../_static/assets/pdf-icon.svg" alt="">
       </a>
       
@@ -620,19 +627,94 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="lecture-notes">
-<h1>Lecture Notes<a class="headerlink" href="#lecture-notes" title="Link to this heading">#</a></h1>
-<p>These notes are the main guide through the course. They are organized by unit and mathematical topic rather than by the particular class meeting in which a topic appeared. Draft and future units remain in the instructor’s private course design collection until they are ready for publication.</p>
-<section id="course-units">
-<h2>Course units<a class="headerlink" href="#course-units" title="Link to this heading">#</a></h2>
+  <section id="midterm-1">
+<h1>Midterm 1<a class="headerlink" href="#midterm-1" title="Link to this heading">#</a></h1>
+<section id="format-and-rules">
+<h2>Format and rules<a class="headerlink" href="#format-and-rules" title="Link to this heading">#</a></h2>
+<p>Midterm 1 lasts 50 minutes and has five problems.</p>
+<p>You may bring one handwritten study sheet or formula sheet on one A4 page, written on both sides. No other notes, or outside materials may be used during the exam. You are encouraged to use an offline calculator.</p>
+<p>Show the counting method that justifies each answer. A numerical answer without supporting work may receive only partial credit.</p>
+</section>
+<section id="coverage">
+<h2>Coverage<a class="headerlink" href="#coverage" title="Link to this heading">#</a></h2>
+<p>The exam covers Lectures 1–11, from the start of the course through the September 11 lecture, and Lecture Notes 1–5. The five problems will be variants of problems in the two Midterm 1 practice banks published on MyOpenMath.</p>
+</section>
+<section id="problem-types-to-practice">
+<h2>Problem types to practice<a class="headerlink" href="#problem-types-to-practice" title="Link to this heading">#</a></h2>
+<p>You should be able to read a counting problem, decide what an outcome records, and choose a method that counts each permitted outcome exactly once. In particular, practice solving problems of the following kinds.</p>
 <ul class="simple">
-<li><p>Unit I: enumeration and inclusion-exclusion.</p></li>
-<li><p>Unit II: generating-function foundations.</p></li>
-<li><p>Unit III: recurrence models.</p></li>
-<li><p>Later units: further topics as announced on the calendar.</p></li>
+<li><p><strong>Counting principles</strong><span class="semantic-space">
+  </span></p>
+<ul>
+<li><p>Use the addition principle to count disjoint cases.</p></li>
+<li><p>Use the subtraction principle to count a complement or remove   prohibited outcomes.</p></li>
+<li><p>Use the multiplication principle to count a sequence of choices.</p></li>
+<li><p>Use the division principle when each outcome has been counted the same   number of times.</p></li>
 </ul>
-<div class="toctree-wrapper compound">
-</div>
+</li>
+<li><p><strong>Strings and functions</strong><span class="semantic-space">
+  </span></p>
+<ul>
+<li><p>Count strings and identifiers with repetition allowed or with no   repeated symbols.</p></li>
+<li><p>Count nonconstant strings by subtracting the constant strings.</p></li>
+<li><p>Count all functions between finite sets and injective functions between   finite sets.</p></li>
+<li><p>Count assignments to labeled recipients and splits into labeled parts.</p></li>
+</ul>
+</li>
+<li><p><strong>Permutations and anagrams</strong><span class="semantic-space">
+  </span></p>
+<ul>
+<li><p>Count ordered selections and arrangements of distinct objects.</p></li>
+<li><p>Count anagrams with repeated symbols using multinomial coefficients.</p></li>
+</ul>
+</li>
+<li><p><strong>Combinations</strong><span class="semantic-space">
+  </span></p>
+<ul>
+<li><p>Count unordered selections without repetition and subsets of a set.</p></li>
+<li><p>Count two- and three-dimensional lattice paths with binomial or   multinomial coefficients.</p></li>
+<li><p>Count paths through a specified point or avoiding a specified point.</p></li>
+<li><p>Solve compound selection problems, such as committee selection with   named offices and ordinary members.</p></li>
+</ul>
+</li>
+<li><p><strong>Combinations with repetition</strong><span class="semantic-space">
+  </span></p>
+<ul>
+<li><p>Count unordered selections with repetition, such as purchases by type.</p></li>
+<li><p>Use stars and bars / combinations with repetition to count nonnegative integer solutions.</p></li>
+<li><p>Count integer solutions with lower bounds by first translating to   nonnegative variables.</p></li>
+<li><p>Count strictly increasing and weakly increasing integer sequences.</p></li>
+</ul>
+</li>
+<li><p><strong>Binomial and multinomial coefficients</strong><span class="semantic-space">
+  </span></p>
+<ul>
+<li><p>Expand binomial and multinomial expressions.</p></li>
+<li><p>Extract ordinary, weighted, and signed coefficients from binomial and   multinomial expressions.</p></li>
+</ul>
+</li>
+<li><p><strong>Catalan paths</strong><span class="semantic-space">
+  </span></p>
+<ul>
+<li><p>Count northeast paths from <span class="semantic-inline-math math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="(0,0)" data-math-display="inline" data-math-speech="open paren 0 comma 0 close paren" role="math" aria-label="Math: open paren 0 comma 0 close paren. Original TeX: (0,0)"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.561ex;" xmlns="http://www.w3.org/2000/svg" width="5.029ex" height="2.253ex" role="img" focusable="false" viewBox="0 -748 2222.7 996" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-1-NCM-N-28" d="M318-248C327-248 332-243 332-234C332-231 330-227 327-223C275-183 233-117 202-26C175 53 161 131 161 208L161 292C161 369 175 447 202 526C233 617 275 683 327 723C330 726 332 730 332 734C332 743 327 748 318 748C317 748 314 747 311 745C251 699 201 631 160 540C121 453 101 371 101 292L101 208C101 129 121 47 160-40C201-131 251-199 311-245C314-247 317-248 318-248Z"></path><path id="MJX-1-NCM-N-30" d="M249-22C390-22 460 92 460 320C460 473 428 575 365 625C330 652 291 666 250 666C109 666 39 551 39 320C39 136 88-22 249-22M361 524C368 489 371 425 371 332C371 240 367 172 360 128C347 48 310 8 249 8C226 8 203 17 182 34C155 57 139 104 132 176C129 201 128 253 128 332C128 419 131 480 136 513C145 568 163 603 191 618C213 630 232 636 249 636C314 636 350 583 361 524Z"></path><path id="MJX-1-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-1-NCM-N-29" d="M78-245C138-199 188-131 229-40C268 47 288 129 288 208L288 292C288 371 268 453 229 540C188 631 138 699 78 745C75 747 72 748 71 748C62 748 57 743 57 734C57 730 59 726 62 723C114 683 156 617 187 526C214 447 228 369 228 292L228 208C228 131 214 53 187-26C156-117 114-183 62-223C59-227 57-231 57-234C57-243 62-248 71-248C72-248 75-247 78-245Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="28" xlink:href="#MJX-1-NCM-N-28"></use></g><g data-mml-node="mn" transform="translate(389,0)"><use data-c="30" xlink:href="#MJX-1-NCM-N-30"></use></g><g data-mml-node="mo" transform="translate(889,0)"><use data-c="2C" xlink:href="#MJX-1-NCM-N-2C"></use></g><g data-mml-node="mn" transform="translate(1333.7,0)"><use data-c="30" xlink:href="#MJX-1-NCM-N-30"></use></g><g data-mml-node="mo" transform="translate(1833.7,0)"><use data-c="29" xlink:href="#MJX-1-NCM-N-29"></use></g></g></g></svg></mjx-container></span> to <span class="semantic-inline-math math notranslate nohighlight math-fallback" data-math-prerendered="" data-tex="(n,n)" data-math-display="inline" data-math-speech="open paren n comma n close paren" role="math" aria-label="Math: open paren n comma n close paren. Original TeX: (n,n)"><mjx-container class="MathJax math-svg" jax="SVG" overflow="overflow" aria-hidden="true" focusable="false"><svg style="vertical-align: -0.561ex;" xmlns="http://www.w3.org/2000/svg" width="5.481ex" height="2.253ex" role="img" focusable="false" viewBox="0 -748 2422.7 996" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="MJX-2-NCM-N-28" d="M318-248C327-248 332-243 332-234C332-231 330-227 327-223C275-183 233-117 202-26C175 53 161 131 161 208L161 292C161 369 175 447 202 526C233 617 275 683 327 723C330 726 332 730 332 734C332 743 327 748 318 748C317 748 314 747 311 745C251 699 201 631 160 540C121 453 101 371 101 292L101 208C101 129 121 47 160-40C201-131 251-199 311-245C314-247 317-248 318-248Z"></path><path id="MJX-2-NCM-I-1D45B" d="M537 137C514 58 481 18 440 18C427 18 420 28 420 47C420 61 426 84 438 115C478 224 498 296 498 333C498 403 451 442 381 442C322 442 271 416 230 363C222 407 187 442 136 442C80 442 58 390 44 345C34 313 29 294 29 287C29 278 34 273 45 273C50 273 53 274 56 276C61 285 64 292 65 299C83 375 106 413 133 413C151 413 160 399 160 371C160 358 155 331 144 290L87 63C84 50 78 24 78 19C78-1 89-11 111-11C130-11 144-1 151 19C153 24 159 49 170 92L191 181L221 295C232 318 249 341 270 365C299 397 335 413 378 413C411 413 427 391 427 348C427 310 406 234 363 120C356 102 353 87 353 74C353 25 390-11 438-11C482-11 517 14 542 64C561 104 571 131 571 144C571 153 566 158 555 158C552 158 537 149 537 137Z"></path><path id="MJX-2-NCM-N-2C" d="M139 106C107 106 86 82 86 50C86 20 109-5 139-5C153-5 165-1 174 8L175 0C175-63 154-117 112-160C105-168 101-174 101-178C101-188 105-193 114-193C123-193 135-181 152-158C186-110 203-57 203 0C203 53 185 106 139 106Z"></path><path id="MJX-2-NCM-N-29" d="M78-245C138-199 188-131 229-40C268 47 288 129 288 208L288 292C288 371 268 453 229 540C188 631 138 699 78 745C75 747 72 748 71 748C62 748 57 743 57 734C57 730 59 726 62 723C114 683 156 617 187 526C214 447 228 369 228 292L228 208C228 131 214 53 187-26C156-117 114-183 62-223C59-227 57-231 57-234C57-243 62-248 71-248C72-248 75-247 78-245Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><use data-c="28" xlink:href="#MJX-2-NCM-N-28"></use></g><g data-mml-node="mi" transform="translate(389,0)"><use data-c="1D45B" xlink:href="#MJX-2-NCM-I-1D45B"></use></g><g data-mml-node="mo" transform="translate(989,0)"><use data-c="2C" xlink:href="#MJX-2-NCM-N-2C"></use></g><g data-mml-node="mi" transform="translate(1433.7,0)"><use data-c="1D45B" xlink:href="#MJX-2-NCM-I-1D45B"></use></g><g data-mml-node="mo" transform="translate(2033.7,0)"><use data-c="29" xlink:href="#MJX-2-NCM-N-29"></use></g></g></g></svg></mjx-container></span> that stay on one side of   the diagonal, using subtraction or the reflection argument.</p></li>
+<li><p>Interpret the same count as balanced-parenthesis strings.</p></li>
+</ul>
+</li>
+<li><p><strong>Inclusion–exclusion</strong><span class="semantic-space">
+  </span></p>
+<ul>
+<li><p>Use inclusion–exclusion for two or three overlapping conditions,   including Venn-diagram and union computations.</p></li>
+<li><p>Count a desired collection by defining violation sets and counting the   complement of their union.</p></li>
+<li><p>Count integer solutions with one or several upper bounds, including a   common upper bound.</p></li>
+<li><p>Count strings or permutations avoiding specified consecutive substrings,   using blocks and inclusion–exclusion; determine whether overlapping   substring conditions are compatible.</p></li>
+<li><p>Compute Euler’s totient function from the distinct prime divisors of an   integer.</p></li>
+<li><p>Recognize when intersection sizes depend only on the number of imposed   conditions and group terms using binomial coefficients.</p></li>
+<li><p>Count derangements and permutations with exactly a prescribed number of   fixed points.</p></li>
+<li><p>Count surjective functions by excluding   omitted symbols or outputs.</p></li>
+<li><p>Count labeled simple graphs with no isolated vertices.</p></li>
+</ul>
+</li>
+</ul>
 </section>
 </section>
 
@@ -643,17 +725,17 @@
               
                 <footer class="prev-next-footer d-print-none">
 <div class="prev-next-area">
-    <a class="left-prev" href="../resources.html" title="previous page">
+    <a class="left-prev" href="example-homework-writeup.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Resources</p>
+        <p class="prev-next-title">Example Homework Write-Ups</p>
       </div>
     </a>
-    <a class="right-next" href="unit-1-enumeration/index.html" title="next page">
+    <a class="right-next" href="hw01.html" title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Unit I: Enumeration and inclusion-exclusion</p>
+        <p class="prev-next-title">Homework 1</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -715,7 +797,9 @@
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-units">Course units</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#format-and-rules">Format and rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coverage">Coverage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-types-to-practice">Problem types to practice</a></li>
 </ul>
   </nav>
   <button id="course-page-toc-follow-current" class="course-page-toc-follow-current" type="button" hidden="" aria-label="Show the current section in on-this-page navigation" title="Show the current section">
