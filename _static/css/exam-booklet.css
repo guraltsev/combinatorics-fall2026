@@ -1,0 +1,103 @@
+/* Screen and print layout for documents using the exam_booklet extension. */
+.exam-page {
+  box-sizing: border-box;
+  min-height: 9.35in;
+  margin: 1.25rem 0;
+  padding: 0.72in;
+  border: 1px solid var(--pst-color-border, #94a3b8);
+  background: var(--pst-color-on-background, #fff);
+}
+
+.exam-cover {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.exam-course-title {
+  margin-top: 0.35in;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.exam-assignment-title {
+  margin: 1.35rem 0 0.35rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.exam-date { font-size: 1.2rem; }
+.exam-name-line { margin: 2.3rem 0 1.8rem; text-align: left; font-weight: 700; }
+.exam-problem-total { margin-bottom: 1.6rem; font-weight: 700; }
+
+.exam-instructions {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border: 1px solid #94a3b8;
+  background: #f8fafc;
+}
+
+.exam-instructions-title { margin-bottom: 0.45rem; font-weight: 700; }
+.exam-instructions > p:last-child { margin-bottom: 0; }
+
+.exam-do-not-open {
+  margin: auto 0 1.4rem;
+  padding: 0.8rem;
+  border: 2px solid currentColor;
+  font-weight: 700;
+}
+
+.exam-page-total { margin: 0; font-style: italic; }
+.exam-problem-heading { margin-bottom: 1.2rem; font-size: 1.45rem; font-weight: 700; }
+.exam-continuation-label { margin: 0; color: #64748b; font-size: 0.72rem; font-style: italic; }
+
+@media print {
+  @page { size: letter; margin: 0.72in; }
+
+  .bd-article:has(.exam-booklet),
+  .bd-article:has(.exam-problem-spread) {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .bd-article:has(.exam-booklet) > section > h1 {
+    display: none;
+  }
+
+  .bd-article:has(.exam-booklet) > section {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .exam-page {
+    /* Leave room for browser print headers, footers, and printer margins.
+       A near-full-page minimum can push the last cover line onto page two. */
+    min-height: 8.5in;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .exam-cover,
+  .exam-problem-page {
+    break-before: left;
+    page-break-before: left;
+  }
+
+  .exam-cover {
+    break-before: auto;
+    page-break-before: auto;
+  }
+
+  .exam-continuation-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exam-do-not-open {
+    border-color: #000;
+  }
+}
