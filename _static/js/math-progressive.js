@@ -40,6 +40,13 @@
             delete fallback.dataset.mathEnhancing;
             return false;
           }
+          // Progressive hosts contain several authoritative build-time SVG
+          // states, not one direct SVG.  The ordinary MathJax enhancer cannot
+          // replace them without discarding the reserved-state geometry.
+          if (fallback.classList.contains('progressive-math')) {
+            delete fallback.dataset.mathEnhancing;
+            return false;
+          }
           return fallback.classList.contains('math-fallback') && !fallback.dataset.mathEnhancing;
         });
         if (!fallbacks.length) return;

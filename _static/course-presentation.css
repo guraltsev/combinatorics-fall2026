@@ -1,0 +1,87 @@
+/* Reveal hides slides before initialization; preserve a readable fallback. */
+html.presentation-fallback .reveal,
+html.presentation-fallback .reveal .slides,
+html.presentation-fallback .reveal section {
+  display: block !important;
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  transform: none !important;
+}
+html.presentation-fallback .reveal .slides > section,
+html.presentation-fallback .reveal .slides > section > section { border-bottom: 1px solid #b8c7d6; margin: 2rem auto; max-width: 62rem; padding: 2rem; }
+html.presentation-fallback .presentation-step-marker,
+html.presentation-fallback .presentation-step-marker {
+  display: none !important;
+}
+html.presentation-fallback .fragment:not(.presentation-step-marker),
+html.presentation-fallback [data-step-from],
+html.presentation-fallback .presentation-state,
+html.presentation-fallback .presentation-media__fallback {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+html.presentation-fallback .presentation-state[aria-hidden="true"] { position: static !important; }
+html.presentation-fallback .presentation-state--initially-hidden { visibility: visible !important; }
+html.presentation-fallback .presentation-replacement--overlay,
+html.presentation-fallback .presentation-equation-steps { display: block !important; }
+html.presentation-fallback .presentation-replacement--overlay > .presentation-state,
+html.presentation-fallback .presentation-equation-steps > .presentation-equation-state {
+  border-top: 1px solid #d2dde8;
+  margin-top: .8em;
+  padding-top: .8em;
+}
+html.presentation-fallback .presentation-split { display: block !important; }
+html.presentation-fallback .presentation-pane { border-top: 1px solid #d2dde8; margin-top: 1em; padding-top: 1em; }
+.presentation-media { break-inside: avoid; }
+.presentation-interactive { min-height: 2rem; }
+.presentation-step-marker { height: 0; overflow: hidden; width: 0; }
+html.presentation-fallback .progressive-math__states { display: block; }
+html.presentation-fallback .progressive-math__state {
+  display: block;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* A fade-out fragment has a meaningful first stop: it enters, then recedes
+   when the following fragment becomes current. Reveal's stock fade-out is
+   visible before its own stop, which creates an apparent no-op transition. */
+.reveal .slides section .fragment.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+.reveal .slides section .fragment.fade-out.visible.current-fragment {
+  opacity: 1;
+  visibility: inherit;
+}
+.reveal .slides section .fragment.fade-out.visible:not(.current-fragment) {
+  opacity: 0;
+  visibility: hidden;
+}
+/* Reveal's current-visible effect normally switches prior fragments to
+   display:none. Keep a hidden slot instead, so later fixed content does not
+   jump when a current-only block recedes. */
+.reveal .slides section .fragment.current-visible {
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+}
+.reveal .slides section .fragment.current-visible.current-fragment {
+  opacity: 1;
+  visibility: visible;
+}
+.presentation-media > video,
+.presentation-media > img {
+  background: #fff;
+  border: 0;
+  box-shadow: none;
+}
+.course-edit-page-tools { position: fixed; right: .5rem; top: .5rem; z-index: 20; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides,
+  .reveal .slides section,
+  .reveal .fragment { transition-duration: 0.01ms !important; }
+  .reveal .slides { scroll-behavior: auto !important; }
+}

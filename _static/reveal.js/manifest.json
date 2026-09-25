@@ -1,0 +1,564 @@
+{
+  "generated_by": "get-ready.cmd (npm pack)",
+  "package": "reveal.js",
+  "version": "6.0.2",
+  "complete": true,
+  "file_count": 111,
+  "files": [
+    {
+      "source": "package/css/theme/fonts/league-gothic/LICENSE",
+      "destination": "css/theme/fonts/league-gothic/LICENSE",
+      "sha256": "f8a741f43a00e8dc1ba89debfe7cc6c760de0315e9ee47406c17474f9246c692"
+    },
+    {
+      "source": "package/css/theme/fonts/source-sans-pro/LICENSE",
+      "destination": "css/theme/fonts/source-sans-pro/LICENSE",
+      "sha256": "bb5f5f9b59ff3ab358efed2c5436e8aa2e12444959c4bde82167b874d5db1b1c"
+    },
+    {
+      "source": "package/LICENSE",
+      "destination": "LICENSE",
+      "sha256": "b2883e4b610bfa1b4d8fff84c4d4b825cc7d553cbd9fec4777c04068a2859dc0"
+    },
+    {
+      "source": "package/dist/theme/beige.css",
+      "destination": "dist/theme/beige.css",
+      "sha256": "b46a29fb18d3e0451c2545d728db60911c2e85ee67740757aabb582832e3a780"
+    },
+    {
+      "source": "package/dist/theme/black-contrast.css",
+      "destination": "dist/theme/black-contrast.css",
+      "sha256": "d44a241835fe768dcb487059ebc3216d4adeef423c62192c7484bec50bf6d36b"
+    },
+    {
+      "source": "package/dist/theme/black.css",
+      "destination": "dist/theme/black.css",
+      "sha256": "c29c9689e8f3b277aa66edc01ed2ef97981a6768b05ad750582eac068d9705c3"
+    },
+    {
+      "source": "package/dist/theme/blood.css",
+      "destination": "dist/theme/blood.css",
+      "sha256": "157eace8f16356383b8b31a1e1ff5c507071c0f990ecafc85841e584a38cafab"
+    },
+    {
+      "source": "package/dist/theme/dracula.css",
+      "destination": "dist/theme/dracula.css",
+      "sha256": "47bf8605c95d61ad25c23d2e16b7de9aca79c1c5b5f1af33558f87f1faef26d0"
+    },
+    {
+      "source": "package/css/theme/fonts/league-gothic/league-gothic.css",
+      "destination": "css/theme/fonts/league-gothic/league-gothic.css",
+      "sha256": "f3d17ade8cd26d537119f3c6dca4fb2bff129b4016cd1803ac869898264ef872"
+    },
+    {
+      "source": "package/dist/theme/league.css",
+      "destination": "dist/theme/league.css",
+      "sha256": "2303d0b38b4d739908112894f93ddca2e4a30ad058bb8a184c85b0a9ddc00a07"
+    },
+    {
+      "source": "package/dist/plugin/highlight/monokai.css",
+      "destination": "dist/plugin/highlight/monokai.css",
+      "sha256": "504e51314144f3f8327155dc69502ba10b1a4991ae4cc3fa70086cf155465999"
+    },
+    {
+      "source": "package/dist/theme/moon.css",
+      "destination": "dist/theme/moon.css",
+      "sha256": "e5adaff1083f18014b09452aaec51fa539feabfb5542ffcae15e893e83e166ca"
+    },
+    {
+      "source": "package/dist/theme/night.css",
+      "destination": "dist/theme/night.css",
+      "sha256": "8f58176d72dba32ad6ecdd2d0035d9355762683b7bf718ddb9a431cbd4d58348"
+    },
+    {
+      "source": "package/css/reset.css",
+      "destination": "css/reset.css",
+      "sha256": "6ae66e15d4537be35b0b39fa8f07b1fc8fae5c16580621649629de6322413a28"
+    },
+    {
+      "source": "package/dist/reset.css",
+      "destination": "dist/reset.css",
+      "sha256": "39413c3490fdcf826427c26ff4c1ee59ea961a0aa8507c18454e0c6dc96c12d8"
+    },
+    {
+      "source": "package/dist/reveal.css",
+      "destination": "dist/reveal.css",
+      "sha256": "615ee850cbbb98a0f688b60ed37b21819a3f54c9f3e6f20e33e63693ab74a0c0"
+    },
+    {
+      "source": "package/dist/theme/serif.css",
+      "destination": "dist/theme/serif.css",
+      "sha256": "9bc18b2e020715b740df656fd28c86230ea4eada95c819901c7bd64b2d187789"
+    },
+    {
+      "source": "package/dist/theme/simple.css",
+      "destination": "dist/theme/simple.css",
+      "sha256": "b6c8df9a191c2f25acebf0075d748134773f916385a359303a509a52851551c2"
+    },
+    {
+      "source": "package/dist/theme/sky.css",
+      "destination": "dist/theme/sky.css",
+      "sha256": "3435a76a0d394c93864b90633b5be590ee5dc0f643255a8c8fee0214f799bff3"
+    },
+    {
+      "source": "package/dist/theme/solarized.css",
+      "destination": "dist/theme/solarized.css",
+      "sha256": "91300a3ac059fe020db391084d1fc7d0fd59f9488e43461ef01b3da6ebcce21c"
+    },
+    {
+      "source": "package/css/theme/fonts/source-sans-pro/source-sans-pro.css",
+      "destination": "css/theme/fonts/source-sans-pro/source-sans-pro.css",
+      "sha256": "48f2622fc11273f683b1693ffddef662e606b3ff9e8af6e0e0af54ff42e72cb9"
+    },
+    {
+      "source": "package/dist/theme/white-contrast.css",
+      "destination": "dist/theme/white-contrast.css",
+      "sha256": "ced195643e5700ccbb79203389b6ab8074349a920b566cda08b47228b4e0a505"
+    },
+    {
+      "source": "package/dist/theme/white.css",
+      "destination": "dist/theme/white.css",
+      "sha256": "41e9507d97eb13ce6804645a9ce9f16220ddc3bfd6e7888aa3a0b5f61777d8f3"
+    },
+    {
+      "source": "package/dist/plugin/highlight/zenburn.css",
+      "destination": "dist/plugin/highlight/zenburn.css",
+      "sha256": "e298a0f1c2de9dea4ace202ce7e60cbc3143ebf7eab42efe891a8885f392444c"
+    },
+    {
+      "source": "package/demo.html",
+      "destination": "demo.html",
+      "sha256": "50cecf01b7ea14cf25af6849a67b3be0e69f91b693093059adb06305344b4631"
+    },
+    {
+      "source": "package/index.html",
+      "destination": "index.html",
+      "sha256": "f2d18518d678e33999861f1fc01d41b72c81f56998888a291ee48ac62529f2f0"
+    },
+    {
+      "source": "package/js/controllers/autoanimate.js",
+      "destination": "js/controllers/autoanimate.js",
+      "sha256": "98af0021504faaeccdd2ffd189b27b9f3389aae1419f1c74c95d66e49e154d8a"
+    },
+    {
+      "source": "package/js/controllers/backgrounds.js",
+      "destination": "js/controllers/backgrounds.js",
+      "sha256": "7f334085269e5e1009924530798d9eb093e428f755470cee6ca9365dd3cc4ff2"
+    },
+    {
+      "source": "package/js/controllers/controls.js",
+      "destination": "js/controllers/controls.js",
+      "sha256": "8dab9aac609bf48e3fde3dfd17a7b35176af3a596e6d44bdd5677f108c7c3abc"
+    },
+    {
+      "source": "package/js/controllers/focus.js",
+      "destination": "js/controllers/focus.js",
+      "sha256": "40e9a99adad2fffe7d89ba17427f5dd743c2a4075c845350e233a8cd3e46100a"
+    },
+    {
+      "source": "package/js/controllers/fragments.js",
+      "destination": "js/controllers/fragments.js",
+      "sha256": "8968741db02ce96b4bbec37ff4273543fe4acaf2b19979da26e3b29d0daaa591"
+    },
+    {
+      "source": "package/dist/plugin/highlight.js",
+      "destination": "dist/plugin/highlight.js",
+      "sha256": "6c98ab2d30c913516efed604909ad525367ad5d7ba1715f43d3b2f662a31d6a8"
+    },
+    {
+      "source": "package/js/controllers/jumptoslide.js",
+      "destination": "js/controllers/jumptoslide.js",
+      "sha256": "54d9479819eb20715e0a32bc5102360fe40a05f7bfc799c21471113faf6b361c"
+    },
+    {
+      "source": "package/js/controllers/keyboard.js",
+      "destination": "js/controllers/keyboard.js",
+      "sha256": "ef2e12980b2003d9894c78d89ed53c5131564621d29e2018d60e7da0c8983285"
+    },
+    {
+      "source": "package/js/controllers/location.js",
+      "destination": "js/controllers/location.js",
+      "sha256": "79ded5e51db835ffecb2358ba94fa109e87b4e80ea0f1fcfd9973abd86f12b63"
+    },
+    {
+      "source": "package/dist/plugin/markdown.js",
+      "destination": "dist/plugin/markdown.js",
+      "sha256": "7a8991997115b882b5f7813a903ed74bf17ab0bbdb90569d5f4331680af92ad9"
+    },
+    {
+      "source": "package/dist/plugin/math.js",
+      "destination": "dist/plugin/math.js",
+      "sha256": "c1990472103c0640a9b21077f32b20347a79615f495ad36c2dd5698ce0ec6a92"
+    },
+    {
+      "source": "package/dist/plugin/notes.js",
+      "destination": "dist/plugin/notes.js",
+      "sha256": "447c42f365876e41853de81453d0c53c580c5b2099132e8f61200de4a0ba2af3"
+    },
+    {
+      "source": "package/js/controllers/notes.js",
+      "destination": "js/controllers/notes.js",
+      "sha256": "340fa775b6759dd6ae25bbde9ee4e5aa17d5e9307b143a8ad06a9893d19d13c0"
+    },
+    {
+      "source": "package/js/controllers/overlay.js",
+      "destination": "js/controllers/overlay.js",
+      "sha256": "793bdb60f26b5b15293bd877e6806f1a3c5511a8c58cace0fa20b568b56ed055"
+    },
+    {
+      "source": "package/js/controllers/overview.js",
+      "destination": "js/controllers/overview.js",
+      "sha256": "1e1be8dc0e53b2b4e6c70ba3a38216d1ef1c67d812040f190b880661b2a68cbc"
+    },
+    {
+      "source": "package/js/components/playback.js",
+      "destination": "js/components/playback.js",
+      "sha256": "67a287cbc6ecb33e0347f6d5e2975ebc605b5bd56955ae54d8dbd1c701115b18"
+    },
+    {
+      "source": "package/js/controllers/plugins.js",
+      "destination": "js/controllers/plugins.js",
+      "sha256": "30bac75f0d6c96e2393747c9ad05f32724387fc453ec2ac52fe8160b384ea7a4"
+    },
+    {
+      "source": "package/js/controllers/pointer.js",
+      "destination": "js/controllers/pointer.js",
+      "sha256": "942650611ea1d028a3da7bc1fb6a4801b6d586f2b3398fa5e02276f329dd892e"
+    },
+    {
+      "source": "package/js/controllers/printview.js",
+      "destination": "js/controllers/printview.js",
+      "sha256": "0c5f7ec60532fe4824b608f125fa31e52ddab15136213a2c223a5a7cf2a48982"
+    },
+    {
+      "source": "package/js/controllers/progress.js",
+      "destination": "js/controllers/progress.js",
+      "sha256": "529443a7d2eec33c53b0a9a7bb1c426a073192a6c3bf08ee2b71b1cd13ad8088"
+    },
+    {
+      "source": "package/dist/reveal.js",
+      "destination": "dist/reveal.js",
+      "sha256": "aa1bbbf2617b23a623b23612cb3c5bdb63de512e652bf20fcfa832b045d37844"
+    },
+    {
+      "source": "package/js/reveal.js",
+      "destination": "js/reveal.js",
+      "sha256": "521575ba2c6012bab0ec873ceb6fec0bfeecd1280d6799da55f2827ba609a9d5"
+    },
+    {
+      "source": "package/js/controllers/scrollview.js",
+      "destination": "js/controllers/scrollview.js",
+      "sha256": "68d8e6d71c5c3fbf015d037b1d0a4592586e370351001eca098f9f2c4cdda4f8"
+    },
+    {
+      "source": "package/dist/plugin/search.js",
+      "destination": "dist/plugin/search.js",
+      "sha256": "887591079bebb965a8d07300b323339ed98d9f4504987713379174f2480d2eb0"
+    },
+    {
+      "source": "package/js/controllers/slidecontent.js",
+      "destination": "js/controllers/slidecontent.js",
+      "sha256": "9ad74cdbaf8eec4c6d36fef24f626189b67d981545e9cdf825fa6b8115fd38ca"
+    },
+    {
+      "source": "package/js/controllers/slidenumber.js",
+      "destination": "js/controllers/slidenumber.js",
+      "sha256": "7ca9a0e87c8e16ab8598b8ba1b03939cee50193c6bf328d6ff487d9ee44ac653"
+    },
+    {
+      "source": "package/js/controllers/touch.js",
+      "destination": "js/controllers/touch.js",
+      "sha256": "8d289fd9ac306ff63623ed57f7f44af12eeeded45947437cdd04756349b86252"
+    },
+    {
+      "source": "package/dist/plugin/zoom.js",
+      "destination": "dist/plugin/zoom.js",
+      "sha256": "ff65816a86a2c0e2d52250d41e4be296b4198fd7684359b4f92a9be5a29ccea8"
+    },
+    {
+      "source": "package/package.json",
+      "destination": "package.json",
+      "sha256": "c9cac6cb97f7e233219ee12a624283fc65c08a4d7bad09b1facc980a490dcc87"
+    },
+    {
+      "source": "package/css/theme/README.md",
+      "destination": "css/theme/README.md",
+      "sha256": "2240ede0386d98ac6cb077605ebc40023d2d097b2c3878f41c3e85703dab9164"
+    },
+    {
+      "source": "package/README.md",
+      "destination": "README.md",
+      "sha256": "897be0ad580674e1394760a1f15e85fafd699779fec41f2b05e46ca2ebf20eb5"
+    },
+    {
+      "source": "package/dist/plugin/highlight.mjs",
+      "destination": "dist/plugin/highlight.mjs",
+      "sha256": "fe277e947abcb1ad2afdb276476d5382bde2f5eccc01f1e84fec303ea36d43e7"
+    },
+    {
+      "source": "package/dist/plugin/markdown.mjs",
+      "destination": "dist/plugin/markdown.mjs",
+      "sha256": "6b066957af29c448bb62ad43ee97a83cd2723dd58e673086a8ff1f298b6c31bc"
+    },
+    {
+      "source": "package/dist/plugin/math.mjs",
+      "destination": "dist/plugin/math.mjs",
+      "sha256": "260a84eff3d120dda2c188a7a46d789fd0b40d873ddb43113e6a258d4063a42e"
+    },
+    {
+      "source": "package/dist/plugin/notes.mjs",
+      "destination": "dist/plugin/notes.mjs",
+      "sha256": "3fc52b7a08beb48d7e4583ad254c211dd1802737eec4f4f5bbf4b1578e31f057"
+    },
+    {
+      "source": "package/dist/reveal.mjs",
+      "destination": "dist/reveal.mjs",
+      "sha256": "4b8fcb93dd5edac3803d8283c9f35fc0b325546e265a4e74ea3b5f3303131aa8"
+    },
+    {
+      "source": "package/dist/plugin/search.mjs",
+      "destination": "dist/plugin/search.mjs",
+      "sha256": "8e7f7325cc03bc364c61fc6b334bcfbb86b51e1e060815e74e86c796e92bd091"
+    },
+    {
+      "source": "package/dist/plugin/zoom.mjs",
+      "destination": "dist/plugin/zoom.mjs",
+      "sha256": "f02ae05f9248a85baf98bae742059990b968b71b91ef615e184c92086564482e"
+    },
+    {
+      "source": "package/css/theme/beige.scss",
+      "destination": "css/theme/beige.scss",
+      "sha256": "0dca365a7a958d69009f7b3ac7e7989d9b99d0c8a927a304ba286ab2cefc4283"
+    },
+    {
+      "source": "package/css/theme/black-contrast.scss",
+      "destination": "css/theme/black-contrast.scss",
+      "sha256": "45261310549ce86049c8d3a5aca615636212cc99b5599380e3688c013f17593b"
+    },
+    {
+      "source": "package/css/theme/black.scss",
+      "destination": "css/theme/black.scss",
+      "sha256": "f7d6010d31e85b5a17ef5345b2f29dda5f8bb33d0d26144b6d5ebc2b398b7939"
+    },
+    {
+      "source": "package/css/theme/blood.scss",
+      "destination": "css/theme/blood.scss",
+      "sha256": "ce371365c459c5bc590f558cd6eae5f2a027f759de40fc4918ec403ffd1c00e0"
+    },
+    {
+      "source": "package/css/theme/dracula.scss",
+      "destination": "css/theme/dracula.scss",
+      "sha256": "dd44177acf6de0ed16e4119b99053fd747dd03718c134e58f5980011450731ad"
+    },
+    {
+      "source": "package/css/layout.scss",
+      "destination": "css/layout.scss",
+      "sha256": "a2e5211d3693f18d8c4e41fb743bb3975bad7e32ee9b162868bdf16324a7d1e2"
+    },
+    {
+      "source": "package/css/theme/league.scss",
+      "destination": "css/theme/league.scss",
+      "sha256": "93bb1eab3cd93747cfb771c8ab806c44c18a1b614fe4c87a66217ebae5dace18"
+    },
+    {
+      "source": "package/css/theme/template/mixins.scss",
+      "destination": "css/theme/template/mixins.scss",
+      "sha256": "73697ea0dd35ac227babd235871b338db6312335f058cd695f92e7f34176f827"
+    },
+    {
+      "source": "package/css/theme/moon.scss",
+      "destination": "css/theme/moon.scss",
+      "sha256": "91fcb07128be714e45d910575b3b32aa8d15871209430ca8844289fe812c3fb3"
+    },
+    {
+      "source": "package/css/theme/night.scss",
+      "destination": "css/theme/night.scss",
+      "sha256": "53682674de80da5ec052425c50a924df9cb007e80e68c7ca88b1d62ad81d0497"
+    },
+    {
+      "source": "package/css/print/paper.scss",
+      "destination": "css/print/paper.scss",
+      "sha256": "7c22cdf3a2dc9a3a69b7ae809af521654b93f3e4042dc390ac536196efe68a2f"
+    },
+    {
+      "source": "package/css/print/pdf.scss",
+      "destination": "css/print/pdf.scss",
+      "sha256": "4525cbd709308bd0d79f2de3af31b7469380c2a1dd6d18e60c211bfedf259e4e"
+    },
+    {
+      "source": "package/css/reveal.scss",
+      "destination": "css/reveal.scss",
+      "sha256": "d33a60d4a982a2266409541a97b64013641994d86fb7ad6e450f0e86ed478130"
+    },
+    {
+      "source": "package/css/theme/serif.scss",
+      "destination": "css/theme/serif.scss",
+      "sha256": "14d2143e0893a43e3f5a0c90b298d1e2e5a7427ac5830097f11755a342d68633"
+    },
+    {
+      "source": "package/css/theme/template/settings.scss",
+      "destination": "css/theme/template/settings.scss",
+      "sha256": "279d13cdf3fd5fc40034d47c485969160eaa1e575209e41ab111516f5e65463f"
+    },
+    {
+      "source": "package/css/theme/simple.scss",
+      "destination": "css/theme/simple.scss",
+      "sha256": "9c61b7397c7eee9a688bd1073cb95e477f45728b5052b86f4e99c2589e60d427"
+    },
+    {
+      "source": "package/css/theme/sky.scss",
+      "destination": "css/theme/sky.scss",
+      "sha256": "c081c8a8de4a2e694d059e9533352eda42bca048ef82f74dcb80a70e694883ad"
+    },
+    {
+      "source": "package/css/theme/solarized.scss",
+      "destination": "css/theme/solarized.scss",
+      "sha256": "d27ac52c6a93deefabb9386bb84ca0ff4cda01388c067a8eadb81466711849fa"
+    },
+    {
+      "source": "package/css/theme/template/theme.scss",
+      "destination": "css/theme/template/theme.scss",
+      "sha256": "d35a3728712f993523485eae107644d8849ca351122b42222908a1ab9f1e322b"
+    },
+    {
+      "source": "package/css/theme/white-contrast.scss",
+      "destination": "css/theme/white-contrast.scss",
+      "sha256": "d573f92a0c555045b8b41ea3711a885474c4f2d22e85ba86c56498cc236f132a"
+    },
+    {
+      "source": "package/css/theme/white.scss",
+      "destination": "css/theme/white.scss",
+      "sha256": "f9a418f7de029382e37b3870e7b014e6d9ccb74ded08d4533233c742a9c2178b"
+    },
+    {
+      "source": "package/dist/utils/color.d.ts",
+      "destination": "dist/utils/color.d.ts",
+      "sha256": "87eb5d8f1883b4916349731590f3470a4d404f546be94d702f2a8b0d6b109fb7"
+    },
+    {
+      "source": "package/js/utils/color.ts",
+      "destination": "js/utils/color.ts",
+      "sha256": "2dcc6f65e6bcb8a3388a12fb0d1eba828184020d728ff71577822f8fbbf2a5e3"
+    },
+    {
+      "source": "package/dist/config.d.ts",
+      "destination": "dist/config.d.ts",
+      "sha256": "aee6b682a58445b0ffd4080e2f8185b9d26407a389083bcbf3ab8666dcb49320"
+    },
+    {
+      "source": "package/js/config.ts",
+      "destination": "js/config.ts",
+      "sha256": "5d834435145fc5c77d50c5338c9543a9e2d2cae510efc67a1d69b50cd249fd45"
+    },
+    {
+      "source": "package/dist/utils/constants.d.ts",
+      "destination": "dist/utils/constants.d.ts",
+      "sha256": "323979b0c5b4b4447ff1787824178fbf91a3643a8bd6537edb4495b67466beea"
+    },
+    {
+      "source": "package/js/utils/constants.ts",
+      "destination": "js/utils/constants.ts",
+      "sha256": "012eb0d89c23aaa25e693d094d312875776247f5ea9b93c2721a72c48770f334"
+    },
+    {
+      "source": "package/dist/utils/device.d.ts",
+      "destination": "dist/utils/device.d.ts",
+      "sha256": "783bd90c7e3d0009c9c06f8ea6634aa46041ddeb9bc741ecb74088288ddbc777"
+    },
+    {
+      "source": "package/js/utils/device.ts",
+      "destination": "js/utils/device.ts",
+      "sha256": "bf4848efe39df631de9eda51009e721eb8ba44544f2c22991a3ce66a2793998c"
+    },
+    {
+      "source": "package/dist/plugin/highlight.d.ts",
+      "destination": "dist/plugin/highlight.d.ts",
+      "sha256": "4ccd3d87dd977f3005f16edf39d2f3cf91a3fca3c7a4d27b1f04b2c161224bee"
+    },
+    {
+      "source": "package/js/index.ts",
+      "destination": "js/index.ts",
+      "sha256": "8867a62e62fac6e079f5e44e67b1ecc988c121a6c627645c2061c790b0fe1bc3"
+    },
+    {
+      "source": "package/dist/utils/loader.d.ts",
+      "destination": "dist/utils/loader.d.ts",
+      "sha256": "1c7276c4a28e826ad729dee9e95395949276e9204b79ae113f7f3da3c6bfce93"
+    },
+    {
+      "source": "package/js/utils/loader.ts",
+      "destination": "js/utils/loader.ts",
+      "sha256": "a9b3ff8b93c982d4ee16e82283d23d85c32e137ebc819e1405fd1a0e847678fe"
+    },
+    {
+      "source": "package/dist/plugin/markdown.d.ts",
+      "destination": "dist/plugin/markdown.d.ts",
+      "sha256": "006ae93139356cff48b13ea86bfa85e3462c876d49e6bb8ce3cc5706d6673165"
+    },
+    {
+      "source": "package/dist/plugin/math.d.ts",
+      "destination": "dist/plugin/math.d.ts",
+      "sha256": "1ce8ce09e0d6dff97e65343e037254324b60ac5aa73a06de5ffae812032cd8b1"
+    },
+    {
+      "source": "package/dist/plugin/notes.d.ts",
+      "destination": "dist/plugin/notes.d.ts",
+      "sha256": "22679207e6caee040240c8aa7becf4e3d709f06ebb600302b460e0a5199919ac"
+    },
+    {
+      "source": "package/dist/reveal.d.ts",
+      "destination": "dist/reveal.d.ts",
+      "sha256": "3a8ade0cc09732e6d8c86184fe6c185f57833cc5970fc45a857f2c7432ea4c78"
+    },
+    {
+      "source": "package/js/reveal.d.ts",
+      "destination": "js/reveal.d.ts",
+      "sha256": "bd750fb9f8bf0e19d2e6769251194faa5d870abf48171d056548c703e3cf424e"
+    },
+    {
+      "source": "package/dist/plugin/search.d.ts",
+      "destination": "dist/plugin/search.d.ts",
+      "sha256": "273b3340774982124f640b3e6f8ce903569fbb877cb890fa86d822b78e172beb"
+    },
+    {
+      "source": "package/dist/utils/util.d.ts",
+      "destination": "dist/utils/util.d.ts",
+      "sha256": "1a78e752ae0b916220804c1be127e2fa251719ef9c5f2e9984bd6014d9a2db6b"
+    },
+    {
+      "source": "package/js/utils/util.ts",
+      "destination": "js/utils/util.ts",
+      "sha256": "074b03446561f7d3aa48ef6846f693e487b6f483b131220eaa13e89ccba9080d"
+    },
+    {
+      "source": "package/dist/plugin/zoom.d.ts",
+      "destination": "dist/plugin/zoom.d.ts",
+      "sha256": "7497bcf7aeae935133b0b08073e8744dbef849b0d974e0462a79ea5e5941f663"
+    },
+    {
+      "source": "package/css/theme/fonts/league-gothic/league-gothic.woff",
+      "destination": "css/theme/fonts/league-gothic/league-gothic.woff",
+      "sha256": "5eef6df86135497f2d0a586c8aa3dc3ace8963234762c16081924714658da2db"
+    },
+    {
+      "source": "package/css/theme/fonts/source-sans-pro/source-sans-pro-italic.woff",
+      "destination": "css/theme/fonts/source-sans-pro/source-sans-pro-italic.woff",
+      "sha256": "05d3615fdbe7d35c62d6a1308dc48e3985016b69e65926ed37b99fe7e6b297dc"
+    },
+    {
+      "source": "package/css/theme/fonts/source-sans-pro/source-sans-pro-regular.woff",
+      "destination": "css/theme/fonts/source-sans-pro/source-sans-pro-regular.woff",
+      "sha256": "d4eaa48ba450f4dd2d024ab5b0e895c73c81475718e5453fd1890254c16b7a57"
+    },
+    {
+      "source": "package/css/theme/fonts/source-sans-pro/source-sans-pro-semibold.woff",
+      "destination": "css/theme/fonts/source-sans-pro/source-sans-pro-semibold.woff",
+      "sha256": "b0abd2736335424f9fd3eb27974a36d03783b3db141e0801dca7d3a635218b46"
+    },
+    {
+      "source": "package/css/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.woff",
+      "destination": "css/theme/fonts/source-sans-pro/source-sans-pro-semibolditalic.woff",
+      "sha256": "7225cacc06c2f360367c138daa4ce727c2a0d26e42875b1f9e802f181fdb81c5"
+    }
+  ]
+}

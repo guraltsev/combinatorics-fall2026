@@ -1,0 +1,391 @@
+/* A compact, Beamer-inspired Reveal theme for course presentations. */
+:root {
+  --r-background-color: #ffffff;
+  --r-main-color: #20242a;
+  --r-heading-color: #17365d;
+  --r-main-font: "Helvetica Neue", Arial, sans-serif;
+  --r-heading-font: "Helvetica Neue", Arial, sans-serif;
+  --r-main-font-size: 42.5px;
+  --r-heading-font-weight: 600;
+  --r-heading-text-transform: none;
+  --r-heading-letter-spacing: normal;
+  --r-link-color: #1d5fa7;
+  --r-link-color-dark: #124271;
+  --r-selection-background-color: #d8e9fb;
+}
+
+.reveal {
+  color: var(--r-main-color);
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  line-height: 1.22;
+}
+
+.reveal .slides { text-align: left; }
+/* Reveal's configured margin is the deck boundary.  Do not add horizontal
+   padding here: it shrinks every slide canvas asymmetrically once Reveal
+   applies its transform.  Individual elements retain their own spacing. */
+.reveal .slides section { box-sizing: border-box; padding: 0; }
+.reveal .slides section.presentation-slide {
+  align-items: stretch;
+  display: flex !important;
+  flex-direction: column;
+  height: 100% !important;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100% !important;
+  background-color: #fff;
+}
+.reveal .slides section.presentation-slide > * { order: 3; }
+.reveal .slides section.presentation-slide > .presentation-breadcrumb { flex: 0 0 auto; order: 1; }
+.reveal .slides section.presentation-slide > h1,
+.reveal .slides section.presentation-slide > h2,
+.reveal .slides section.presentation-slide > h3,
+.reveal .slides section.presentation-slide > h4 { flex: 0 0 auto; order: 2; }
+.reveal .slides section.title-slide {
+  --r-background-color: #ffffff;
+  --r-main-color: #20242a;
+  --r-heading-color: #17365d;
+  --r-link-color: #1d5fa7;
+  background: #ffffff;
+  color: #20242a;
+  text-align: center;
+}
+.reveal .slides section.presentation-variant--inverse {
+  --r-background-color: #102a43;
+  --r-main-color: #f0f7ff;
+  --r-heading-color: #ffffff;
+  --r-link-color: #b9e6ff;
+  --r-link-color-dark: #e0f5ff;
+  background: #102a43;
+  color: #f0f7ff;
+}
+.reveal .slides section.presentation-variant--accent {
+  --r-background-color: #eef6ff;
+  --r-main-color: #102a43;
+  --r-heading-color: #123b63;
+  --r-link-color: #075985;
+  --r-link-color-dark: #164e63;
+  background: #eef6ff;
+}
+
+/* The destination slide is an opaque card, so the short fade never exposes
+   readable content from the outgoing slide. */
+.reveal .slides section.presentation-slide,
+.reveal .slides section.presentation-slide.present,
+.reveal .slides section.presentation-slide.future,
+.reveal .slides section.presentation-slide.past { transition-duration: .18s; }
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  color: var(--r-heading-color);
+  font-family: var(--r-heading-font);
+  font-weight: var(--r-heading-font-weight);
+  line-height: 1.1;
+  text-align: left;
+  text-shadow: none;
+}
+
+.reveal h1 { font-size: 1.55em; margin: 0 0 .6em; }
+.reveal h2 { border-bottom: .09em solid #2a6f97; font-size: 1.16em; margin: 0 0 .7em; padding: 0 0 .24em; }
+.reveal .presentation-slide > h1,
+.reveal .presentation-slide > h2,
+.reveal .presentation-slide > h3,
+.reveal .presentation-slide > h4 { margin-bottom: .16em; }
+.reveal .presentation-title { text-align: center; }
+.reveal .presentation-breadcrumb { color: #60758a; font-size: .52em; letter-spacing: .035em; margin: 0 0 .45em; }
+.reveal .presentation-variant--inverse .presentation-breadcrumb { color: #c6d8e8; }
+.reveal h3 { font-size: .92em; margin: .45em 0 .22em; }
+.reveal p { margin: .1em 0; }
+
+/* Figure captions are supporting text, not a second slide heading. */
+.reveal figure > figcaption {
+  color: #60758a;
+  font-family: var(--r-main-font);
+  font-size: .67em;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: .2em 0 0;
+}
+.reveal figure > figcaption p { margin: 0; }
+
+/* Source excerpts use the same semantic distinction as ordinary course
+   pages: verbatim is plain text, while code is a framed, highlighted sample. */
+.reveal .semantic-verbatim {
+  background: transparent;
+  border: 0;
+  font-size: .65em;
+  margin: .45em 0;
+  padding: 0;
+}
+.reveal .semantic-code {
+  background: #f8fafc;
+  border: .035em solid #cbd5e1;
+  border-radius: .08em;
+  box-sizing: border-box;
+  color: #20242a;
+  max-width: 100%;
+  overflow: auto;
+  padding: .34em .5em;
+  text-align: left;
+}
+.reveal .semantic-code { font-size: .65em; margin: .45em 0; }
+.reveal .semantic-code pre {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.reveal .semantic-code > .highlight,
+.reveal .semantic-verbatim > .highlight {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+.reveal .semantic-center > .semantic-code,
+.reveal .semantic-center > .highlight {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.reveal .semantic-alignblocks-hleft,
+.reveal .semantic-alignblocks-hcenter,
+.reveal .semantic-alignblocks-hright { text-align: left; }
+.reveal .semantic-alignblocks-hcenter .semantic-alignblocks-centered {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+.reveal .semantic-alignblocks-hleft .semantic-alignblocks-left {
+  width: fit-content;
+  max-width: 100%;
+  margin-right: auto;
+}
+.reveal .semantic-alignblocks-hright .semantic-alignblocks-right {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+}
+.reveal .semantic-code .k,
+.reveal .semantic-code .kc,
+.reveal .semantic-code .kd,
+.reveal .semantic-code .kn,
+.reveal .semantic-code .kp,
+.reveal .semantic-code .kr,
+.reveal .semantic-code .kt { color: #1d4ed8; font-weight: 600; }
+.reveal .semantic-code .c,
+.reveal .semantic-code .ch,
+.reveal .semantic-code .cm,
+.reveal .semantic-code .cp,
+.reveal .semantic-code .cs { color: #64748b; font-style: italic; }
+.reveal .semantic-code .s,
+.reveal .semantic-code .sa,
+.reveal .semantic-code .sb,
+.reveal .semantic-code .sc,
+.reveal .semantic-code .dl,
+.reveal .semantic-code .sd,
+.reveal .semantic-code .s2,
+.reveal .semantic-code .se,
+.reveal .semantic-code .sh,
+.reveal .semantic-code .si,
+.reveal .semantic-code .sx,
+.reveal .semantic-code .sr,
+.reveal .semantic-code .s1 { color: #047857; }
+
+.reveal ul,
+.reveal ol { display: block; margin: .1em 0 .1em 1.15em; padding: 0; text-align: left; }
+.reveal ul { list-style-type: disc; }
+.reveal ol { list-style-type: decimal; }
+.reveal li { margin: .08em 0; padding-left: .18em; }
+.reveal li > p { margin: 0; }
+.reveal li > ul,
+.reveal li > ol { margin-bottom: .18em; margin-top: .18em; }
+
+.reveal table { border-collapse: collapse; font-size: .78em; margin: .55em auto; }
+.reveal th { background: #e8f0f8; color: #17365d; font-weight: 600; }
+.reveal th,
+.reveal td { border: 1px solid #b8c7d6; padding: .05em .55em; text-align: left; }
+.reveal th > p,
+.reveal td > p { margin: 0; }
+.reveal blockquote { border-left: .18em solid #2a6f97; box-shadow: none; margin: .6em 0; padding: .25em .7em; text-align: left; width: auto; }
+
+/* Semantic theorem environments deliberately read like Beamer blocks. */
+.reveal .admonition { background: #f7fafc; border: 1px solid #9fb3c8; border-radius: .08em; box-shadow: none; font-size: .82em; margin: .55em 0; padding: .25em .65em .4em; text-align: left; }
+.reveal .admonition > .admonition-title { background: #dceaf7; color: #17365d; font-size: 1em; font-weight: 700; margin: -.25em -.65em .38em; padding: .28em .65em; }
+.reveal .admonition > .admonition-title::before,
+.reveal .admonition > .admonition-title::after { content: none !important; }
+.reveal .admonition-theorem,
+.reveal .admonition-lemma,
+.reveal .admonition-proposition { background: #f5f7fc; border-color: #526d9a; }
+.reveal .admonition-theorem > .admonition-title,
+.reveal .admonition-lemma > .admonition-title,
+.reveal .admonition-proposition > .admonition-title { background: #dbe4f3; color: #253b63; }
+.reveal .admonition-remark { background: #fffdf5; border-color: #b69755; }
+.reveal .admonition-remark > .admonition-title { background: #f7edcc; color: #6d531e; }
+.reveal .admonition-definition { background: #f3faf7; border-color: #5c9b87; }
+.reveal .admonition-definition > .admonition-title { background: #d7eee5; color: #245c4c; }
+.reveal .admonition p:last-child { margin-bottom: 0; }
+.reveal .headerlink { display: none; }
+.reveal .semantic-text-style-tiny { font-size: .65em; }
+.reveal .semantic-text-style-small { font-size: .8em; }
+.reveal .semantic-text-style-normal { font-size: 1em; }
+.reveal .semantic-text-style-large { font-size: 1.25em; }
+.reveal .semantic-text-style-huge { font-size: 1.6em; }
+
+.reveal .slides section.title-slide > h1 {
+  align-self: center;
+  background: #1a53a1;
+  border-radius: .18em;
+  box-shadow: .12em .2em .14em #828282;
+  color: aliceblue;
+  font-size: 1.8em;
+  margin: .75em auto .9em;
+  padding: .55em 1em;
+  text-align: center;
+  width: fit-content;
+}
+.reveal .slides section.title-slide > .semantic-center {
+  align-self: center;
+  max-width: 86%;
+  text-align: center;
+}
+.reveal .slides section.title-slide > .semantic-center p { text-align: center; }
+.reveal .slides section.title-slide > p { color: #20242a; text-align: center; }
+.reveal .slides section.title-slide > .presentation-breadcrumb { color: #60758a; text-align: center; }
+.reveal .finish-slide { color: #edf4ff; }
+.reveal .finish-slide h2 { border-color: #8db8ea; color: #fff; }
+.reveal .finish-slide .checklist { display: grid; gap: .35em .9em; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: .75em; }
+.reveal .finish-slide .checklist div::before { color: #94d3a2; content: "✓"; font-weight: 700; margin-right: .35em; }
+
+.reveal .controls { color: #2a6f97; }
+.reveal .progress { color: #2a6f97; height: 5px; }
+
+.reveal .presentation-split {
+  display: grid;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+}
+.reveal .presentation-split--horizontal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.reveal .presentation-split--vertical { grid-template-rows: repeat(2, minmax(0, 1fr)); }
+.reveal .presentation-pane { min-height: 0; min-width: 0; overflow: auto; }
+.reveal .presentation-pane > .presentation-split { height: 100%; }
+
+.reveal .presentation-replacement--overlay,
+.reveal .presentation-equation-steps {
+  display: grid;
+  min-height: 1.8em;
+  min-width: 0;
+  align-items: start;
+}
+.reveal .presentation-replacement--overlay > .presentation-state,
+.reveal .presentation-equation-steps > .presentation-equation-state {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+.reveal .presentation-state--initially-hidden { visibility: hidden; }
+.reveal .presentation-equation-state { text-align: center; }
+.reveal .presentation-equation-state .math { margin-left: auto; margin-right: auto; }
+
+.reveal .presentation-media {
+  align-self: center;
+  background: #fff;
+  box-shadow: none;
+  isolation: isolate;
+  margin: .45em auto;
+  max-width: 100%;
+  overflow: clip;
+}
+.reveal .presentation-media > img,
+.reveal .presentation-media > video {
+  background: #fff;
+  border: 0;
+  box-shadow: none;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-height: 65vh;
+  max-width: 100%;
+  object-fit: contain;
+  width: auto;
+}
+.reveal .presentation-media--audio audio { width: 100%; }
+.reveal .presentation-media[data-media-fit="cover"] > img,
+.reveal .presentation-media[data-media-fit="cover"] > video { object-fit: cover; }
+.reveal .presentation-media__fallback { font-size: .65em; margin-top: .3em; }
+.reveal .presentation-media__unsupported { display: none; }
+.reveal .presentation-variant--inverse .presentation-media__fallback { color: #dcecf8; }
+.progressive-math {
+  display: inline-grid;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.progressive-math--display {
+  display: grid;
+  font-size: var(--course-display-math-size, 80%);
+  justify-items: center;
+  width: 100%;
+  margin-block: .35rem;
+}
+
+.progressive-math__states {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  align-items: center;
+  justify-items: center;
+  box-sizing: border-box;
+  min-width: max-content;
+  max-width: 100%;
+}
+
+.progressive-math__state {
+  grid-area: 1 / 1;
+  display: block;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.progressive-math__state:first-child,
+.progressive-math__state[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+.progressive-math__state[aria-hidden="true"] {
+  pointer-events: none;
+}
+
+/* MathJax gives standalone display containers their own vertical margins.
+   Progressive states already share one outer display slot; retaining those
+   inner margins makes every hidden state contribute a different-looking gap
+   and makes the slot much taller than ordinary display math. */
+.progressive-math__state > .math-svg,
+.progressive-math__state > mjx-container,
+.progressive-math__state > mjx-container[display] {
+  display: block;
+  margin: 0 !important;
+  padding: 0;
+  max-width: 100%;
+}
+
+.progressive-math__fallback {
+  font-family: var(--course-code-font-family, monospace);
+}
+
+.progressive-math .course-math-highlight-foreground {
+  color: var(--course-math-highlight-color, #b42318);
+}
+
+.progressive-math .course-math-highlight-background {
+  background: var(--course-math-highlight-background, #fff1a8);
+  border-radius: .12em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progressive-math__state { transition: none; }
+}

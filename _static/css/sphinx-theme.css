@@ -573,6 +573,94 @@ html.course-secondary-in-menu body.layout-info .bd-main .bd-content .bd-article-
 .semantic-strikethrough { text-decoration: line-through; }
 .semantic-boxed { border: 1px solid currentColor; border-radius: 0.15rem; padding: 0 0.2em; }
 .semantic-center { text-align: center; }
+.semantic-alignblocks-hleft,
+.semantic-alignblocks-hcenter,
+.semantic-alignblocks-hright { text-align: left; }
+.semantic-alignblocks-hcenter .semantic-alignblocks-centered {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+}
+.semantic-alignblocks-hleft .semantic-alignblocks-left {
+  width: fit-content;
+  max-width: 100%;
+  margin-right: auto;
+}
+.semantic-alignblocks-hright .semantic-alignblocks-right {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+}
+
+/* ``verbatim`` is a literal source excerpt; ``code`` is an authored,
+   language-aware example.  Keep their visual roles distinct even when both
+   ultimately use a literal-block node in the Sphinx writer. */
+.semantic-verbatim {
+  background: transparent;
+  border: 0;
+  font-size: .7em;
+  margin: 1rem 0;
+  padding: 0;
+}
+.semantic-code {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: .3rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: auto;
+  padding: .8rem 1rem;
+  text-align: left;
+}
+.semantic-code { font-size: .7em; margin: 1rem 0; }
+.semantic-code pre {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.semantic-code > .highlight,
+.semantic-verbatim > .highlight {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+}
+.semantic-center > .semantic-code,
+.semantic-center > .highlight {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.semantic-code .k,
+.semantic-code .kc,
+.semantic-code .kd,
+.semantic-code .kn,
+.semantic-code .kp,
+.semantic-code .kr,
+.semantic-code .kt { color: #1d4ed8; font-weight: 600; }
+.semantic-code .c,
+.semantic-code .ch,
+.semantic-code .cm,
+.semantic-code .cp,
+.semantic-code .cs { color: #64748b; font-style: italic; }
+.semantic-code .s,
+.semantic-code .sa,
+.semantic-code .sb,
+.semantic-code .sc,
+.semantic-code .dl,
+.semantic-code .sd,
+.semantic-code .s2,
+.semantic-code .se,
+.semantic-code .sh,
+.semantic-code .si,
+.semantic-code .sx,
+.semantic-code .sr,
+.semantic-code .s1 { color: #047857; }
+.semantic-text-style-tiny { font-size: .65em; }
+.semantic-text-style-small { font-size: .8em; }
+.semantic-text-style-normal { font-size: 1em; }
+.semantic-text-style-large { font-size: 1.25em; }
+.semantic-text-style-huge { font-size: 1.6em; }
 .semantic-colored.semantic-color-black { color: black; }
 .semantic-colored.semantic-color-blue { color: blue; }
 .semantic-colored.semantic-color-brown { color: brown; }
@@ -1626,6 +1714,17 @@ ol.parenthesized-upperalpha > li::marker {
 /* LaTeX's \item[label] syntax is represented inside the list item so the
    label remains available to screen readers and can contain inline math. */
 .latex-item-label { font-weight: 700; }
+
+/* Figure captions are supporting text, so keep them quieter than the image. */
+.bd-article figure > figcaption,
+.bd-article figure > p.caption {
+  margin-top: 0.35rem;
+  color: var(--pst-color-text-muted);
+  font-family: var(--pst-font-family-base, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
 
 .grade-weights-chart { display: grid; grid-template-columns: minmax(11rem, 16rem) minmax(15rem, 1fr); gap: 1.25rem; align-items: center; max-width: 46rem; margin: 1.25rem auto; }
 .grade-weights-chart svg { width: 100%; max-width: 16rem; margin: auto; }
