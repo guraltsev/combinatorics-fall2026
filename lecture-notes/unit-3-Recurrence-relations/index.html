@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Unit II: Generating functions — Combinatorics - Fall 2026</title>
+    <title>Unit III: Recurrence Relations — Combinatorics - Fall 2026</title>
   
   
   
@@ -37,7 +37,7 @@
     <script src="../../_static/documentation_options.js?v=7f41d439"></script>
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture-notes/unit-2-generating-functions/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture-notes/unit-3-Recurrence-relations/index';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <script src="../../_static/js/course-focused-mode.js?v=0be05eaa"></script>
     <script src="../../_static/js/course-sidebar-toggle.js?v=5012eb64"></script>
@@ -56,8 +56,8 @@
     <link rel="icon" href="../../_static/uark-favicon.png">
     <link rel="index" title="Index" href="../../genindex.html">
     <link rel="search" title="Search" href="../../search.html">
-    <link rel="next" title="6. Rook polynomials and forbidden positions" href="01-rook-polynomials.html">
-    <link rel="prev" title="5. Inclusion–exclusion and applications" href="../unit-1-enumeration/05-inclusion-exclusion-and-applications.html">
+    <link rel="next" title="11. Basics of recurrence relations" href="01-basics-of-recurrence-relations.html">
+    <link rel="prev" title="9. Ordinary generating functions: ordered arrangements, compositions, and recurrences" href="../unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences.html">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
@@ -88,7 +88,7 @@
   </script>
 
   </head>
-  <body data-default-mode="" data-course-docname="lecture-notes/unit-2-generating-functions/index" data-focus-section-root="lecture-notes/index" data-focus-section-title="Lecture Notes" data-focus-section-documents="lecture-notes/index,lecture-notes/unit-1-enumeration/index,lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting,lecture-notes/unit-1-enumeration/02-more counting techniques,lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition,lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers,lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications,lecture-notes/unit-2-generating-functions/index,lecture-notes/unit-2-generating-functions/01-rook-polynomials,lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics,lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced,lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences,lecture-notes/unit-3-Recurrence-relations/index,lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations" data-focus-section-targets="{&quot;lecture-notes/index&quot;:&quot;../index.html&quot;,&quot;lecture-notes/unit-1-enumeration/index&quot;:&quot;../unit-1-enumeration/index.html&quot;,&quot;lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting&quot;:&quot;../unit-1-enumeration/01-set-notation-and-basic-counting.html&quot;,&quot;lecture-notes/unit-1-enumeration/02-more counting techniques&quot;:&quot;../unit-1-enumeration/02-more%20counting%20techniques.html&quot;,&quot;lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition&quot;:&quot;../unit-1-enumeration/03-applications-of-combinations-and-repetition.html&quot;,&quot;lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers&quot;:&quot;../unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers.html&quot;,&quot;lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications&quot;:&quot;../unit-1-enumeration/05-inclusion-exclusion-and-applications.html&quot;,&quot;lecture-notes/unit-2-generating-functions/index&quot;:&quot;#&quot;,&quot;lecture-notes/unit-2-generating-functions/01-rook-polynomials&quot;:&quot;01-rook-polynomials.html&quot;,&quot;lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics&quot;:&quot;02-ordinary-generating-functions-basics.html&quot;,&quot;lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced&quot;:&quot;03-ordinary-generating-functions-advanced.html&quot;,&quot;lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences&quot;:&quot;04-ordered-arrangements-compositions-and-recurrences.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/index&quot;:&quot;../unit-3-Recurrence-relations/index.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations&quot;:&quot;../unit-3-Recurrence-relations/01-basics-of-recurrence-relations.html&quot;}" class="layout-notes">
+  <body data-default-mode="" data-course-docname="lecture-notes/unit-3-Recurrence-relations/index" data-focus-section-root="lecture-notes/index" data-focus-section-title="Lecture Notes" data-focus-section-documents="lecture-notes/index,lecture-notes/unit-1-enumeration/index,lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting,lecture-notes/unit-1-enumeration/02-more counting techniques,lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition,lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers,lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications,lecture-notes/unit-2-generating-functions/index,lecture-notes/unit-2-generating-functions/01-rook-polynomials,lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics,lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced,lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences,lecture-notes/unit-3-Recurrence-relations/index,lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations" data-focus-section-targets="{&quot;lecture-notes/index&quot;:&quot;../index.html&quot;,&quot;lecture-notes/unit-1-enumeration/index&quot;:&quot;../unit-1-enumeration/index.html&quot;,&quot;lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting&quot;:&quot;../unit-1-enumeration/01-set-notation-and-basic-counting.html&quot;,&quot;lecture-notes/unit-1-enumeration/02-more counting techniques&quot;:&quot;../unit-1-enumeration/02-more%20counting%20techniques.html&quot;,&quot;lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition&quot;:&quot;../unit-1-enumeration/03-applications-of-combinations-and-repetition.html&quot;,&quot;lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers&quot;:&quot;../unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers.html&quot;,&quot;lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications&quot;:&quot;../unit-1-enumeration/05-inclusion-exclusion-and-applications.html&quot;,&quot;lecture-notes/unit-2-generating-functions/index&quot;:&quot;../unit-2-generating-functions/index.html&quot;,&quot;lecture-notes/unit-2-generating-functions/01-rook-polynomials&quot;:&quot;../unit-2-generating-functions/01-rook-polynomials.html&quot;,&quot;lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics&quot;:&quot;../unit-2-generating-functions/02-ordinary-generating-functions-basics.html&quot;,&quot;lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced&quot;:&quot;../unit-2-generating-functions/03-ordinary-generating-functions-advanced.html&quot;,&quot;lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences&quot;:&quot;../unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/index&quot;:&quot;#&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations&quot;:&quot;01-basics-of-recurrence-relations.html&quot;}" class="layout-notes">
 
   
   
@@ -555,15 +555,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../unit-1-enumeration/05-inclusion-exclusion-and-applications.html">5. Inclusion–exclusion and applications</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Unit II: Generating functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="01-rook-polynomials.html">6. Rook polynomials and forbidden positions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02-ordinary-generating-functions-basics.html">7. Ordinary generating functions: definitions and series multiplication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03-ordinary-generating-functions-advanced.html">8. Ordinary generating functions: constructions and coefficient extraction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-ordered-arrangements-compositions-and-recurrences.html">9. Ordinary generating functions: ordered arrangements, compositions, and recurrences</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../unit-2-generating-functions/index.html">Unit II: Generating functions</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../unit-2-generating-functions/01-rook-polynomials.html">6. Rook polynomials and forbidden positions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unit-2-generating-functions/02-ordinary-generating-functions-basics.html">7. Ordinary generating functions: definitions and series multiplication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unit-2-generating-functions/03-ordinary-generating-functions-advanced.html">8. Ordinary generating functions: constructions and coefficient extraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences.html">9. Ordinary generating functions: ordered arrangements, compositions, and recurrences</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../unit-3-Recurrence-relations/index.html">Unit III: Recurrence Relations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../unit-3-Recurrence-relations/01-basics-of-recurrence-relations.html">11. Basics of recurrence relations</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Unit III: Recurrence Relations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="01-basics-of-recurrence-relations.html">11. Basics of recurrence relations</a></li>
 </ul>
 </details></li>
 </ul>
@@ -610,7 +610,7 @@
       
     
     <li class="breadcrumb-item active" aria-current="page">
-      <span class="ellipsis">Unit II: Generating functions</span>
+      <span class="ellipsis">Unit III: Recurrence Relations</span>
       
       <a class="course-breadcrumb-pdf-link" href="_pdf/index.pdf" aria-label="Download PDF version of this page">
         <img class="course-breadcrumb-pdf-icon" src="../../_static/assets/pdf-icon.svg" alt="">
@@ -634,9 +634,9 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="unit-ii-generating-functions">
-<h1>Unit II: Generating functions<a class="headerlink" href="#unit-ii-generating-functions" title="Link to this heading">#</a></h1>
-<p>Generating functions record a sequence of counting answers as the coefficients of one polynomial or formal power series. This unit begins with rook polynomials, where the stored coefficients have a visible purpose in inclusion–exclusion. It then develops ordinary and exponential generating functions as two encodings suited to different kinds of combinatorial constructions.</p>
+  <section id="unit-iii-recurrence-relations">
+<h1>Unit III: Recurrence Relations<a class="headerlink" href="#unit-iii-recurrence-relations" title="Link to this heading">#</a></h1>
+<p>Recurrence relations are equations that define a sequence where each term is defined as a function of its predecessors.  This unit introduces the concept of recurrence relations and their solutions, focusing on linear homogeneous and non-homogeneous relations with constant coefficients.  We will explore methods for solving these relations, including characteristic equations and generating functions.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -648,17 +648,17 @@
               
                 <footer class="prev-next-footer d-print-none">
 <div class="prev-next-area">
-    <a class="left-prev" href="../unit-1-enumeration/05-inclusion-exclusion-and-applications.html" title="previous page">
+    <a class="left-prev" href="../unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">5. Inclusion–exclusion and applications</p>
+        <p class="prev-next-title">9. Ordinary generating functions: ordered arrangements, compositions, and recurrences</p>
       </div>
     </a>
-    <a class="right-next" href="01-rook-polynomials.html" title="next page">
+    <a class="right-next" href="01-basics-of-recurrence-relations.html" title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">6. Rook polynomials and forbidden positions</p>
+        <p class="prev-next-title">11. Basics of recurrence relations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
