@@ -289,6 +289,29 @@
 .reveal .presentation-equation-state { text-align: center; }
 .reveal .presentation-equation-state .math { margin-left: auto; margin-right: auto; }
 
+/* Display math can be emitted as an inline span when it interrupts prose.
+   Presentation pages intentionally do not load the article stylesheet, so
+   keep both the prerendered fallback and browser-enhanced output block-level
+   here.  The output node owns the small vertical gap so standalone and
+   interrupted displays use the same geometry. */
+.reveal .math.display-math-interrupt,
+.reveal .math-fallback[data-math-display="block"],
+.reveal .math-enhanced[data-math-display="block"] {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.reveal .math[data-math-display="block"] > .math-svg,
+.reveal .math.display-math-interrupt > .math-svg,
+.reveal .math[data-math-display="block"] > mjx-container[display],
+.reveal .math.display-math-interrupt > mjx-container[display] {
+  display: block;
+  margin: .35rem 0 !important;
+  padding: 0;
+  max-width: 100%;
+}
+
 .reveal .presentation-media {
   align-self: center;
   background: #fff;

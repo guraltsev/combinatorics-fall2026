@@ -2,11 +2,23 @@
 (function () {
   'use strict';
 
+  var loaderScript = document.currentScript;
+  var mode = (loaderScript && loaderScript.dataset.mathMode) || 'cdn';
+  if (mode === 'disabled') return;
+
   var fallbackMath = Array.from(document.querySelectorAll('[data-math-prerendered]'));
   if (!fallbackMath.length) return;
 
+  var scriptSource = 'https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-mml-svg.js';
+  var fontPaths = null;
+  if (mode === 'local') {
+    // The build ships MathJax and its dynamic fonts beside this script.
+    scriptSource = new URL('../mathjax/tex-mml-svg.js', loaderScript.src).href;
+    fontPaths = new URL('../mathjax/fonts', loaderScript.src).href;
+  }
+
   window.MathJax = {
-    loader: {load: ['[tex]/cancel', '[tex]/textmacros']},
+    loader: Object.assign({load: ['[tex]/cancel', '[tex]/textmacros']}, fontPaths ? {paths: {fonts: fontPaths}} : {}),
     tex: {packages: {'[+]': ['cancel', 'textmacros']}},
     options: {
       menuOptions: {
@@ -22,7 +34,7 @@
   };
 
   var script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-mml-svg.js';
+  script.src = scriptSource;
   script.async = true;
   script.crossOrigin = 'anonymous';
   script.referrerPolicy = 'no-referrer';
