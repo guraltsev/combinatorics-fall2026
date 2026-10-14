@@ -26,8 +26,8 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02">
     <link rel="stylesheet" type="text/css" href="../../_static/css/exam-booklet.css?v=33169b37">
-    <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx-theme.css?v=35d33106">
-    <link rel="stylesheet" type="text/css" href="../../_static/css/course-reference-preview.css?v=dfd52601">
+    <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx-theme.css">
+    <link rel="stylesheet" type="text/css" href="../../_static/css/course-reference-preview.css">
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9">
@@ -38,19 +38,19 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script data-math-mode="cdn" defer="defer" src="../../_static/js/math-progressive.js?v=914947c1"></script>
+    <script data-math-mode="cdn" defer="defer" src="../../_static/js/math-progressive.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <script src="../../_static/js/course-focused-mode.js?v=0be05eaa"></script>
-    <script src="../../_static/js/course-sidebar-toggle.js?v=5012eb64"></script>
-    <script src="../../_static/js/course-page-toc.js?v=21b48933"></script>
-    <script src="../../_static/js/course-navbar-overflow.js?v=3a1ef034"></script>
-    <script src="../../_static/js/course-search.js?v=d094b4b4"></script>
-    <script src="../../_static/js/my-open-math.js?v=f599d90e"></script>
-    <script src="../../_static/@floating-ui/core/floating-ui.core.umd.min.js?v=4c6fc893"></script>
-    <script src="../../_static/@floating-ui/dom/floating-ui.dom.umd.min.js?v=b4f165e2"></script>
-    <script src="../../_static/js/course-reference-preview-core.js?v=56ac7479"></script>
-    <script src="../../_static/js/course-reference-preview.js?v=c43e9279"></script>
+    <script src="../../_static/js/course-focused-mode.js"></script>
+    <script src="../../_static/js/course-sidebar-toggle.js"></script>
+    <script src="../../_static/js/course-page-toc.js"></script>
+    <script src="../../_static/js/course-navbar-overflow.js"></script>
+    <script src="../../_static/js/course-search.js"></script>
+    <script src="../../_static/js/my-open-math.js"></script>
+    <script src="../../_static/@floating-ui/core/floating-ui.core.umd.min.js"></script>
+    <script src="../../_static/@floating-ui/dom/floating-ui.dom.umd.min.js"></script>
+    <script src="../../_static/js/course-reference-preview-core.js"></script>
+    <script src="../../_static/js/course-reference-preview.js"></script>
   <script src="../../course-search-index.js"></script>
   
   
@@ -58,12 +58,13 @@
     <link rel="icon" href="../../_static/uark-favicon.png">
     <link rel="index" title="Index" href="../../genindex.html">
     <link rel="search" title="Search" href="../../search.html">
+    <link rel="next" title="13. Finite state machines and vector recurrences" href="03-finite-state-machines-and-vector-recurrences.html">
     <link rel="prev" title="11. Basics of recurrence relations" href="01-basics-of-recurrence-relations.html">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
   <meta name="docsearch:version" content="">
-    <meta name="docbuild:last-update" content="October 11, 2026">
+    <meta name="docbuild:last-update" content="October 14, 2026">
   
     
     <script src="../../_static/searchtools.js"></script>
@@ -89,7 +90,7 @@
   </script>
 
   </head>
-  <body data-default-mode="" data-course-docname="lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences" data-focus-section-root="lecture-notes/index" data-focus-section-title="Lecture Notes" data-focus-section-documents="lecture-notes/index,lecture-notes/unit-1-enumeration/index,lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting,lecture-notes/unit-1-enumeration/02-more counting techniques,lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition,lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers,lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications,lecture-notes/unit-2-generating-functions/index,lecture-notes/unit-2-generating-functions/01-rook-polynomials,lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics,lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced,lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences,lecture-notes/unit-3-Recurrence-relations/index,lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations,lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences" data-focus-section-targets="{&quot;lecture-notes/index&quot;:&quot;../index.html&quot;,&quot;lecture-notes/unit-1-enumeration/index&quot;:&quot;../unit-1-enumeration/index.html&quot;,&quot;lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting&quot;:&quot;../unit-1-enumeration/01-set-notation-and-basic-counting.html&quot;,&quot;lecture-notes/unit-1-enumeration/02-more counting techniques&quot;:&quot;../unit-1-enumeration/02-more%20counting%20techniques.html&quot;,&quot;lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition&quot;:&quot;../unit-1-enumeration/03-applications-of-combinations-and-repetition.html&quot;,&quot;lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers&quot;:&quot;../unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers.html&quot;,&quot;lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications&quot;:&quot;../unit-1-enumeration/05-inclusion-exclusion-and-applications.html&quot;,&quot;lecture-notes/unit-2-generating-functions/index&quot;:&quot;../unit-2-generating-functions/index.html&quot;,&quot;lecture-notes/unit-2-generating-functions/01-rook-polynomials&quot;:&quot;../unit-2-generating-functions/01-rook-polynomials.html&quot;,&quot;lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics&quot;:&quot;../unit-2-generating-functions/02-ordinary-generating-functions-basics.html&quot;,&quot;lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced&quot;:&quot;../unit-2-generating-functions/03-ordinary-generating-functions-advanced.html&quot;,&quot;lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences&quot;:&quot;../unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/index&quot;:&quot;index.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations&quot;:&quot;01-basics-of-recurrence-relations.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences&quot;:&quot;#&quot;}" class="layout-notes">
+  <body data-default-mode="" data-course-docname="lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences" data-focus-section-root="lecture-notes/index" data-focus-section-title="Lecture Notes" data-focus-section-documents="lecture-notes/index,lecture-notes/unit-1-enumeration/index,lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting,lecture-notes/unit-1-enumeration/02-more counting techniques,lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition,lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers,lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications,lecture-notes/unit-2-generating-functions/index,lecture-notes/unit-2-generating-functions/01-rook-polynomials,lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics,lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced,lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences,lecture-notes/unit-3-Recurrence-relations/index,lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations,lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences,lecture-notes/unit-3-Recurrence-relations/03-finite-state-machines-and-vector-recurrences" data-focus-section-targets="{&quot;lecture-notes/index&quot;:&quot;../index.html&quot;,&quot;lecture-notes/unit-1-enumeration/index&quot;:&quot;../unit-1-enumeration/index.html&quot;,&quot;lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting&quot;:&quot;../unit-1-enumeration/01-set-notation-and-basic-counting.html&quot;,&quot;lecture-notes/unit-1-enumeration/02-more counting techniques&quot;:&quot;../unit-1-enumeration/02-more%20counting%20techniques.html&quot;,&quot;lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition&quot;:&quot;../unit-1-enumeration/03-applications-of-combinations-and-repetition.html&quot;,&quot;lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers&quot;:&quot;../unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers.html&quot;,&quot;lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications&quot;:&quot;../unit-1-enumeration/05-inclusion-exclusion-and-applications.html&quot;,&quot;lecture-notes/unit-2-generating-functions/index&quot;:&quot;../unit-2-generating-functions/index.html&quot;,&quot;lecture-notes/unit-2-generating-functions/01-rook-polynomials&quot;:&quot;../unit-2-generating-functions/01-rook-polynomials.html&quot;,&quot;lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics&quot;:&quot;../unit-2-generating-functions/02-ordinary-generating-functions-basics.html&quot;,&quot;lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced&quot;:&quot;../unit-2-generating-functions/03-ordinary-generating-functions-advanced.html&quot;,&quot;lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences&quot;:&quot;../unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/index&quot;:&quot;index.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations&quot;:&quot;01-basics-of-recurrence-relations.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences&quot;:&quot;#&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/03-finite-state-machines-and-vector-recurrences&quot;:&quot;03-finite-state-machines-and-vector-recurrences.html&quot;}" class="layout-notes">
 
   
   
@@ -630,6 +631,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Unit III: Recurrence Relations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-basics-of-recurrence-relations.html">11. Basics of recurrence relations</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">12. Solving linear recurrences with constant coefficients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-finite-state-machines-and-vector-recurrences.html">13. Finite state machines and vector recurrences</a></li>
 </ul>
 </details></li>
 </ul>
@@ -1216,6 +1218,13 @@ a_6 &amp;= 2(\sqrt{2})^6 \left(\cos\frac{3\pi}{2} - \sin\frac{3\pi}{2}\right) = 
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">11. Basics of recurrence relations</p>
       </div>
+    </a>
+    <a class="right-next" href="03-finite-state-machines-and-vector-recurrences.html" title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">13. Finite state machines and vector recurrences</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></footer>
               
