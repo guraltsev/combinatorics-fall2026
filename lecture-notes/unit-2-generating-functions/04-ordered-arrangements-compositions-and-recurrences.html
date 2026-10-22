@@ -26,8 +26,8 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02">
     <link rel="stylesheet" type="text/css" href="../../_static/css/exam-booklet.css?v=33169b37">
-    <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx-theme.css">
-    <link rel="stylesheet" type="text/css" href="../../_static/css/course-reference-preview.css">
+    <link rel="stylesheet" type="text/css" href="../../_static/css/sphinx-theme.css?v=35d33106">
+    <link rel="stylesheet" type="text/css" href="../../_static/css/course-reference-preview.css?v=dfd52601">
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9">
@@ -38,19 +38,19 @@
     <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script data-math-mode="cdn" defer="defer" src="../../_static/js/math-progressive.js"></script>
+    <script data-math-mode="cdn" defer="defer" src="../../_static/js/math-progressive.js?v=914947c1"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences';</script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
-    <script src="../../_static/js/course-focused-mode.js"></script>
-    <script src="../../_static/js/course-sidebar-toggle.js"></script>
-    <script src="../../_static/js/course-page-toc.js"></script>
-    <script src="../../_static/js/course-navbar-overflow.js"></script>
-    <script src="../../_static/js/course-search.js"></script>
-    <script src="../../_static/js/my-open-math.js"></script>
-    <script src="../../_static/@floating-ui/core/floating-ui.core.umd.min.js"></script>
-    <script src="../../_static/@floating-ui/dom/floating-ui.dom.umd.min.js"></script>
-    <script src="../../_static/js/course-reference-preview-core.js"></script>
-    <script src="../../_static/js/course-reference-preview.js"></script>
+    <script src="../../_static/js/course-focused-mode.js?v=0be05eaa"></script>
+    <script src="../../_static/js/course-sidebar-toggle.js?v=5012eb64"></script>
+    <script src="../../_static/js/course-page-toc.js?v=21b48933"></script>
+    <script src="../../_static/js/course-navbar-overflow.js?v=3a1ef034"></script>
+    <script src="../../_static/js/course-search.js?v=d094b4b4"></script>
+    <script src="../../_static/js/my-open-math.js?v=f599d90e"></script>
+    <script src="../../_static/@floating-ui/core/floating-ui.core.umd.min.js?v=4c6fc893"></script>
+    <script src="../../_static/@floating-ui/dom/floating-ui.dom.umd.min.js?v=b4f165e2"></script>
+    <script src="../../_static/js/course-reference-preview-core.js?v=56ac7479"></script>
+    <script src="../../_static/js/course-reference-preview.js?v=c43e9279"></script>
   <script src="../../course-search-index.js"></script>
   
   
@@ -64,7 +64,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="docsearch:language" content="en">
   <meta name="docsearch:version" content="">
-    <meta name="docbuild:last-update" content="October 14, 2026">
+    <meta name="docbuild:last-update" content="October 22, 2026">
   
     
     <script src="../../_static/searchtools.js"></script>
@@ -90,7 +90,7 @@
   </script>
 
   </head>
-  <body data-default-mode="" data-course-docname="lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences" data-focus-section-root="lecture-notes/index" data-focus-section-title="Lecture Notes" data-focus-section-documents="lecture-notes/index,lecture-notes/unit-1-enumeration/index,lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting,lecture-notes/unit-1-enumeration/02-more counting techniques,lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition,lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers,lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications,lecture-notes/unit-2-generating-functions/index,lecture-notes/unit-2-generating-functions/01-rook-polynomials,lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics,lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced,lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences,lecture-notes/unit-3-Recurrence-relations/index,lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations,lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences,lecture-notes/unit-3-Recurrence-relations/03-finite-state-machines-and-vector-recurrences" data-focus-section-targets="{&quot;lecture-notes/index&quot;:&quot;../index.html&quot;,&quot;lecture-notes/unit-1-enumeration/index&quot;:&quot;../unit-1-enumeration/index.html&quot;,&quot;lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting&quot;:&quot;../unit-1-enumeration/01-set-notation-and-basic-counting.html&quot;,&quot;lecture-notes/unit-1-enumeration/02-more counting techniques&quot;:&quot;../unit-1-enumeration/02-more%20counting%20techniques.html&quot;,&quot;lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition&quot;:&quot;../unit-1-enumeration/03-applications-of-combinations-and-repetition.html&quot;,&quot;lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers&quot;:&quot;../unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers.html&quot;,&quot;lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications&quot;:&quot;../unit-1-enumeration/05-inclusion-exclusion-and-applications.html&quot;,&quot;lecture-notes/unit-2-generating-functions/index&quot;:&quot;index.html&quot;,&quot;lecture-notes/unit-2-generating-functions/01-rook-polynomials&quot;:&quot;01-rook-polynomials.html&quot;,&quot;lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics&quot;:&quot;02-ordinary-generating-functions-basics.html&quot;,&quot;lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced&quot;:&quot;03-ordinary-generating-functions-advanced.html&quot;,&quot;lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences&quot;:&quot;#&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/index&quot;:&quot;../unit-3-Recurrence-relations/index.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations&quot;:&quot;../unit-3-Recurrence-relations/01-basics-of-recurrence-relations.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences&quot;:&quot;../unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/03-finite-state-machines-and-vector-recurrences&quot;:&quot;../unit-3-Recurrence-relations/03-finite-state-machines-and-vector-recurrences.html&quot;}" class="layout-notes">
+  <body data-default-mode="" data-course-docname="lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences" data-focus-section-root="lecture-notes/index" data-focus-section-title="Lecture Notes" data-focus-section-documents="lecture-notes/index,lecture-notes/unit-1-enumeration/index,lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting,lecture-notes/unit-1-enumeration/02-more counting techniques,lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition,lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers,lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications,lecture-notes/unit-2-generating-functions/index,lecture-notes/unit-2-generating-functions/01-rook-polynomials,lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics,lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced,lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences,lecture-notes/unit-3-Recurrence-relations/index,lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations,lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences,lecture-notes/unit-3-Recurrence-relations/03-finite-state-machines-and-vector-recurrences,lecture-notes/unit-4-symmetry/index,lecture-notes/unit-4-symmetry/01-groups" data-focus-section-targets="{&quot;lecture-notes/index&quot;:&quot;../index.html&quot;,&quot;lecture-notes/unit-1-enumeration/index&quot;:&quot;../unit-1-enumeration/index.html&quot;,&quot;lecture-notes/unit-1-enumeration/01-set-notation-and-basic-counting&quot;:&quot;../unit-1-enumeration/01-set-notation-and-basic-counting.html&quot;,&quot;lecture-notes/unit-1-enumeration/02-more counting techniques&quot;:&quot;../unit-1-enumeration/02-more%20counting%20techniques.html&quot;,&quot;lecture-notes/unit-1-enumeration/03-applications-of-combinations-and-repetition&quot;:&quot;../unit-1-enumeration/03-applications-of-combinations-and-repetition.html&quot;,&quot;lecture-notes/unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers&quot;:&quot;../unit-1-enumeration/04-binomial-expansions-pascal-paths-and-catalan-numbers.html&quot;,&quot;lecture-notes/unit-1-enumeration/05-inclusion-exclusion-and-applications&quot;:&quot;../unit-1-enumeration/05-inclusion-exclusion-and-applications.html&quot;,&quot;lecture-notes/unit-2-generating-functions/index&quot;:&quot;index.html&quot;,&quot;lecture-notes/unit-2-generating-functions/01-rook-polynomials&quot;:&quot;01-rook-polynomials.html&quot;,&quot;lecture-notes/unit-2-generating-functions/02-ordinary-generating-functions-basics&quot;:&quot;02-ordinary-generating-functions-basics.html&quot;,&quot;lecture-notes/unit-2-generating-functions/03-ordinary-generating-functions-advanced&quot;:&quot;03-ordinary-generating-functions-advanced.html&quot;,&quot;lecture-notes/unit-2-generating-functions/04-ordered-arrangements-compositions-and-recurrences&quot;:&quot;#&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/index&quot;:&quot;../unit-3-Recurrence-relations/index.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/01-basics-of-recurrence-relations&quot;:&quot;../unit-3-Recurrence-relations/01-basics-of-recurrence-relations.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences&quot;:&quot;../unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences.html&quot;,&quot;lecture-notes/unit-3-Recurrence-relations/03-finite-state-machines-and-vector-recurrences&quot;:&quot;../unit-3-Recurrence-relations/03-finite-state-machines-and-vector-recurrences.html&quot;,&quot;lecture-notes/unit-4-symmetry/index&quot;:&quot;../unit-4-symmetry/index.html&quot;,&quot;lecture-notes/unit-4-symmetry/01-groups&quot;:&quot;../unit-4-symmetry/01-groups.html&quot;}" class="layout-notes">
 
   
   
@@ -159,6 +159,26 @@
         <div class="navbar-item">
 <nav class="course-navbar-nav" aria-label="Primary navigation">
   
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
   
     
       
@@ -455,6 +475,26 @@
       
     
   
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
   <ul class="bd-navbar-elements navbar-nav current" data-course-navbar-items="">
 <li class="nav-item"><a class="nav-link nav-external" href="https://learn.uark.edu/ultra/courses/_529368_1/outline">Blackboard</a></li>
 <li class="nav-item"><a class="nav-link nav-internal" href="../../syllabus.html">Syllabus</a></li>
@@ -612,6 +652,26 @@
         
         
       
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
     <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../unit-1-enumeration/index.html">Unit I: Enumeration and inclusion-exclusion</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../unit-1-enumeration/01-set-notation-and-basic-counting.html">1. Set notation and basic counting</a></li>
@@ -632,6 +692,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../unit-3-Recurrence-relations/01-basics-of-recurrence-relations.html">11. Basics of recurrence relations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../unit-3-Recurrence-relations/02-solving-linear-constant-coefficient-recurrences.html">12. Solving linear recurrences with constant coefficients</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../unit-3-Recurrence-relations/03-finite-state-machines-and-vector-recurrences.html">13. Finite state machines and vector recurrences</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../unit-4-symmetry/index.html">Unit IV: Symmetry</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../unit-4-symmetry/01-groups.html">14. Groups</a></li>
 </ul>
 </details></li>
 </ul>
