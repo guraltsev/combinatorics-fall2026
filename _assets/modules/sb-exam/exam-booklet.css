@@ -1,0 +1,78 @@
+/* sb-exam asset: exam-booklet.css (design 05 §3.5). Page boxes are CSS on the elements. */
+sb-examcover,
+sb-examproblem {
+  display: block;
+  box-sizing: border-box;
+  min-height: 9.35in;
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--sb-border, #d1d5da);
+  border-radius: 0.25rem;
+  background: var(--sb-background, #fff);
+}
+sb-examcover > * {
+  display: block;
+  margin: 0.8rem 0;
+}
+sb-course,
+sb-examname,
+sb-date {
+  text-align: center;
+}
+sb-course {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+sb-examname {
+  font-size: 1.8em;
+  font-weight: 700;
+}
+sb-examdonotopen {
+  border: 1px solid currentColor;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+sb-examinstructions > sb-name {
+  display: block;
+  font-weight: 700;
+}
+sb-examproblem > sb-head {
+  display: block;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+sb-examcontinuation {
+  display: block;
+  margin-top: 2rem;
+  font-style: italic;
+  min-height: 3rem;
+}
+
+@page {
+  size: letter;
+  margin: 0.72in;
+}
+
+@media print {
+  h1 {
+    display: none;
+  }
+  sb-examcover,
+  sb-examproblem {
+    break-after: page;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+  sb-examproblem {
+    break-before: left;
+  }
+  sb-examcontinuation {
+    break-before: auto;
+    break-after: page;
+  }
+}

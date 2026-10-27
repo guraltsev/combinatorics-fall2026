@@ -1,0 +1,48 @@
+/* sb-myopenmath assets (design 05 §3.4). */
+sb-my-open-math {
+  display: block;
+  margin: 1rem 0;
+}
+sb-my-open-math > details {
+  border: 1px solid var(--sb-border, #d1d5da);
+  border-radius: 0.25rem;
+  background: var(--sb-surface, #f3f4f5);
+  padding: 0.4rem 0.8rem;
+}
+sb-my-open-math > details > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+sb-mom-metadata,
+sb-mom-common-control,
+sb-mom-question,
+sb-mom-solution {
+  display: block;
+  position: relative;
+  margin: 0.8rem 0;
+}
+sb-mom-metadata > sb-name,
+sb-mom-common-control > sb-name,
+sb-mom-question > sb-name,
+sb-mom-solution > sb-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+sb-mom-metadata > pre,
+sb-mom-common-control > pre,
+sb-mom-question > pre,
+sb-mom-solution > pre {
+  max-height: 32rem;
+  overflow: auto;
+}
+[data-sb-ui="chrome:sb-myopenmath/copy"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+[data-sb-ui="chrome:sb-myopenmath/copy"] > button {
+  font: inherit;
+  font-size: 0.8em;
+  cursor: pointer;
+}

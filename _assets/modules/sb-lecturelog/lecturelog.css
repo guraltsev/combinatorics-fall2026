@@ -1,0 +1,50 @@
+/* sb-lecturelog assets (design 06 §4.6): date line and status pills. */
+sb-lecturedate {
+  display: block;
+  margin: 0.4rem 0;
+}
+sb-lecturedate > sb-name {
+  font-weight: 700;
+}
+
+sb-lecturestatus,
+sb-tentative,
+sb-inclass {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.1em 0.7em;
+  font-size: 0.78em;
+  text-transform: uppercase;
+  font-weight: 700;
+  vertical-align: middle;
+  --pill-fg: #374151;
+  --pill-bg: #e5e7eb;
+  color: var(--pill-fg);
+  background: var(--pill-bg);
+}
+sb-lecturestatus[status="published"] {
+  --pill-fg: #166534;
+  --pill-bg: #dcfce7;
+}
+sb-lecturestatus[status="tentative"],
+sb-tentative {
+  --pill-fg: var(--sb-brand-brown, #8a2432);
+  --pill-bg: var(--sb-brand-tan, #f1d7a5);
+}
+sb-lecturestatus[status="draft"] {
+  --pill-fg: #374151;
+  --pill-bg: #e5e7eb;
+}
+sb-inclass {
+  --pill-fg: #174e63;
+  --pill-bg: #cdebf2;
+}
+html[data-sb-theme="dark"] sb-lecturestatus[status="tentative"],
+html[data-sb-theme="dark"] sb-tentative {
+  --pill-fg: var(--sb-brand-navy, #1e3a5f);
+  --pill-bg: var(--sb-brand-sky, #9ec5e8);
+}
+html[data-sb-theme="dark"] sb-inclass {
+  --pill-fg: #d9f5fb;
+  --pill-bg: #24596a;
+}

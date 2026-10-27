@@ -1,0 +1,47 @@
+/* sb-homework assets (design 06 §4.6). Colours fall back when the brand lacks a token. */
+section[data-sb-construct="hwproblem"] > h2 sb-note {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+sb-weight {
+  font-size: 0.7em;
+}
+
+/* Part headings and their first paragraph run inline. */
+section[data-sb-construct="hwsubproblem"] > h3 {
+  display: inline;
+  font-size: inherit;
+  margin-right: 0.4em;
+}
+section[data-sb-construct="hwsubproblem"] > h3 + p {
+  display: inline;
+}
+
+sb-hwinstructions {
+  display: block;
+  background: #f1f1f1;
+  border-radius: 0.25rem;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+sb-hwinstructions > sb-head {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+html[data-sb-theme="dark"] sb-hwinstructions {
+  background: var(--sb-surface, #29313d);
+}
+
+sb-studentwork {
+  display: block;
+  margin: 1rem 0;
+  padding: 0.6rem 1rem;
+  font-family: "Segoe Print", "Comic Sans MS", "Bradley Hand", cursive;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  background: color-mix(in srgb, var(--sb-surface, #f3f4f5) 94%, var(--sb-brand-sky, #cdebf2));
+  border: 1px solid color-mix(in srgb, var(--sb-border, #d1d5da) 65%, var(--sb-brand-blue, #2563eb));
+  border-radius: 0.25rem;
+}
