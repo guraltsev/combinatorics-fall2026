@@ -1,0 +1,30 @@
+/* sb-badges assets (design 06 §4.6): the pills of \tentative and \inclass. */
+sb-tentative,
+sb-inclass {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.1em 0.7em;
+  font-size: 0.78em;
+  text-transform: uppercase;
+  font-weight: 700;
+  vertical-align: middle;
+  color: var(--pill-fg);
+  background: var(--pill-bg);
+}
+sb-tentative {
+  --pill-fg: var(--sb-brand-brown, #8a2432);
+  --pill-bg: var(--sb-brand-tan, #f1d7a5);
+}
+/* Razorback red: white on #9d2235, slightly lighter in dark mode. */
+sb-inclass {
+  --pill-fg: #ffffff;
+  --pill-bg: var(--sb-brand-red, #9d2235);
+}
+html[data-sb-theme="dark"] sb-tentative {
+  --pill-fg: var(--sb-brand-navy, #1e3a5f);
+  --pill-bg: var(--sb-brand-sky, #9ec5e8);
+}
+html[data-sb-theme="dark"] sb-inclass {
+  --pill-fg: #ffffff;
+  --pill-bg: #b8293f;
+}
